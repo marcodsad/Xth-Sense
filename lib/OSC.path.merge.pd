@@ -1,0 +1,15 @@
+#N canvas 329 383 450 300 10;
+#X obj 98 170 mergefilename;
+#X obj 98 143 pack s s;
+#X obj 183 101 symbol;
+#X obj 98 44 t b a;
+#X obj 98 14 inlet;
+#X obj 98 204 outlet;
+#X obj 98 100 symbol \$1;
+#X connect 0 0 5 0;
+#X connect 1 0 0 0;
+#X connect 2 0 1 1;
+#X connect 3 0 6 0;
+#X connect 3 1 2 0;
+#X connect 4 0 3 0;
+#X connect 6 0 1 0;

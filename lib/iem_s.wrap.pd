@@ -1,0 +1,14 @@
+#N canvas 922 441 450 300 10;
+#X obj 64 61 inlet bng;
+#X obj 37 19 inlet value;
+#X obj 37 173 iem_s;
+#X msg 64 148 set \$1;
+#X obj 119 148 outlet;
+#X obj 64 114 symbol \$1;
+#X obj 84 87 loadbang;
+#X connect 0 0 5 0;
+#X connect 1 0 2 0;
+#X connect 3 0 2 1;
+#X connect 5 0 3 0;
+#X connect 5 0 4 0;
+#X connect 6 0 5 0;
