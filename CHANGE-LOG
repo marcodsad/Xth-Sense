@@ -1,0 +1,10 @@
+Wed 26 Oct 2011
+- Finished structure programming, event creation for preset and timeline
+- Changed GUI main side window
+
+
+Wed 10 Aug 2011
+- Added [muscle.model~] for testing.
+- Added change-log and todo bangs to keep better track of development.
+- Trying to save CPU resources, without loosing resolution using [resample] instead of [speedlim] in [pd threshold].
+- Changed snapshot~ follower in [all.scaling]. Created [anlz.snap~] with [metro] resolution of 20ms.
