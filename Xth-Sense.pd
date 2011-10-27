@@ -1,5 +1,4 @@
-#N canvas 42 60 234 455 10;
-#X declare -lib mrpeach;
+#N canvas 65 227 234 455 10;
 #X declare -lib iemlib;
 #X declare -lib mrpeach;
 #X declare -lib moocow;
@@ -16,9 +15,9 @@
 #X declare -lib rj;
 #X declare -lib pdmtl;
 #X declare -stdpath extra/tof;
-#N canvas 124 210 546 632 software 0;
+#N canvas 130 210 546 632 software 0;
 #X obj 214 325 image images/sidewindow.gif 0;
-#N canvas 501 145 1000 697 workspaces 1;
+#N canvas 411 103 1000 697 workspaces 1;
 #X obj 501 348 image images/interface_cntrl0.1.gif 0;
 #X obj 948 22 tabswitch-motion2;
 #N canvas 32 446 465 370 creator1 0;
@@ -92,7 +91,7 @@
 #X connect 10 3 11 0;
 #X connect 12 0 10 2;
 #X restore 22 712 pd creator2;
-#N canvas 283 489 950 347 workspace_4 0;
+#N canvas 289 495 950 344 workspace_4 0;
 #N canvas 116 269 450 300 edit-workspace 0;
 #X obj 131 102 bng 15 250 50 0 empty empty Edit -29 7 0 8 -162280 -1
 -1;
@@ -138,7 +137,7 @@
 #X connect 15 0 3 0;
 #X connect 15 0 6 0;
 #X coords 0 -1 1 1 85 20 2 100 100;
-#X restore 225 328 pd totalcount;
+#X restore 225 348 pd totalcount;
 #N canvas 23 289 450 300 delete 0;
 #X obj 102 214 sendcanvas 1;
 #X msg 102 191 delete \$1;
@@ -153,84 +152,11 @@
 #X connect 4 0 6 0;
 #X connect 5 0 1 0;
 #X connect 5 0 2 0;
-#X restore 137 329 pd delete;
-#X obj 49 330 canvasdelete;
-#X obj 153 33 init 500;
-#X floatatom 209 34 5 0 0 0 - - -;
-#X obj 53 196 rev3~ 98 98;
-#X obj 80 151 bp~ 60 3;
-#X obj 221 207 rev3~ 98 98;
-#X obj 249 151 bp~ 70 10;
-#X text 248 247 1: 5.05 \, -173;
-#X text 250 265 2: 2.02 \, -173;
-#X text 380 247 1: 50.5 \, -214;
-#X text 383 265 2: 2.02 \, -246;
-#X obj 52 277 mix.set.ch~ four;
-#X obj 51 56 efx.pshift.ssb~;
-#X obj 249 176 *~ 4.6;
-#X obj 434 24 r~ /aux.four_l;
-#X obj 462 44 r~ /aux.four_r;
-#X obj 51 8 r~ /aux.one_l;
-#X obj 62 31 r~ /aux.one_r;
-#X floatatom 626 45 5 0 0 0 - - -;
-#N canvas 48 208 450 300 BINARY.TRIG 0;
-#X obj 147 -100 r t.a;
-#X obj 175 -81 r t.b;
-#X obj 201 -60 r t.c;
-#X obj 228 -39 r t.d;
-#X obj 255 -19 r t.e;
-#X obj 282 5 r t.f;
-#X obj 275 100 debounce;
-#X obj 141 125 outlet;
-#X obj 141 96 speedlim 4500;
-#X msg 142 47 0;
-#X msg 271 48 1;
-#X msg 206 48 1;
-#X msg 235 48 2;
-#X msg 172 47 2;
-#X connect 0 0 9 0;
-#X connect 1 0 13 0;
-#X connect 2 0 11 0;
-#X connect 3 0 12 0;
-#X connect 4 0 10 0;
-#X connect 8 0 7 0;
-#X connect 9 0 8 0;
-#X connect 10 0 8 0;
-#X connect 11 0 8 0;
-#X connect 12 0 8 0;
-#X connect 13 0 8 0;
-#X restore 620 18 pd BINARY.TRIG;
-#X obj 421 199 *~ 5.5;
-#X obj 840 42 switch~;
-#X obj 220 84 efx.gui.tstretch~ /wp4/2;
-#X obj 421 86 efx.gui.pdelay~ /wp4/3;
-#X obj 840 17 utils.gui.switch~ /sw4;
-#X obj 52 84 efx.gui.tstretch~ /wp4/1;
-#X connect 4 0 15 1;
-#X connect 5 0 15 1;
-#X connect 6 0 14 0;
-#X connect 6 0 26 0;
-#X connect 6 1 14 1;
-#X connect 7 0 6 1;
-#X connect 8 0 14 0;
-#X connect 8 0 26 0;
-#X connect 8 1 14 1;
-#X connect 9 0 16 0;
-#X connect 15 0 25 0;
-#X connect 15 0 28 0;
-#X connect 16 0 8 1;
-#X connect 19 0 15 0;
-#X connect 20 0 15 0;
-#X connect 22 0 21 0;
-#X connect 22 0 26 1;
-#X connect 23 0 14 0;
-#X connect 23 0 14 1;
-#X connect 25 0 8 0;
-#X connect 25 0 9 0;
-#X connect 26 0 23 0;
-#X connect 27 0 24 0;
-#X connect 28 0 6 0;
-#X connect 28 0 7 0;
+#X restore 137 349 pd delete;
+#X obj 49 350 canvasdelete;
+#X obj 870 32 switch~;
+#X obj 870 7 utils.gui.switch~ /sw4;
+#X connect 5 0 4 0;
 #X coords 0 -1 1 1 922 339 2 0 0;
 #X restore 17 755 pd workspace_4;
 #N canvas 455 373 450 300 dispatch.keyTab 0;
@@ -262,7 +188,7 @@
 #X connect 11 2 6 0;
 #X connect 11 3 7 0;
 #X restore 590 707 pd dispatch.keyTab;
-#N canvas 471 439 942 355 workspace_2 0;
+#N canvas 477 462 932 344 workspace_2 0;
 #N canvas 517 262 571 415 totalcount 0;
 #X obj 106 103 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
@@ -316,97 +242,9 @@
 #X connect 5 0 4 0;
 #X connect 6 0 1 0;
 #X connect 6 0 2 0;
-#X restore 163 314 pd delete;
-#X obj 65 314 canvasdelete;
-#X floatatom 330 3 5 0 0 0 - - -;
-#X obj 231 23 efx.gui.pshift.ssb~ /wp2/1;
+#X restore 163 344 pd delete;
+#X obj 65 344 canvasdelete;
 #X obj 867 33 switch~;
-#X obj 229 298 mix.set.ch~ two;
-#N canvas 12 70 450 300 triggers 0;
-#N canvas 970 383 450 300 receive.all.triggers 0;
-#X obj 77 12 r t.a;
-#X obj 107 32 r t.b;
-#X obj 134 53 r t.c;
-#X obj 161 75 r t.d;
-#X obj 188 94 r t.e;
-#X obj 219 120 r t.f;
-#X obj 49 199 outlet;
-#X obj 99 199 outlet;
-#X obj 147 199 outlet;
-#X obj 197 199 outlet;
-#X obj 247 199 outlet;
-#X obj 297 199 outlet;
-#X connect 0 0 6 0;
-#X connect 1 0 7 0;
-#X connect 2 0 8 0;
-#X connect 3 0 9 0;
-#X connect 4 0 10 0;
-#X connect 5 0 11 0;
-#X restore 148 -168 pd receive.all.triggers;
-#X obj 149 -145 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 179 -145 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 209 -145 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 239 -145 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 269 -145 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 299 -145 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X msg 149 -108 15.1;
-#X msg 221 -106 8.69;
-#X msg 256 -107 6.13;
-#X msg 290 -106 3.56;
-#X obj 149 -28 line;
-#X msg 180 -108 12.54;
-#X obj 149 35 s pitch2;
-#X obj 237 -30 line;
-#X obj 85 -69 loadbang;
-#X msg 237 -56 12 5000;
-#X msg 296 -71 13 8000;
-#X msg 299 -42 11 4000;
-#X msg 85 -43 1;
-#X obj 149 -61 pack f 70;
-#X obj 149 1 spigot 1;
-#X connect 0 0 1 0;
-#X connect 0 1 2 0;
-#X connect 0 2 3 0;
-#X connect 0 3 4 0;
-#X connect 0 4 5 0;
-#X connect 0 5 6 0;
-#X connect 1 0 7 0;
-#X connect 1 0 16 0;
-#X connect 2 0 12 0;
-#X connect 2 0 17 0;
-#X connect 3 0 8 0;
-#X connect 3 0 18 0;
-#X connect 4 0 9 0;
-#X connect 5 0 10 0;
-#X connect 7 0 20 0;
-#X connect 8 0 20 0;
-#X connect 9 0 20 0;
-#X connect 10 0 20 0;
-#X connect 11 0 21 0;
-#X connect 12 0 20 0;
-#X connect 14 0 21 0;
-#X connect 15 0 19 0;
-#X connect 16 0 14 0;
-#X connect 17 0 14 0;
-#X connect 18 0 14 0;
-#X connect 19 0 21 1;
-#X connect 20 0 11 0;
-#X connect 21 0 13 0;
-#X restore 82 104 pd triggers;
-#X obj 229 269 *~ 5.8;
-#X obj 380 274 *~ 5.8;
-#X obj 280 269 fx.punch~;
-#X obj 369 254 init 2;
-#X obj 48 7 r~ 2.r;
-#X obj 65 32 r~ 2.l;
-#X obj 231 80 efx.gui.delay~ /wp2/2;
-#X obj 230 158 efx.gui.grunger~ /wp2/3;
 #X obj 867 8 utils.gui.switch~ /sw2;
 #N canvas 101 255 450 300 edit-workspace 0;
 #X obj 131 102 bng 15 250 50 0 empty empty Edit -29 7 0 8 -162280 -1
@@ -415,24 +253,10 @@
 #X connect 0 0 1 0;
 #X coords 0 -1 1 1 48 19 2 100 100;
 #X restore 864 311 pd edit-workspace;
-#X connect 3 0 4 2;
-#X connect 4 0 14 0;
-#X connect 4 1 14 0;
-#X connect 8 0 6 0;
-#X connect 9 0 6 1;
-#X connect 10 0 6 0;
-#X connect 10 1 6 1;
-#X connect 11 0 10 2;
-#X connect 12 0 4 0;
-#X connect 13 0 4 0;
-#X connect 14 0 15 0;
-#X connect 14 0 15 1;
-#X connect 15 0 10 0;
-#X connect 15 1 10 1;
-#X connect 16 0 5 0;
+#X connect 4 0 3 0;
 #X coords 0 -1 1 1 922 339 2 0 0;
 #X restore 17 755 pd workspace_2;
-#N canvas 460 308 929 355 workspace_3 0;
+#N canvas 466 331 927 347 workspace_3 0;
 #N canvas 116 269 450 300 edit-workspace 0;
 #X obj 131 102 bng 15 250 50 0 empty empty Edit -29 7 0 8 -162280 -1
 -1;
@@ -478,7 +302,7 @@
 #X connect 15 0 3 0;
 #X connect 15 0 6 0;
 #X coords 0 -1 1 1 85 20 2 100 100;
-#X restore 223 331 pd totalcount;
+#X restore 223 351 pd totalcount;
 #N canvas 23 289 450 300 delete 0;
 #X obj 102 214 sendcanvas 1;
 #X msg 102 191 delete \$1;
@@ -493,27 +317,12 @@
 #X connect 5 0 1 0;
 #X connect 5 0 2 0;
 #X connect 6 0 4 0;
-#X restore 145 333 pd delete;
-#X obj 47 333 canvasdelete;
-#X obj 226 278 rev3~ 90 80;
-#X text 58 190 1: 0.02 \, 202 \, 3.61 \, 1.11;
+#X restore 145 353 pd delete;
+#X obj 47 353 canvasdelete;
 #X text 553 -22 \$1 = wp3.a \, wp3.aa \, ...;
-#X obj 225 66 efx.gui.granular.live~ /wp3/1;
-#X obj 226 179 efx.gui.chorus~ /wp3/2;
-#X obj 402 26 r~ /aux.one_l;
-#X obj 418 47 r~ /aux.one_r;
-#X obj 852 52 switch~;
-#X obj 225 304 mix.set.ch~ three;
-#X obj 852 27 utils.gui.switch~ /sw3;
-#X connect 4 0 12 0;
-#X connect 4 1 12 1;
-#X connect 7 0 8 0;
-#X connect 7 1 8 1;
-#X connect 8 0 4 0;
-#X connect 8 1 4 1;
-#X connect 9 0 7 0;
-#X connect 10 0 7 0;
-#X connect 13 0 11 0;
+#X obj 872 32 switch~;
+#X obj 872 7 utils.gui.switch~ /sw3;
+#X connect 6 0 5 0;
 #X coords 0 -1 1 1 922 339 2 0 0;
 #X restore 17 755 pd workspace_3;
 #N canvas 325 456 647 386 routing-params 0;
@@ -626,7 +435,7 @@
 #X obj 725 703 catch~ cntrl.mix-l;
 #X obj 845 725 catch~ cntrl.mix-r;
 #X obj 843 705 catch~ test-l;
-#N canvas 277 368 940 347 workspace_5 0;
+#N canvas 283 391 940 347 workspace_5 0;
 #N canvas 517 262 571 415 totalcount 0;
 #X obj 106 103 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
@@ -682,83 +491,7 @@
 #X connect 6 0 4 0;
 #X restore 243 353 pd delete;
 #X obj 155 354 canvasdelete;
-#X floatatom 124 59 5 0 0 0 - - -;
-#X obj 123 38 mtof;
-#N canvas 784 196 631 598 closest.note 0;
-#X obj 115 94 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0 127
-;
-#X obj 251 176 musical.transpose;
-#X floatatom 124 186 5 0 0 0 - - -;
-#X obj 115 137 count.modulo 12;
-#X floatatom 197 320 5 0 0 0 - - -;
-#X floatatom 169 93 5 0 0 0 - - -;
-#X obj 395 148 loadbang;
-#X text 213 154 944;
-#X msg 453 198 0 1 5;
-#X msg 350 198 0 1 3;
-#X msg 396 198 0 1 3 6;
-#X floatatom 25 194 5 0 0 0 - - -;
-#X obj 105 -114 r t.a;
-#X obj 133 -95 r t.b;
-#X obj 159 -74 r t.c;
-#X obj 186 -53 r t.d;
-#X obj 213 -33 r t.e;
-#X obj 240 -9 r t.f;
-#X msg 74 31 60;
-#X msg 107 31 61;
-#X msg 139 31 63;
-#X msg 173 32 65;
-#X msg 205 32 67;
-#X msg 272 32 70;
-#X obj 74 279 musical.closest.note 0 2 4 7 9;
-#X obj 74 248 line;
-#X obj 74 215 pack f 130;
-#X msg 251 146 0 2 3 5 7 8 15;
-#X msg 237 32 74;
-#X obj 146 222 pack f 130;
-#X obj 373 -31 inlet start;
-#X obj 74 393 s midinote.five;
-#X obj 126 162 + 45;
-#X obj 73 361 line;
-#X msg 74 326 \$1 50;
-#X obj 115 115 metro 500;
-#X connect 0 0 35 0;
-#X connect 1 0 24 1;
-#X connect 3 0 32 0;
-#X connect 5 0 35 1;
-#X connect 6 0 10 0;
-#X connect 8 0 24 1;
-#X connect 9 0 24 1;
-#X connect 10 0 24 1;
-#X connect 11 0 26 0;
-#X connect 12 0 18 0;
-#X connect 13 0 19 0;
-#X connect 14 0 20 0;
-#X connect 15 0 21 0;
-#X connect 16 0 22 0;
-#X connect 17 0 28 0;
-#X connect 18 0 26 0;
-#X connect 19 0 26 0;
-#X connect 20 0 26 0;
-#X connect 21 0 26 0;
-#X connect 22 0 26 0;
-#X connect 24 0 4 0;
-#X connect 24 0 34 0;
-#X connect 25 0 24 0;
-#X connect 27 0 1 0;
-#X connect 28 0 26 0;
-#X connect 29 0 25 0;
-#X connect 30 0 0 0;
-#X connect 32 0 2 0;
-#X connect 32 0 29 0;
-#X connect 33 0 31 0;
-#X connect 34 0 33 0;
-#X connect 35 0 3 0;
-#X restore 541 38 pd closest.note;
-#X obj 541 16 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-127;
-#X obj 123 16 r midinote.five;
-#X obj 9 342 switch~;
+#X obj 869 39 switch~;
 #N canvas 116 269 450 300 edit-workspace 0;
 #X obj 131 102 bng 15 250 50 0 empty empty Edit -29 7 0 8 -162280 -1
 -1;
@@ -766,15 +499,11 @@
 #X connect 0 0 1 0;
 #X coords 0 -1 1 1 48 19 2 100 100;
 #X restore 863 308 pd edit-workspace;
-#X obj 120 270 mix.set.ch~ five;
-#X obj 9 310 utils.gui.switch~ /sw5;
-#X connect 4 0 3 0;
-#X connect 6 0 5 0;
-#X connect 7 0 4 0;
-#X connect 11 0 8 0;
+#X obj 869 7 utils.gui.switch~ /sw5;
+#X connect 5 0 3 0;
 #X coords 0 -1 1 1 922 339 2 0 0;
 #X restore 17 755 pd workspace_5;
-#N canvas 419 222 927 347 workspace_6 0;
+#N canvas 425 245 927 347 workspace_6 0;
 #N canvas 122 292 450 300 edit-workspace 0;
 #X obj 131 102 bng 15 250 50 0 empty empty Edit -29 7 0 8 -162280 -1
 -1;
@@ -820,7 +549,7 @@
 #X connect 15 0 3 0;
 #X connect 15 0 6 0;
 #X coords 0 -1 1 1 85 20 2 100 100;
-#X restore 199 321 pd totalcount;
+#X restore 199 351 pd totalcount;
 #N canvas 35 335 450 300 delete 0;
 #X obj 102 214 sendcanvas 1;
 #X msg 102 191 delete \$1;
@@ -835,155 +564,13 @@
 #X connect 5 0 4 0;
 #X connect 6 0 1 0;
 #X connect 6 0 2 0;
-#X restore 111 322 pd delete;
-#X obj 23 323 canvasdelete;
-#X obj 840 42 switch~;
-#X obj 33 292 mix.set.ch~ six;
-#X obj 548 276 mix.set.ch~ seven;
-#N canvas 1028 167 450 300 chords 0;
-#X msg 200 198 4 7 11;
-#X msg 299 198 4 7 10;
-#X msg 248 197 4 8 10;
-#X msg 350 200 3 7 10;
-#X msg 256 100 0 3 5;
-#X msg 311 101 0 4 7;
-#X msg 263 127 0 1 6;
-#X msg 322 128 0 12 7;
-#X msg 128 59 3 6 9;
-#X msg 137 34 1 32 9 12 15 20;
-#X msg 58 59 4 7 11;
-#X msg 248 34 1 9 26 12 11 20;
-#X restore 361 293 pd chords;
-#X floatatom 723 43 5 0 0 0 - - -;
-#N canvas 48 208 450 300 BINARY.TRIG 0;
-#X obj 147 -100 r t.a;
-#X obj 175 -81 r t.b;
-#X obj 201 -60 r t.c;
-#X obj 228 -39 r t.d;
-#X obj 255 -19 r t.e;
-#X obj 282 5 r t.f;
-#X obj 275 100 debounce;
-#X obj 141 125 outlet;
-#X obj 141 96 speedlim 4500;
-#X msg 170 47 8;
-#X msg 206 48 8;
-#X msg 142 47 5;
-#X msg 235 48 6;
-#X msg 272 48 6;
-#X connect 0 0 11 0;
-#X connect 1 0 9 0;
-#X connect 2 0 10 0;
-#X connect 3 0 12 0;
-#X connect 4 0 13 0;
-#X connect 8 0 7 0;
-#X connect 9 0 8 0;
-#X connect 10 0 8 0;
-#X connect 11 0 8 0;
-#X connect 12 0 8 0;
-#X connect 13 0 8 0;
-#X restore 717 16 pd BINARY.TRIG;
-#X obj 548 24 r~ /aux.six_l;
-#X obj 365 25 r~ /aux.six_l;
-#X obj 365 191 *~ 2;
-#X floatatom 462 44 5 0 0 0 - - -;
-#N canvas 54 231 450 300 BINARY.TRIG 0;
-#X obj 147 -100 r t.a;
-#X obj 175 -81 r t.b;
-#X obj 201 -60 r t.c;
-#X obj 228 -39 r t.d;
-#X obj 255 -19 r t.e;
-#X obj 282 5 r t.f;
-#X obj 275 100 debounce;
-#X obj 141 125 outlet;
-#X obj 141 96 speedlim 4500;
-#X msg 169 47 5;
-#X msg 272 48 1;
-#X msg 206 48 3;
-#X msg 141 48 1;
-#X msg 233 48 4;
-#X connect 0 0 12 0;
-#X connect 1 0 9 0;
-#X connect 2 0 11 0;
-#X connect 3 0 13 0;
-#X connect 4 0 10 0;
-#X connect 8 0 7 0;
-#X connect 9 0 8 0;
-#X connect 10 0 8 0;
-#X connect 11 0 8 0;
-#X connect 12 0 8 0;
-#X connect 13 0 8 0;
-#X restore 456 17 pd BINARY.TRIG;
-#X floatatom 76 169 5 0 0 0 - - -;
-#X obj 33 25 r~ 2.l;
-#X obj 121 117 init 700;
-#X obj 112 169 init 127;
-#X obj 54 57 r TIME.BARS;
-#N canvas 624 311 450 378 musical.form 0;
-#X obj 114 18 inlet;
-#X obj 114 349 outlet;
-#X obj 273 161 musical.form;
-#X obj 342 117 loadbang;
-#X floatatom 162 60 5 0 0 0 - - -;
-#X obj 114 59 mod 64;
-#X obj 114 151 sel 0 16 32 48;
-#X msg 342 138 3 3 4 4 6 6 5 5;
-#X obj 245 24 inlet;
-#X obj 274 184 sel 1;
-#X msg 114 246 3 6 9;
-#X msg 134 227 1 32 9 12 15 20;
-#X msg 213 254 0 4 7;
-#X msg 178 180 0 1 6;
-#X msg 154 206 1 9 26 12 11 20;
-#X obj 114 122 spigot 1;
-#X connect 0 0 5 0;
-#X connect 3 0 7 0;
+#X restore 111 352 pd delete;
+#X obj 23 353 canvasdelete;
+#X obj 867 34 switch~;
+#X obj 867 9 utils.gui.switch~ /sw6;
 #X connect 5 0 4 0;
-#X connect 5 0 15 0;
-#X connect 6 0 10 0;
-#X connect 6 1 11 0;
-#X connect 6 2 14 0;
-#X connect 6 3 13 0;
-#X connect 7 0 2 1;
-#X connect 8 0 15 1;
-#X connect 10 0 1 0;
-#X connect 11 0 1 0;
-#X connect 13 0 1 0;
-#X connect 14 0 1 0;
-#X connect 15 0 6 0;
-#X restore 54 81 pd musical.form;
-#X obj 147 228 rev3~ 80 90;
-#X obj 33 200 efx.voices~;
-#X obj 33 138 efx.pshift.ssb~;
-#X obj 365 62 efx.gui.pdelay~ /wp6/2;
-#X obj 549 60 efx.gui.bubbler~ /wp6/2;
-#X obj 840 17 utils.gui.switch~ /sw6;
-#X connect 9 0 8 0;
-#X connect 9 0 25 1;
-#X connect 10 0 25 0;
-#X connect 11 0 24 0;
-#X connect 12 0 6 0;
-#X connect 12 0 6 1;
-#X connect 14 0 13 0;
-#X connect 14 0 24 1;
-#X connect 15 0 22 2;
-#X connect 16 0 23 0;
-#X connect 17 0 23 1;
-#X connect 18 0 22 3;
-#X connect 19 0 20 0;
-#X connect 20 0 22 1;
-#X connect 21 0 5 0;
-#X connect 21 1 5 1;
-#X connect 22 0 5 0;
-#X connect 22 0 21 0;
-#X connect 22 1 5 1;
-#X connect 22 1 21 1;
-#X connect 23 0 22 0;
-#X connect 24 0 12 0;
-#X connect 25 0 6 0;
-#X connect 25 0 6 1;
-#X connect 26 0 4 0;
 #X coords 0 -1 1 1 922 339 2 0 0;
-#X restore 17 755 pd workspace_6;
+#X restore 17 18 pd workspace_6;
 #X obj 559 655 utils.cpusage;
 #X obj 774 655 utils.clockk;
 #N canvas 410 541 318 297 side-buttons 0;
@@ -1061,8 +648,6 @@
 #X connect 6 0 5 0;
 #X coords 0 -1 1 1 65 77 2 100 100;
 #X restore 944 399 pd side-buttons;
-#X obj 948 283 utils.timebase;
-#X obj 948 372 s TIME.START;
 #N canvas 261 389 668 453 routing.midi 0;
 #X obj 100 100 cnv 15 372 240 empty empty empty 20 12 0 14 -133153
 -66577 0;
@@ -6499,7 +6084,7 @@ x 5 9 0 11 -232576 -1 -1 0 0;
 #X connect 16 0 15 0;
 #X coords 0 -1 1 1 372 240 2 100 100;
 #X restore 553 394 pd analysis;
-#N canvas 344 150 1202 484 workspace_1 0;
+#N canvas 350 173 931 348 workspace_1 0;
 #N canvas 523 285 571 415 totalcount 0;
 #X obj 106 103 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
@@ -6538,7 +6123,7 @@ x 5 9 0 11 -232576 -1 -1 0 0;
 #X connect 15 0 3 0;
 #X connect 15 0 6 0;
 #X coords 0 -1 1 1 85 20 2 100 100;
-#X restore 214 347 pd totalcount;
+#X restore 214 351 pd totalcount;
 #N canvas 29 312 450 300 delete 0;
 #X obj 102 214 sendcanvas 1;
 #X msg 102 191 delete \$1;
@@ -6553,360 +6138,10 @@ x 5 9 0 11 -232576 -1 -1 0 0;
 #X connect 5 0 4 0;
 #X connect 6 0 1 0;
 #X connect 6 0 2 0;
-#X restore 135 323 pd delete;
-#X obj 37 323 canvasdelete;
-#X obj 23 46 r~ 1.l;
-#X obj 71 46 r~ 1.r;
-#X floatatom 167 41 5 0 0 0 - - -;
-#X obj 224 17 r uno;
-#X obj 273 17 r due;
-#X obj 222 60 pack f 50;
-#X obj 220 80 line;
-#X obj 317 16 r tre;
-#N canvas 810 220 732 622 closest.note 0;
-#X msg 251 146 0 2 3 5 7 8 11;
-#X obj 115 94 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0 1
-;
-#X obj 251 176 musical.transpose;
-#X floatatom 124 186 5 0 0 0 - - -;
-#X obj 115 137 count.modulo 12;
-#X obj 115 158 + 60;
-#X floatatom 197 320 5 0 0 0 - - -;
-#X floatatom 169 93 5 0 0 0 - - -;
-#X obj 250 123 loadbang;
-#X obj 74 401 s midinote.one;
-#X text 213 154 944;
-#X msg 453 198 0 1 5;
-#X msg 350 198 0 1 3;
-#X msg 396 198 0 1 3 6;
-#X obj 115 115 metro 180;
-#X floatatom 25 194 5 0 0 0 - - -;
-#X obj 105 -114 r t.a;
-#X obj 133 -95 r t.b;
-#X obj 159 -74 r t.c;
-#X obj 186 -53 r t.d;
-#X obj 213 -33 r t.e;
-#X obj 240 -9 r t.f;
-#X msg 74 31 60;
-#X msg 107 31 61;
-#X msg 139 31 63;
-#X msg 173 32 65;
-#X msg 205 32 67;
-#X msg 237 32 68;
-#X msg 272 32 70;
-#X obj 74 279 musical.closest.note 0 2 4 7 9;
-#X obj 74 248 line;
-#X obj 30 -83 inlet;
-#X obj 74 362 line;
-#X obj 74 311 + 0;
-#X msg 149 328 20;
-#X obj 74 336 pack f 80;
-#X msg 152 352 10;
-#X msg 146 375 0;
-#X msg 390 -80 0 1 4 5 7 8 11;
-#X msg 402 -57 0 2 4 6 7 9 10;
-#X msg 413 -35 0 2 3 5 7 8 11;
-#X msg 436 10 0 2 4 6 8 10;
-#X msg 446 32 0 2 3 5 6 8 9 11;
-#X text 488 -80 middle-east-like minor;
-#X text 499 -56 lydian-dominant (jazzy);
-#X text 511 -33 harmonic minor;
-#X msg 424 -12 0 2 3 4 5 6 7 9 10 11;
-#X text 562 -11 chromatic blues;
-#X text 522 12 whole-tones scale;
-#X text 554 34 diminished scale;
-#X msg 454 54 0 2 4 7 9;
-#X text 522 55 pentatonic;
-#X text 554 76 pentatonic blues;
-#X msg 462 76 0 2 3 4 7 8 9;
-#X obj 371 97 t a;
-#X obj 74 215 pack f 130;
-#X connect 0 0 2 0;
-#X connect 1 0 14 0;
-#X connect 2 0 29 1;
-#X connect 4 0 5 0;
-#X connect 5 0 3 0;
-#X connect 5 0 55 0;
-#X connect 7 0 14 1;
-#X connect 8 0 0 0;
-#X connect 11 0 29 1;
-#X connect 12 0 29 1;
-#X connect 13 0 29 1;
-#X connect 14 0 4 0;
-#X connect 15 0 55 0;
-#X connect 16 0 22 0;
-#X connect 17 0 23 0;
-#X connect 18 0 24 0;
-#X connect 19 0 25 0;
-#X connect 20 0 26 0;
-#X connect 21 0 27 0;
-#X connect 22 0 55 0;
-#X connect 23 0 55 0;
-#X connect 24 0 55 0;
-#X connect 25 0 55 0;
-#X connect 26 0 55 0;
-#X connect 27 0 55 0;
-#X connect 29 0 6 0;
-#X connect 29 0 33 0;
-#X connect 30 0 29 0;
-#X connect 31 0 1 0;
-#X connect 32 0 9 0;
-#X connect 33 0 35 0;
-#X connect 34 0 33 1;
-#X connect 35 0 32 0;
-#X connect 36 0 33 1;
-#X connect 37 0 33 1;
-#X connect 38 0 54 0;
-#X connect 39 0 54 0;
-#X connect 40 0 54 0;
-#X connect 41 0 54 0;
-#X connect 42 0 54 0;
-#X connect 46 0 54 0;
-#X connect 50 0 54 0;
-#X connect 53 0 54 0;
-#X connect 54 0 2 0;
-#X connect 55 0 30 0;
-#X restore 356 367 pd closest.note;
-#X obj 125 -4 r midinote.one;
-#X obj 356 347 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 171 69 == 0;
-#X obj 185 224 *~ 12;
-#X obj 335 225 *~ 12;
-#X obj 186 244 hip~ 500;
-#X obj 334 246 hip~ 500;
-#X obj 97 258 *~ 0.4;
-#X obj 23 258 *~ 0.4;
-#X obj 186 264 hip~ 500;
-#X obj 334 266 hip~ 500;
-#X obj 22 124 efx.gui.delay~ /wp1/1;
-#X obj 22 77 efx.pshift.ssb~;
-#X obj 185 121 efx.gui.grunger~ /wp1/2;
-#X obj 125 23 mtof;
-#X obj 890 44 switch~;
+#X restore 135 353 pd delete;
+#X obj 37 353 canvasdelete;
+#X obj 896 34 switch~;
 #X obj 896 7 utils.gui.switch~ /sw1;
-#X obj 502 -5 r~ /aux.one_l;
-#X obj 23 290 mix.set.ch~ one;
-#X obj 670 -50 r~ /aux.one_l;
-#X obj 463 291 mix.set.ch~ three;
-#X obj 817 -83 r TIME.BANGS;
-#X obj 817 123 spigot 0;
-#X floatatom 843 220 5 0 0 0 - - -;
-#X floatatom 990 194 5 0 0 0 - - -;
-#X obj 994 -73 r TIME.BARS;
-#X obj 838 43 t f f f;
-#X msg 881 122 seed \$1;
-#X obj 816 146 drunk 8;
-#X obj 880 78 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
-#X obj 953 274 efx.pan.cos.mono~;
-#X obj 637 244 efx.gui.pan.cos.mono~ /wp1/5;
-#X obj 816 194 clip 5 8;
-#X obj 881 100 init 7;
-#X msg 829 81 0;
-#X msg 224 38 65;
-#X msg 251 38 69;
-#X msg 283 38 72;
-#N canvas 551 79 450 300 filter-bank 0;
-#X obj 75 0 inlet~;
-#X obj 153 0 inlet~;
-#X obj 73 254 outlet~;
-#X obj 152 256 outlet~;
-#X obj 73 98 hip~ 500;
-#X obj 73 118 hip~ 500;
-#X obj 153 77 hip~ 300;
-#X obj 152 98 hip~ 500;
-#X obj 152 118 hip~ 500;
-#X obj 261 84 mtof;
-#X floatatom 398 56 5 0 0 2 BW - -;
-#X floatatom 261 52 5 0 0 2 freq - -;
-#N canvas 0 0 450 300 show 0;
-#X obj 41 39 inlet;
-#X obj 186 36 inlet;
-#X obj 41 124 outlet;
-#X msg 186 76 set;
-#X obj 41 59 list prepend set;
-#X obj 41 83 list trim;
-#X connect 0 0 4 0;
-#X connect 1 0 3 0;
-#X connect 3 0 2 0;
-#X connect 4 0 5 0;
-#X connect 5 0 2 0;
-#X restore 261 154 pd show;
-#X msg 261 187 0.612351 -0.128661 0.43567 0 -0.43567;
-#X msg 319 154 reset;
-#X msg 304 85 bang;
-#X obj 153 27 hip~ 80;
-#X obj 153 47 hip~ 80;
-#X obj 8 4 noise~;
-#X obj 12 47 *~ 0.4;
-#X floatatom 29 82 5 0 0 0 - - -;
-#X obj 74 27 hip~ 80;
-#X obj 74 46 hip~ 80;
-#X obj 74 77 hip~ 300;
-#X obj 151 164 e_beequad;
-#X obj 74 164 e_beequad;
-#X obj 261 121 u_bandpass2 7000 200;
-#X connect 0 0 21 0;
-#X connect 1 0 16 0;
-#X connect 4 0 5 0;
-#X connect 5 0 25 0;
-#X connect 6 0 7 0;
-#X connect 7 0 8 0;
-#X connect 8 0 24 0;
-#X connect 9 0 26 0;
-#X connect 10 0 26 1;
-#X connect 11 0 9 0;
-#X connect 12 0 13 0;
-#X connect 14 0 12 1;
-#X connect 15 0 26 0;
-#X connect 16 0 17 0;
-#X connect 17 0 6 0;
-#X connect 18 0 19 0;
-#X connect 20 0 19 1;
-#X connect 21 0 22 0;
-#X connect 22 0 23 0;
-#X connect 23 0 4 0;
-#X connect 24 0 3 0;
-#X connect 25 0 2 0;
-#X connect 26 0 12 0;
-#X connect 26 0 24 1;
-#X connect 26 0 25 1;
-#X restore 522 174 pd filter-bank;
-#N canvas 551 79 450 300 filter-bank 0;
-#X obj 75 0 inlet~;
-#X obj 153 0 inlet~;
-#X obj 73 254 outlet~;
-#X obj 152 256 outlet~;
-#X obj 73 98 hip~ 500;
-#X obj 73 118 hip~ 500;
-#X obj 153 77 hip~ 300;
-#X obj 152 98 hip~ 500;
-#X obj 152 118 hip~ 500;
-#X obj 261 84 mtof;
-#X floatatom 398 56 5 0 0 2 BW - -;
-#X floatatom 261 52 5 0 0 2 freq - -;
-#N canvas 0 0 450 300 show 0;
-#X obj 41 39 inlet;
-#X obj 186 36 inlet;
-#X obj 41 124 outlet;
-#X msg 186 76 set;
-#X obj 41 59 list prepend set;
-#X obj 41 83 list trim;
-#X connect 0 0 4 0;
-#X connect 1 0 3 0;
-#X connect 3 0 2 0;
-#X connect 4 0 5 0;
-#X connect 5 0 2 0;
-#X restore 261 154 pd show;
-#X msg 261 187 0.612351 -0.128661 0.43567 0 -0.43567;
-#X msg 319 154 reset;
-#X msg 304 85 bang;
-#X obj 153 27 hip~ 80;
-#X obj 153 47 hip~ 80;
-#X obj 8 4 noise~;
-#X obj 12 47 *~ 0.4;
-#X floatatom 29 82 5 0 0 0 - - -;
-#X obj 74 27 hip~ 80;
-#X obj 74 46 hip~ 80;
-#X obj 74 77 hip~ 300;
-#X obj 151 164 e_beequad;
-#X obj 74 164 e_beequad;
-#X obj 261 121 u_bandpass2 7000 200;
-#X connect 0 0 21 0;
-#X connect 1 0 16 0;
-#X connect 4 0 5 0;
-#X connect 5 0 25 0;
-#X connect 6 0 7 0;
-#X connect 7 0 8 0;
-#X connect 8 0 24 0;
-#X connect 9 0 26 0;
-#X connect 10 0 26 1;
-#X connect 11 0 9 0;
-#X connect 12 0 13 0;
-#X connect 14 0 12 1;
-#X connect 15 0 26 0;
-#X connect 16 0 17 0;
-#X connect 17 0 6 0;
-#X connect 18 0 19 0;
-#X connect 20 0 19 1;
-#X connect 21 0 22 0;
-#X connect 22 0 23 0;
-#X connect 23 0 4 0;
-#X connect 24 0 3 0;
-#X connect 25 0 2 0;
-#X connect 26 0 12 0;
-#X connect 26 0 24 1;
-#X connect 26 0 25 1;
-#X restore 669 -2 pd filter-bank;
-#X obj 692 -27 r~ /aux.one_r;
-#X obj 511 17 r~ /aux.one_r;
-#X obj 719 282 rev3~ 90 80;
-#N canvas 30 139 450 300 BINARY.TRIG 0;
-#X obj 147 -100 r t.a;
-#X obj 175 -81 r t.b;
-#X obj 201 -60 r t.c;
-#X obj 228 -39 r t.d;
-#X obj 255 -19 r t.e;
-#X obj 282 5 r t.f;
-#X msg 206 48 4;
-#X msg 235 48 6;
-#X msg 272 48 5;
-#X obj 275 100 debounce;
-#X obj 141 125 outlet;
-#X obj 141 96 speedlim 4500;
-#X msg 142 47 0;
-#X msg 172 47 0;
-#X connect 0 0 12 0;
-#X connect 1 0 13 0;
-#X connect 2 0 6 0;
-#X connect 3 0 7 0;
-#X connect 4 0 8 0;
-#X connect 6 0 11 0;
-#X connect 7 0 11 0;
-#X connect 8 0 11 0;
-#X connect 11 0 10 0;
-#X connect 12 0 11 0;
-#X connect 13 0 11 0;
-#X restore 990 174 pd BINARY.TRIG;
-#N canvas 369 225 450 378 musical.form 0;
-#X obj 114 18 inlet;
-#X obj 114 250 outlet;
-#X obj 114 217 musical.form;
-#X obj 183 173 loadbang;
-#X floatatom 162 60 5 0 0 0 - - -;
-#X obj 114 59 mod 64;
-#X obj 114 151 sel 0 16 32 48;
-#X msg 183 194 3 3 4 4 6 6 5 5;
-#X obj 114 122 spigot 0;
-#X obj 245 24 inlet;
-#X obj 114 85 gui.spigot /go1;
-#X connect 0 0 5 0;
-#X connect 2 0 1 0;
-#X connect 3 0 7 0;
-#X connect 5 0 4 0;
-#X connect 5 0 10 0;
-#X connect 6 0 2 0;
-#X connect 6 1 2 0;
-#X connect 6 2 2 0;
-#X connect 6 3 2 0;
-#X connect 7 0 2 1;
-#X connect 8 0 6 0;
-#X connect 9 0 8 1;
-#X connect 10 0 8 0;
-#X restore 994 -49 pd musical.form;
-#X obj 816 168 + 5;
-#X obj 138 96 spigot 1;
-#X obj 637 314 *~ 2;
-#X obj 782 316 *~ 2;
-#X obj 463 206 lop~ 15000;
-#X obj 463 226 lop~ 15000;
-#X obj 535 206 lop~ 15000;
-#X obj 535 226 lop~ 15000;
-#X obj 637 48 efx.gui.bubbler~ /wp1/4;
-#X obj 462 48 efx.gui.pdelay~ /wp1/3;
-#X obj 463 252 *~ 1;
-#X obj 536 250 *~ 1;
 #N canvas 122 292 450 300 edit-workspace 0;
 #X obj 131 102 bng 15 250 50 0 empty empty Edit -29 7 0 8 -162280 -1
 -1;
@@ -6914,77 +6149,9 @@ x 5 9 0 11 -232576 -1 -1 0 0;
 #X connect 0 0 1 0;
 #X coords 0 -1 1 1 48 19 2 100 100;
 #X restore 863 310 pd edit-workspace;
-#X connect 3 0 24 0;
-#X connect 4 0 30 1;
-#X connect 5 0 24 1;
-#X connect 6 0 47 0;
-#X connect 7 0 48 0;
-#X connect 8 0 9 0;
-#X connect 9 0 58 0;
-#X connect 9 0 24 1;
-#X connect 10 0 49 0;
-#X connect 12 0 26 0;
-#X connect 13 0 11 0;
-#X connect 14 0 58 1;
-#X connect 15 0 17 0;
-#X connect 16 0 18 0;
-#X connect 17 0 21 0;
-#X connect 18 0 22 0;
-#X connect 19 0 30 1;
-#X connect 20 0 30 0;
-#X connect 21 0 30 0;
-#X connect 22 0 30 1;
-#X connect 23 0 19 0;
-#X connect 23 0 20 0;
-#X connect 23 0 25 0;
-#X connect 23 0 25 1;
-#X connect 24 0 23 0;
-#X connect 24 1 23 0;
-#X connect 25 0 15 0;
-#X connect 25 1 16 0;
-#X connect 28 0 38 0;
-#X connect 29 0 66 0;
-#X connect 31 0 65 0;
-#X connect 33 0 34 0;
-#X connect 34 0 40 0;
-#X connect 37 0 56 0;
-#X connect 38 0 34 1;
-#X connect 38 1 56 1;
-#X connect 38 2 27 0;
-#X connect 39 0 40 0;
-#X connect 40 0 57 0;
-#X connect 41 0 45 0;
-#X connect 43 0 54 0;
-#X connect 43 0 59 0;
-#X connect 43 1 54 1;
-#X connect 43 1 60 0;
-#X connect 44 0 35 0;
-#X connect 44 0 65 1;
-#X connect 45 0 39 0;
-#X connect 46 0 34 1;
-#X connect 47 0 8 0;
-#X connect 48 0 8 0;
-#X connect 49 0 8 0;
-#X connect 52 0 65 0;
-#X connect 53 0 66 0;
-#X connect 54 0 59 0;
-#X connect 54 1 60 0;
-#X connect 55 0 36 0;
-#X connect 56 0 66 1;
-#X connect 57 0 44 0;
-#X connect 59 0 32 0;
-#X connect 60 0 32 1;
-#X connect 61 0 62 0;
-#X connect 62 0 67 0;
-#X connect 63 0 64 0;
-#X connect 64 0 68 0;
-#X connect 65 0 43 0;
-#X connect 66 0 61 0;
-#X connect 66 0 63 0;
-#X connect 67 0 32 0;
-#X connect 68 0 32 1;
+#X connect 4 0 3 0;
 #X coords 0 -1 1 1 922 339 2 0 0;
-#X restore 17 18 pd workspace_1;
+#X restore 17 755 pd workspace_1;
 #N canvas 404 293 960 414 mixer 0;
 #X text 469 -119 throw/catch = bus: serve per gruppare canali;
 #X text 468 -91 send/receive = aux: serve per singoli effetti;
@@ -7187,7 +6354,6 @@ x 5 9 0 11 -232576 -1 -1 0 0;
 #X connect 47 1 25 0;
 #X coords 0 -1 1 1 492 155 2 0 0;
 #X restore 31 510 pd mixer;
-#X connect 18 0 19 0;
 #X restore 342 170 pd workspaces;
 #N canvas 77 228 589 247 dependencies 0;
 #X obj 375 52 import iemlib;
@@ -7215,407 +6381,44 @@ x 5 9 0 11 -232576 -1 -1 0 0;
 #X obj 119 339 tgl 15 0 empty empty Triggers.extraction 21 9 0 8 -162280
 -1 -1 0 1;
 #X obj 10 338 s GLOB.START;
-#N canvas 937 189 481 609 presetstore3 0;
+#N canvas 943 212 481 609 presetstore3 0;
 #X obj 10 10 r presetstore3;
-#X msg 10 30 \; SSSAD /an//switch~ 1 \; SSSAD /ch9/vol 0 \; SSSAD /ch8/vol
-0.118182 \; SSSAD /ch7/vol 0.020202 \; SSSAD /ch6/vol 0 \; SSSAD /ch5/vol
-0 \; SSSAD /ch1/vol 0.59596 \; SSSAD /ch4/vol 0 \; SSSAD /ch3/vol 0
-\; SSSAD /ch2/vol 0 \; SSSAD /aux.six/wet 100 \; SSSAD /aux.four/wet
-100 \; SSSAD /aux.two/wet 100 \; SSSAD /aux.three/wet 81 \; SSSAD /aux.one/wet
-100 \; SSSAD /sw6/switch~ 1 \; SSSAD /wp6/2/pdel.mix 32.4171 \; SSSAD
-/wp6/2/pdel.oct 1 \; SSSAD /wp6/2/pdel.fdb 1.28283 \; SSSAD /wp6/2/pdel.depth
-127 \; SSSAD /wp6/2/pdel.fact 127 \; SSSAD /wp6/2/pdel.time 1.87293
-\; SSSAD /wp6/2/bub.tvar 50.0303 \; SSSAD /wp6/2/bub.fdb 0 \; SSSAD
-/wp6/2/bub.dens 48.9014 \; SSSAD /wp6/2/bub.grev 76.9697 \; SSSAD /wp6/2/bub.mix
-13.7904 \; SSSAD /wp6/2/bub.gsize 79.5354 \; SSSAD /wp6/2/bub.reso
-5.13131 \; SSSAD /wp6/2/bub.filt 94.9293 \; SSSAD /wp6/2/bub.time 32.0707
-\; SSSAD /sw5/switch~ 0 \; SSSAD /sw1/switch~ 1 \; SSSAD /wp1/5/cos.pan
-14.1368 \; SSSAD /wp1/4/bub.tvar 123.152 \; SSSAD /wp1/4/bub.fdb 60.2929
-\; SSSAD /wp1/4/bub.dens 87.2323 \; SSSAD /wp1/4/bub.grev 35.9192 \;
-SSSAD /wp1/4/bub.mix 1.3598 \; SSSAD /wp1/4/bub.gsize 13.9828 \; SSSAD
-/wp1/4/bub.reso 123.152 \; SSSAD /wp1/4/bub.filt 34.6364 \; SSSAD /wp1/4/bub.time
-33.3151 \; SSSAD /wp1/3/pdel.mix 1.93707 \; SSSAD /wp1/3/pdel.oct 4
-\; SSSAD /wp1/3/pdel.fdb 81.7803 \; SSSAD /wp1/3/pdel.depth 33.3151
-\; SSSAD /wp1/3/pdel.fact 97.4949 \; SSSAD /wp1/3/pdel.time 10.5962
-\; SSSAD /wp1/2/gru.mix 127 \; SSSAD /wp1/2/gru.pitch 15.3939 \; SSSAD
-/wp1/2/gru.q.filt 60.2929 \; SSSAD /wp1/2/gru.filt 77.9703 \; SSSAD
-/wp1/1/del.mix 17.9596 \; SSSAD /wp1/1/del.fb 102.626 \; SSSAD /wp1/1/del.del
-65.4242 \; SSSAD /sn1.8/paramoff 0 \; SSSAD /sn1.8/paramout /ch8/vol
-\; SSSAD /sn1.7/paramoff 1 \; SSSAD /sn1.7/paramout /wp6/2/bub.dens
-\; SSSAD /sn1.6/paramoff 1 \; SSSAD /sn1.6/paramout /wp6/2/bub.mix
-\; SSSAD /sn1.5/paramoff 1 \; SSSAD /sn1.5/paramout /wp6/2/pdel.mix
-\; SSSAD /sn1.4/paramoff 0 \; SSSAD /sn1.4/paramout /ch8/vol \; SSSAD
-/sn1.1/paramoff 0 \; SSSAD /sn1.1/paramout /ch8/vol \; SSSAD /sn1.3/paramoff
-0 \; SSSAD /sn1.3/paramout /ch8/vol \; SSSAD /pr1.8/paramin max.1 \;
-SSSAD /pr1.8/paramon 1 \; SSSAD /pr1.7/paramin max.2 \; SSSAD /pr1.7/paramon
-1 \; SSSAD /pr1.6/paramin max.1 \; SSSAD /pr1.6/paramon 1 \; SSSAD
-/pr1.5/paramin max.1 \; SSSAD /pr1.5/paramon 1 \; SSSAD /pr1.4/paramin
-max.2 \; SSSAD /pr1.4/paramon 1 \; SSSAD /pr1.2/paramin max.1 \; SSSAD
-/pr1.2/paramon 1 \; SSSAD /pr1.3/paramin max.1 \; SSSAD /pr1.3/paramon
-1 \; SSSAD /sn1.2/paramoff 0 \; SSSAD /sn1.2/paramout /ch8/vol \; SSSAD
-/pr1.1/paramin max.1 \; SSSAD /pr1.1/paramon 1 \; SSSAD /cv1.8/curve
-2 \; SSSAD /cv1.7/curve 4.89 \; SSSAD /cv1.6/curve 3 \; SSSAD /cv1.5/curve
-4 \; SSSAD /cv1.4/curve 4 \; SSSAD /cv1.3/curve 6 \; SSSAD /cv1.2/curve
-3 \; SSSAD /cv1.1/curve 3 \; SSSAD /sw3/switch~ 0 \; SSSAD /sw2/switch~
-1 \; SSSAD /wp2/2/del.mix 0 \; SSSAD /wp2/2/del.fb 0 \; SSSAD /wp2/2/del.del
-0 \; SSSAD /wp2/3/gru.mix 0 \; SSSAD /wp2/3/gru.pitch 5.13131 \; SSSAD
-/wp2/3/gru.q.filt 53.8788 \; SSSAD /wp2/3/gru.filt 120.586 \; SSSAD
-/wp2/1/sh.mix 127 \; SSSAD /wp2/1/sh.pitch 6.41414 \; SSSAD /sw4/switch~
-1 \; SSSAD /wp4/3/pdel.mix 127 \; SSSAD /wp4/3/pdel.oct 0 \; SSSAD
-/wp4/3/pdel.fdb 118.02 \; SSSAD /wp4/3/pdel.depth 74.404 \; SSSAD /wp4/3/pdel.fact
-96.2121 \; SSSAD /wp4/3/pdel.time 48.7475 \; SSSAD /wp4/2/tstre.trsp
-45.2454 \; SSSAD /wp4/2/tstre.comp 19.3451 \; SSSAD /wp4/1/tstre.trsp
-43.9497 \; SSSAD /wp4/1/tstre.comp 86.7577 \; SSSAD_ADMIN set \;;
+#X msg 10 30;
 #X connect 0 0 1 0;
 #X restore 342 460 pd presetstore3;
-#N canvas 983 124 447 633 presetstore2 0;
+#N canvas 989 147 447 633 presetstore2 0;
 #X obj 10 10 r presetstore2;
-#X msg 10 30 \; SSSAD /an//switch~ 1 \; SSSAD /ch9/vol 0 \; SSSAD /ch8/vol
-0 \; SSSAD /ch7/vol 0 \; SSSAD /ch6/vol 0 \; SSSAD /ch5/vol 0 \; SSSAD
-/ch1/vol 0.727273 \; SSSAD /ch4/vol 0.69697 \; SSSAD /ch3/vol 0 \;
-SSSAD /ch2/vol 0.575758 \; SSSAD /aux.six/wet 67 \; SSSAD /aux.four/wet
-100 \; SSSAD /aux.two/wet 100 \; SSSAD /aux.three/wet 81 \; SSSAD /aux.one/wet
-60 \; SSSAD /sw6/switch~ 1 \; SSSAD /wp6/2/pdel.mix 127 \; SSSAD /wp6/2/pdel.oct
-1 \; SSSAD /wp6/2/pdel.fdb 11.9944 \; SSSAD /wp6/2/pdel.depth 127 \;
-SSSAD /wp6/2/pdel.fact 127 \; SSSAD /wp6/2/pdel.time 1.8601 \; SSSAD
-/wp6/2/bub.tvar 106.475 \; SSSAD /wp6/2/bub.fdb 15.3939 \; SSSAD /wp6/2/bub.dens
-0 \; SSSAD /wp6/2/bub.grev 76.9697 \; SSSAD /wp6/2/bub.mix 127 \; SSSAD
-/wp6/2/bub.gsize 11.5455 \; SSSAD /wp6/2/bub.reso 0 \; SSSAD /wp6/2/bub.filt
-0 \; SSSAD /wp6/2/bub.time 6.41414 \; SSSAD /sw5/switch~ 0 \; SSSAD
-/sw1/switch~ 1 \; SSSAD /wp1/5/cos.pan 23.8093 \; SSSAD /wp1/4/bub.tvar
-123.152 \; SSSAD /wp1/4/bub.fdb 60.2929 \; SSSAD /wp1/4/bub.dens 32.5069
-\; SSSAD /wp1/4/bub.grev 35.9192 \; SSSAD /wp1/4/bub.mix 11.9944 \;
-SSSAD /wp1/4/bub.gsize 1.8601 \; SSSAD /wp1/4/bub.reso 123.152 \; SSSAD
-/wp1/4/bub.filt 34.6364 \; SSSAD /wp1/4/bub.time 77.3032 \; SSSAD /wp1/3/pdel.mix
-100.612 \; SSSAD /wp1/3/pdel.oct 6 \; SSSAD /wp1/3/pdel.fdb 35.9192
-\; SSSAD /wp1/3/pdel.depth 0 \; SSSAD /wp1/3/pdel.fact 97.4949 \; SSSAD
-/wp1/3/pdel.time 13.7904 \; SSSAD /wp1/2/gru.mix 110.323 \; SSSAD /wp1/2/gru.pitch
-98.7778 \; SSSAD /wp1/2/gru.q.filt 7.69697 \; SSSAD /wp1/2/gru.filt
-32.4171 \; SSSAD /wp1/1/del.mix 26.9394 \; SSSAD /wp1/1/del.fb 52.596
-\; SSSAD /wp1/1/del.del 37.202 \; SSSAD /sn1.8/paramoff 1 \; SSSAD
-/sn1.8/paramout /wp1/3/pdel.time \; SSSAD /sn1.7/paramoff 1 \; SSSAD
-/sn1.7/paramout /wp1/4/bub.mix \; SSSAD /sn1.6/paramoff 1 \; SSSAD
-/sn1.6/paramout /wp1/3/pdel.mix \; SSSAD /sn1.5/paramoff 1 \; SSSAD
-/sn1.5/paramout /wp1/4/bub.time \; SSSAD /sn1.4/paramoff 1 \; SSSAD
-/sn1.4/paramout /wp1/3/pdel.depth \; SSSAD /sn1.1/paramoff 1 \; SSSAD
-/sn1.1/paramout /wp1/2/gru.filt \; SSSAD /sn1.3/paramoff 1 \; SSSAD
-/sn1.3/paramout /wp1/5/cos.pan \; SSSAD /pr1.8/paramin max.2 \; SSSAD
-/pr1.8/paramon 1 \; SSSAD /pr1.7/paramin max.2 \; SSSAD /pr1.7/paramon
-1 \; SSSAD /pr1.6/paramin max.1 \; SSSAD /pr1.6/paramon 1 \; SSSAD
-/pr1.5/paramin max.2 \; SSSAD /pr1.5/paramon 1 \; SSSAD /pr1.4/paramin
-max.1 \; SSSAD /pr1.4/paramon 1 \; SSSAD /pr1.2/paramin tanh.2 \; SSSAD
-/pr1.2/paramon 1 \; SSSAD /pr1.3/paramin max.2 \; SSSAD /pr1.3/paramon
-1 \; SSSAD /sn1.2/paramoff 1 \; SSSAD /sn1.2/paramout /wp1/4/bub.gsize
-\; SSSAD /pr1.1/paramin max.2 \; SSSAD /pr1.1/paramon 1 \; SSSAD /cv1.8/curve
-3 \; SSSAD /cv1.7/curve 2.89 \; SSSAD /cv1.6/curve 7 \; SSSAD /cv1.5/curve
-6 \; SSSAD /cv1.4/curve 1 \; SSSAD /cv1.3/curve 4 \; SSSAD /cv1.2/curve
-8 \; SSSAD /cv1.1/curve 2 \; SSSAD /sw3/switch~ 0 \; SSSAD /sw2/switch~
-1 \; SSSAD /wp2/2/del.mix 0 \; SSSAD /wp2/2/del.fb 0 \; SSSAD /wp2/2/del.del
-0 \; SSSAD /wp2/3/gru.mix 0 \; SSSAD /wp2/3/gru.pitch 5.13131 \; SSSAD
-/wp2/3/gru.q.filt 53.8788 \; SSSAD /wp2/3/gru.filt 120.586 \; SSSAD
-/wp2/1/sh.mix 127 \; SSSAD /wp2/1/sh.pitch 6.41414 \; SSSAD /sw4/switch~
-1 \; SSSAD /wp4/3/pdel.mix 127 \; SSSAD /wp4/3/pdel.oct 0 \; SSSAD
-/wp4/3/pdel.fdb 118.02 \; SSSAD /wp4/3/pdel.depth 74.404 \; SSSAD /wp4/3/pdel.fact
-96.2121 \; SSSAD /wp4/3/pdel.time 48.7475 \; SSSAD /wp4/2/tstre.trsp
-45.2454 \; SSSAD /wp4/2/tstre.comp 13.7904 \; SSSAD /wp4/1/tstre.trsp
-43.9497 \; SSSAD /wp4/1/tstre.comp 77.3032 \; SSSAD_ADMIN set \;;
+#X msg 10 30;
 #X connect 0 0 1 0;
 #X restore 342 440 pd presetstore2;
-#N canvas 984 180 454 563 presetstore1 0;
+#N canvas 990 203 454 563 presetstore1 0;
 #X obj 10 10 r presetstore1;
-#X msg 10 30 \; SSSAD /an//switch~ 1 \; SSSAD /ch9/vol 0 \; SSSAD /ch8/vol
-0.0153535 \; SSSAD /ch7/vol 0 \; SSSAD /ch6/vol 0 \; SSSAD /ch5/vol
-0 \; SSSAD /ch1/vol 0.616162 \; SSSAD /ch4/vol 0.909091 \; SSSAD /ch3/vol
-0 \; SSSAD /ch2/vol 0.828283 \; SSSAD /aux.six/wet 67 \; SSSAD /aux.four/wet
-100 \; SSSAD /aux.two/wet 100 \; SSSAD /aux.three/wet 81 \; SSSAD /aux.one/wet
-60 \; SSSAD /sw6/switch~ 1 \; SSSAD /wp6/2/pdel.mix 127 \; SSSAD /wp6/2/pdel.oct
-1 \; SSSAD /wp6/2/pdel.fdb 11.9944 \; SSSAD /wp6/2/pdel.depth 127 \;
-SSSAD /wp6/2/pdel.fact 127 \; SSSAD /wp6/2/pdel.time 1.8601 \; SSSAD
-/wp6/2/bub.tvar 106.475 \; SSSAD /wp6/2/bub.fdb 15.3939 \; SSSAD /wp6/2/bub.dens
-0 \; SSSAD /wp6/2/bub.grev 76.9697 \; SSSAD /wp6/2/bub.mix 127 \; SSSAD
-/wp6/2/bub.gsize 11.5455 \; SSSAD /wp6/2/bub.reso 0 \; SSSAD /wp6/2/bub.filt
-0 \; SSSAD /wp6/2/bub.time 6.41414 \; SSSAD /sw5/switch~ 0 \; SSSAD
-/sw1/switch~ 1 \; SSSAD /wp1/5/cos.pan 13.7904 \; SSSAD /wp1/4/bub.tvar
-0 \; SSSAD /wp1/4/bub.fdb 10.2626 \; SSSAD /wp1/4/bub.dens 13.7904
-\; SSSAD /wp1/4/bub.grev 35.9192 \; SSSAD /wp1/4/bub.mix 16.6768 \;
-SSSAD /wp1/4/bub.gsize 1.87293 \; SSSAD /wp1/4/bub.reso 55.1616 \;
-SSSAD /wp1/4/bub.filt 127 \; SSSAD /wp1/4/bub.time 1.8601 \; SSSAD
-/wp1/3/pdel.mix 101.164 \; SSSAD /wp1/3/pdel.oct 4 \; SSSAD /wp1/3/pdel.fdb
-55.1616 \; SSSAD /wp1/3/pdel.depth 102.626 \; SSSAD /wp1/3/pdel.fact
-75.6869 \; SSSAD /wp1/3/pdel.time 10.5962 \; SSSAD /wp1/2/gru.mix 6.41414
-\; SSSAD /wp1/2/gru.pitch 98.7778 \; SSSAD /wp1/2/gru.q.filt 65.4242
-\; SSSAD /wp1/2/gru.filt 88.5152 \; SSSAD /wp1/1/del.mix 26.9394 \;
-SSSAD /wp1/1/del.fb 52.596 \; SSSAD /wp1/1/del.del 37.202 \; SSSAD
-/sn1.8/paramoff 0 \; SSSAD /sn1.8/paramout /ch8/vol \; SSSAD /sn1.7/paramoff
-0 \; SSSAD /sn1.7/paramout /wp1/4/bub.mix \; SSSAD /sn1.6/paramoff
-0 \; SSSAD /sn1.6/paramout /wp1/3/pdel.mix \; SSSAD /sn1.5/paramoff
-0 \; SSSAD /sn1.5/paramout /wp6/1/pdel.fdb \; SSSAD /sn1.4/paramoff
-0 \; SSSAD /sn1.4/paramout /wp6/1/pdel.time \; SSSAD /sn1.1/paramoff
-0 \; SSSAD /sn1.1/paramout /wp1/4/bub.dens \; SSSAD /sn1.3/paramoff
-1 \; SSSAD /sn1.3/paramout /wp1/4/bub.dens \; SSSAD /pr1.8/paramin
-max.1 \; SSSAD /pr1.8/paramon 0 \; SSSAD /pr1.7/paramin max.2 \; SSSAD
-/pr1.7/paramon 0 \; SSSAD /pr1.6/paramin max.1 \; SSSAD /pr1.6/paramon
-0 \; SSSAD /pr1.5/paramin max.2 \; SSSAD /pr1.5/paramon 0 \; SSSAD
-/pr1.4/paramin max.2 \; SSSAD /pr1.4/paramon 0 \; SSSAD /pr1.2/paramin
-max.1 \; SSSAD /pr1.2/paramon 1 \; SSSAD /pr1.3/paramin max.2 \; SSSAD
-/pr1.3/paramon 0 \; SSSAD /sn1.2/paramoff 1 \; SSSAD /sn1.2/paramout
-/wp1/4/bub.time \; SSSAD /pr1.1/paramin max.2 \; SSSAD /pr1.1/paramon
-1 \; SSSAD /cv1.8/curve 2 \; SSSAD /cv1.7/curve 1.89 \; SSSAD /cv1.6/curve
-7 \; SSSAD /cv1.5/curve 4 \; SSSAD /cv1.4/curve 4 \; SSSAD /cv1.3/curve
-4 \; SSSAD /cv1.2/curve 3 \; SSSAD /cv1.1/curve 2 \; SSSAD /sw3/switch~
-0 \; SSSAD /sw2/switch~ 1 \; SSSAD /wp2/2/del.mix 0 \; SSSAD /wp2/2/del.fb
-0 \; SSSAD /wp2/2/del.del 0 \; SSSAD /wp2/3/gru.mix 0 \; SSSAD /wp2/3/gru.pitch
-5.13131 \; SSSAD /wp2/3/gru.q.filt 53.8788 \; SSSAD /wp2/3/gru.filt
-120.586 \; SSSAD /wp2/1/sh.mix 127 \; SSSAD /wp2/1/sh.pitch 6.41414
-\; SSSAD /sw4/switch~ 1 \; SSSAD /wp4/3/pdel.mix 127 \; SSSAD /wp4/3/pdel.oct
-0 \; SSSAD /wp4/3/pdel.fdb 118.02 \; SSSAD /wp4/3/pdel.depth 74.404
-\; SSSAD /wp4/3/pdel.fact 96.2121 \; SSSAD /wp4/3/pdel.time 48.7475
-\; SSSAD /wp4/2/tstre.trsp 45.2454 \; SSSAD /wp4/2/tstre.comp 13.7904
-\; SSSAD /wp4/1/tstre.trsp 43.9497 \; SSSAD /wp4/1/tstre.comp 77.3032
-\; SSSAD_ADMIN set \;;
+#X msg 10 30;
 #X connect 0 0 1 0;
 #X restore 342 420 pd presetstore1;
-#N canvas 1008 333 433 313 presetstore0 0;
+#N canvas 1014 356 433 313 presetstore0 0;
 #X obj 10 10 r presetstore0;
-#X msg 10 30 \; SSSAD \$1/switch~ 0 \; SSSAD /ch9/vol 0 \; SSSAD /ch8/vol
-0 \; SSSAD /ch7/vol 0 \; SSSAD /ch6/vol 0 \; SSSAD /ch5/vol 0 \; SSSAD
-/ch4/vol 0.545455 \; SSSAD /ch3/vol 0.474747 \; SSSAD /ch1/vol 0.585859
-\; SSSAD /ch2/vol 0.737374 \; SSSAD /aux.six/wet 67 \; SSSAD /aux.four/wet
-100 \; SSSAD /aux.two/wet 100 \; SSSAD /aux.three/wet 81 \; SSSAD /aux.one/wet
-74 \; SSSAD /wp1/3/pdel.mix 73.1212 \; SSSAD /wp1/3/pdel.oct 6 \; SSSAD
-/wp1/3/pdel.fdb 3.84848 \; SSSAD /wp1/3/pdel.depth 19.2424 \; SSSAD
-/wp1/3/pdel.fact 29.5051 \; SSSAD /wp1/3/pdel.time 77.3032 \; SSSAD
-/wp1/4/bub.tvar 109.04 \; SSSAD /wp1/4/bub.fdb 0 \; SSSAD /wp1/4/bub.dens
-40.6528 \; SSSAD /wp1/4/bub.grev 112.889 \; SSSAD /wp1/4/bub.mix 127
-\; SSSAD /wp1/4/bub.gsize 94.9293 \; SSSAD /wp1/4/bub.reso 0 \; SSSAD
-/wp1/4/bub.filt 127 \; SSSAD /wp1/4/bub.time 19.2424 \; SSSAD /wp1/5/cos.pan
-50.8 \; SSSAD /sw1/switch~ 1 \; SSSAD /wp1/2/gru.mix 13.7904 \; SSSAD
-/wp1/2/gru.pitch 73.8139 \; SSSAD /wp1/2/gru.q.filt 73.1212 \; SSSAD
-/wp1/2/gru.filt 0 \; SSSAD /wp1/1/del.mix 26.9394 \; SSSAD /wp1/1/del.fb
-52.596 \; SSSAD /wp1/1/del.del 37.202 \; SSSAD /analysis/switch~ 1
-\; SSSAD /sw6/switch~ 0 \; SSSAD /wp6/2/bub.tvar 106.475 \; SSSAD /wp6/2/bub.fdb
-15.3939 \; SSSAD /wp6/2/bub.dens 0 \; SSSAD /wp6/2/bub.grev 76.9697
-\; SSSAD /wp6/2/bub.mix 127 \; SSSAD /wp6/2/bub.gsize 11.5455 \; SSSAD
-/wp6/2/bub.reso 0 \; SSSAD /wp6/2/bub.filt 0 \; SSSAD /wp6/2/bub.time
-6.41414 \; SSSAD /wp6/2/pdel.mix 127 \; SSSAD /wp6/2/pdel.oct 1 \;
-SSSAD /wp6/2/pdel.fdb 11.9944 \; SSSAD /wp6/2/pdel.depth 127 \; SSSAD
-/wp6/2/pdel.fact 127 \; SSSAD /wp6/2/pdel.time 10.3524 \; SSSAD /sw5/switch~
-0 \; SSSAD /pr1.8/paramin max.1 \; SSSAD /pr1.8/paramon 0 \; SSSAD
-/pr1.7/paramin max.2 \; SSSAD /pr1.7/paramon 0 \; SSSAD /pr1.6/paramin
-max.1 \; SSSAD /pr1.6/paramon 0 \; SSSAD /pr1.5/paramin max.2 \; SSSAD
-/pr1.5/paramon 0 \; SSSAD /pr1.4/paramin max.2 \; SSSAD /pr1.4/paramon
-0 \; SSSAD /pr1.2/paramin max.1 \; SSSAD /pr1.2/paramon 1 \; SSSAD
-/pr1.3/paramin max.1 \; SSSAD /pr1.3/paramon 1 \; SSSAD /pr1.1/paramin
-tanh.2 \; SSSAD /pr1.1/paramon 1 \; SSSAD /cv1.8/curve 2 \; SSSAD /cv1.7/curve
-1.89 \; SSSAD /cv1.6/curve 7 \; SSSAD /cv1.5/curve 4 \; SSSAD /cv1.4/curve
-4 \; SSSAD /cv1.3/curve 3 \; SSSAD /cv1.2/curve 5 \; SSSAD /sn1.8/paramoff
-0 \; SSSAD /sn1.8/paramout /ch8/vol \; SSSAD /sn1.7/paramoff 0 \; SSSAD
-/sn1.7/paramout /wp1/4/bub.mix \; SSSAD /sn1.6/paramoff 0 \; SSSAD
-/sn1.6/paramout /wp1/3/pdel.mix \; SSSAD /sn1.5/paramoff 0 \; SSSAD
-/sn1.5/paramout /wp6/1/pdel.fdb \; SSSAD /sn1.4/paramoff 0 \; SSSAD
-/sn1.4/paramout /wp6/1/pdel.time \; SSSAD /sn1.3/paramoff 1 \; SSSAD
-/sn1.3/paramout /wp1/5/cos.pan \; SSSAD /sn1.1/paramoff 1 \; SSSAD
-/sn1.1/paramout /wp1/2/gru.mix \; SSSAD /sn1.2/paramoff 1 \; SSSAD
-/sn1.2/paramout /wp1/4/bub.dens \; SSSAD /cv1.1/curve 8 \; SSSAD /sw3/switch~
-0 \; SSSAD /wp3/2/cho.mix 0 \; SSSAD /wp3/2/cho.depth 0 \; SSSAD /wp3/2/cho.rate
-0 \; SSSAD /wp3/2/cho.fb 0 \; SSSAD /sw2/switch~ 1 \; SSSAD /wp2/3/gru.mix
-127 \; SSSAD /wp2/3/gru.pitch 99.9965 \; SSSAD /wp2/3/gru.q.filt 1.00061
-\; SSSAD /wp2/3/gru.filt 79.9972 \; SSSAD /wp2/2/del.mix 0 \; SSSAD
-/wp2/2/del.fb 0 \; SSSAD /wp2/2/del.del 0 \; SSSAD /wp2/1/sh.mix 125.717
-\; SSSAD /wp2/1/sh.pitch 8.9798 \; SSSAD /wp4/1/tstre.trsp 43.9497
-\; SSSAD /wp4/1/tstre.comp 77.3032 \; SSSAD /sw4/switch~ 0 \; SSSAD
-/wp4/3/pdel.mix 127 \; SSSAD /wp4/3/pdel.oct 0 \; SSSAD /wp4/3/pdel.fdb
-118.02 \; SSSAD /wp4/3/pdel.depth 74.404 \; SSSAD /wp4/3/pdel.fact
-96.2121 \; SSSAD /wp4/3/pdel.time 48.7475 \; SSSAD /wp4/2/tstre.trsp
-45.2454 \; SSSAD /wp4/2/tstre.comp 13.7904 \; SSSAD_ADMIN set \;;
+#X msg 10 30;
 #X connect 0 0 1 0;
 #X restore 342 400 pd presetstore0;
-#N canvas 973 208 450 300 presetstore4 0;
+#N canvas 979 231 450 300 presetstore4 0;
 #X obj 10 10 r presetstore4;
-#X msg 10 30 \; SSSAD /an//switch~ 1 \; SSSAD /ch9/vol 0.89899 \; SSSAD
-/ch8/vol 0.122626 \; SSSAD /ch7/vol 0 \; SSSAD /ch6/vol 1 \; SSSAD
-/ch5/vol 0.20202 \; SSSAD /ch1/vol 0.747475 \; SSSAD /ch4/vol 0.212121
-\; SSSAD /ch3/vol 0.121212 \; SSSAD /ch2/vol 0.171717 \; SSSAD /aux.six/wet
-38 \; SSSAD /aux.four/wet 100 \; SSSAD /aux.two/wet 100 \; SSSAD /aux.three/wet
-81 \; SSSAD /aux.one/wet 100 \; SSSAD /sw6/switch~ 1 \; SSSAD /wp6/2/pdel.mix
-32.8532 \; SSSAD /wp6/2/pdel.oct 1 \; SSSAD /wp6/2/pdel.fdb 48.9014
-\; SSSAD /wp6/2/pdel.depth 127 \; SSSAD /wp6/2/pdel.fact 127 \; SSSAD
-/wp6/2/pdel.time 77.3032 \; SSSAD /wp6/2/bub.tvar 87.2323 \; SSSAD
-/wp6/2/bub.fdb 100.971 \; SSSAD /wp6/2/bub.dens 49.4145 \; SSSAD /wp6/2/bub.grev
-0 \; SSSAD /wp6/2/bub.mix 112.183 \; SSSAD /wp6/2/bub.gsize 115.455
-\; SSSAD /wp6/2/bub.reso 0 \; SSSAD /wp6/2/bub.filt 0 \; SSSAD /wp6/2/bub.time
-116.25 \; SSSAD /sw5/switch~ 0 \; SSSAD /sw1/switch~ 1 \; SSSAD /wp1/5/cos.pan
-62.6918 \; SSSAD /wp1/4/bub.tvar 123.152 \; SSSAD /wp1/4/bub.fdb 60.2929
-\; SSSAD /wp1/4/bub.dens 87.2323 \; SSSAD /wp1/4/bub.grev 35.9192 \;
-SSSAD /wp1/4/bub.mix 1.27 \; SSSAD /wp1/4/bub.gsize 16.51 \; SSSAD
-/wp1/4/bub.reso 123.152 \; SSSAD /wp1/4/bub.filt 34.6364 \; SSSAD /wp1/4/bub.time
-77.3032 \; SSSAD /wp1/3/pdel.mix 1.8601 \; SSSAD /wp1/3/pdel.oct 6
-\; SSSAD /wp1/3/pdel.fdb 81.7803 \; SSSAD /wp1/3/pdel.depth 32.4171
-\; SSSAD /wp1/3/pdel.fact 97.4949 \; SSSAD /wp1/3/pdel.time 32.4171
-\; SSSAD /wp1/2/gru.mix 127 \; SSSAD /wp1/2/gru.pitch 84.6667 \; SSSAD
-/wp1/2/gru.q.filt 17.9596 \; SSSAD /wp1/2/gru.filt 32.4171 \; SSSAD
-/wp1/1/del.mix 0 \; SSSAD /wp1/1/del.fb 0 \; SSSAD /wp1/1/del.del 0
-\; SSSAD /sn1.8/paramoff 1 \; SSSAD /sn1.8/paramout /wp6/2/pdel.time
-\; SSSAD /sn1.7/paramoff 1 \; SSSAD /sn1.7/paramout /wp6/2/pdel.fdb
-\; SSSAD /sn1.6/paramoff 1 \; SSSAD /sn1.6/paramout /wp1/3/pdel.mix
-\; SSSAD /sn1.5/paramoff 1 \; SSSAD /sn1.5/paramout /wp6/1/pdel.fdb
-\; SSSAD /sn1.4/paramoff 1 \; SSSAD /sn1.4/paramout /wp6/1/pdel.time
-\; SSSAD /sn1.1/paramoff 1 \; SSSAD /sn1.1/paramout /wp1/3/pdel.time
-\; SSSAD /sn1.3/paramoff 1 \; SSSAD /sn1.3/paramout /wp4/2/tstre.comp
-\; SSSAD /pr1.8/paramin max.2 \; SSSAD /pr1.8/paramon 1 \; SSSAD /pr1.7/paramin
-max.2 \; SSSAD /pr1.7/paramon 1 \; SSSAD /pr1.6/paramin max.1 \; SSSAD
-/pr1.6/paramon 1 \; SSSAD /pr1.5/paramin max.2 \; SSSAD /pr1.5/paramon
-1 \; SSSAD /pr1.4/paramin max.2 \; SSSAD /pr1.4/paramon 1 \; SSSAD
-/pr1.2/paramin max.1 \; SSSAD /pr1.2/paramon 1 \; SSSAD /pr1.3/paramin
-max.2 \; SSSAD /pr1.3/paramon 1 \; SSSAD /sn1.2/paramoff 1 \; SSSAD
-/sn1.2/paramout /wp1/2/gru.filt \; SSSAD /pr1.1/paramin max.1 \; SSSAD
-/pr1.1/paramon 1 \; SSSAD /cv1.8/curve 6 \; SSSAD /cv1.7/curve 4.89
-\; SSSAD /cv1.6/curve 2 \; SSSAD /cv1.5/curve 4 \; SSSAD /cv1.4/curve
-4 \; SSSAD /cv1.3/curve 4 \; SSSAD /cv1.2/curve 3 \; SSSAD /cv1.1/curve
-4 \; SSSAD /sw3/switch~ 0 \; SSSAD /sw2/switch~ 1 \; SSSAD /wp2/2/del.mix
-127 \; SSSAD /wp2/2/del.fb 0 \; SSSAD /wp2/2/del.del 0 \; SSSAD /wp2/3/gru.mix
-123.152 \; SSSAD /wp2/3/gru.pitch 50.0303 \; SSSAD /wp2/3/gru.q.filt
-0 \; SSSAD /wp2/3/gru.filt 110.323 \; SSSAD /wp2/1/sh.mix 127 \; SSSAD
-/wp2/1/sh.pitch 23.0909 \; SSSAD /sw4/switch~ 1 \; SSSAD /wp4/3/pdel.mix
-127 \; SSSAD /wp4/3/pdel.oct 0 \; SSSAD /wp4/3/pdel.fdb 118.02 \; SSSAD
-/wp4/3/pdel.depth 74.404 \; SSSAD /wp4/3/pdel.fact 96.2121 \; SSSAD
-/wp4/3/pdel.time 37.202 \; SSSAD /wp4/2/tstre.trsp 6.51677 \; SSSAD
-/wp4/2/tstre.comp 13.7904 \; SSSAD /wp4/1/tstre.trsp 5.13131 \; SSSAD
-/wp4/1/tstre.comp 77.3032 \; SSSAD_ADMIN set \;;
+#X msg 10 30;
 #X connect 0 0 1 0;
 #X restore 342 480 pd presetstore4;
-#N canvas 975 190 450 300 presetstore5 0;
+#N canvas 981 213 450 300 presetstore5 0;
 #X obj 10 10 r presetstore5;
-#X msg 10 30 \; SSSAD /an//switch~ 1 \; SSSAD /ch9/vol 0 \; SSSAD /ch8/vol
-0.222222 \; SSSAD /ch7/vol 0.040404 \; SSSAD /ch6/vol 1 \; SSSAD /ch5/vol
-0 \; SSSAD /ch1/vol 0.646465 \; SSSAD /ch4/vol 0.212121 \; SSSAD /ch3/vol
-0.121212 \; SSSAD /ch2/vol 0.626263 \; SSSAD /aux.six/wet 13 \; SSSAD
-/aux.four/wet 100 \; SSSAD /aux.two/wet 100 \; SSSAD /aux.three/wet
-81 \; SSSAD /aux.one/wet 100 \; SSSAD /sw6/switch~ 0 \; SSSAD /wp6/2/pdel.mix
-127 \; SSSAD /wp6/2/pdel.oct 1 \; SSSAD /wp6/2/pdel.fdb 48.9014 \;
-SSSAD /wp6/2/pdel.depth 0 \; SSSAD /wp6/2/pdel.fact 127 \; SSSAD /wp6/2/pdel.time
-77.3032 \; SSSAD /wp6/2/bub.tvar 0 \; SSSAD /wp6/2/bub.fdb 100.971
-\; SSSAD /wp6/2/bub.dens 12.0329 \; SSSAD /wp6/2/bub.grev 50.0303 \;
-SSSAD /wp6/2/bub.mix 127 \; SSSAD /wp6/2/bub.gsize 0 \; SSSAD /wp6/2/bub.reso
-0 \; SSSAD /wp6/2/bub.filt 0 \; SSSAD /wp6/2/bub.time 116.25 \; SSSAD
-/sw5/switch~ 0 \; SSSAD /sw1/switch~ 1 \; SSSAD /wp1/5/cos.pan 16.51
-\; SSSAD /wp1/4/bub.tvar 82.101 \; SSSAD /wp1/4/bub.fdb 74.404 \; SSSAD
-/wp1/4/bub.dens 87.2323 \; SSSAD /wp1/4/bub.grev 35.9192 \; SSSAD /wp1/4/bub.mix
-2.56566 \; SSSAD /wp1/4/bub.gsize 16.51 \; SSSAD /wp1/4/bub.reso 8.9798
-\; SSSAD /wp1/4/bub.filt 34.6364 \; SSSAD /wp1/4/bub.time 0.333535
-\; SSSAD /wp1/3/pdel.mix 117.751 \; SSSAD /wp1/3/pdel.oct 6 \; SSSAD
-/wp1/3/pdel.fdb 8.9798 \; SSSAD /wp1/3/pdel.depth 17.0231 \; SSSAD
-/wp1/3/pdel.fact 94.9293 \; SSSAD /wp1/3/pdel.time 32.4171 \; SSSAD
-/wp1/2/gru.mix 127 \; SSSAD /wp1/2/gru.pitch 84.6667 \; SSSAD /wp1/2/gru.q.filt
-17.9596 \; SSSAD /wp1/2/gru.filt 1.8601 \; SSSAD /wp1/1/del.mix 0 \;
-SSSAD /wp1/1/del.fb 0 \; SSSAD /wp1/1/del.del 0 \; SSSAD /sn1.8/paramoff
-1 \; SSSAD /sn1.8/paramout /wp6/2/pdel.time \; SSSAD /sn1.7/paramoff
-1 \; SSSAD /sn1.7/paramout /wp6/2/pdel.fdb \; SSSAD /sn1.6/paramoff
-1 \; SSSAD /sn1.6/paramout /wp1/3/pdel.mix \; SSSAD /sn1.5/paramoff
-1 \; SSSAD /sn1.5/paramout /wp6/1/pdel.fdb \; SSSAD /sn1.4/paramoff
-1 \; SSSAD /sn1.4/paramout /wp6/1/pdel.time \; SSSAD /sn1.1/paramoff
-0 \; SSSAD /sn1.1/paramout /wp4/1/tstre.comp \; SSSAD /sn1.3/paramoff
-1 \; SSSAD /sn1.3/paramout /wp1/3/pdel.time \; SSSAD /pr1.8/paramin
-max.2 \; SSSAD /pr1.8/paramon 1 \; SSSAD /pr1.7/paramin max.2 \; SSSAD
-/pr1.7/paramon 1 \; SSSAD /pr1.6/paramin max.2 \; SSSAD /pr1.6/paramon
-1 \; SSSAD /pr1.5/paramin max.2 \; SSSAD /pr1.5/paramon 1 \; SSSAD
-/pr1.4/paramin max.2 \; SSSAD /pr1.4/paramon 1 \; SSSAD /pr1.2/paramin
-max.2 \; SSSAD /pr1.2/paramon 1 \; SSSAD /pr1.3/paramin max.1 \; SSSAD
-/pr1.3/paramon 0 \; SSSAD /sn1.2/paramoff 1 \; SSSAD /sn1.2/paramout
-/wp1/2/gru.filt \; SSSAD /pr1.1/paramin max.1 \; SSSAD /pr1.1/paramon
-1 \; SSSAD /cv1.8/curve 6 \; SSSAD /cv1.7/curve 4.89 \; SSSAD /cv1.6/curve
-8 \; SSSAD /cv1.5/curve 4 \; SSSAD /cv1.4/curve 4 \; SSSAD /cv1.3/curve
-6 \; SSSAD /cv1.2/curve 4 \; SSSAD /cv1.1/curve 2 \; SSSAD /sw3/switch~
-0 \; SSSAD /sw2/switch~ 1 \; SSSAD /wp2/2/del.mix 127 \; SSSAD /wp2/2/del.fb
-0 \; SSSAD /wp2/2/del.del 0 \; SSSAD /wp2/3/gru.mix 123.152 \; SSSAD
-/wp2/3/gru.pitch 50.0303 \; SSSAD /wp2/3/gru.q.filt 0 \; SSSAD /wp2/3/gru.filt
-110.323 \; SSSAD /wp2/1/sh.mix 127 \; SSSAD /wp2/1/sh.pitch 23.0909
-\; SSSAD /sw4/switch~ 0 \; SSSAD /wp4/3/pdel.mix 127 \; SSSAD /wp4/3/pdel.oct
-0 \; SSSAD /wp4/3/pdel.fdb 118.02 \; SSSAD /wp4/3/pdel.depth 74.404
-\; SSSAD /wp4/3/pdel.fact 96.2121 \; SSSAD /wp4/3/pdel.time 48.7475
-\; SSSAD /wp4/2/tstre.trsp 6.51677 \; SSSAD /wp4/2/tstre.comp 14.2522
-\; SSSAD /wp4/1/tstre.trsp 5.13131 \; SSSAD /wp4/1/tstre.comp 78.2012
-\; SSSAD_ADMIN set \;;
+#X msg 10 30;
 #X connect 0 0 1 0;
 #X restore 342 500 pd presetstore5;
-#N canvas 978 234 450 300 presetstore6 0;
+#N canvas 984 257 450 300 presetstore6 0;
 #X obj 10 10 r presetstore6;
-#X msg 10 30 \; SSSAD /an//switch~ 1 \; SSSAD /ch9/vol 0 \; SSSAD /ch8/vol
-0 \; SSSAD /ch7/vol 0 \; SSSAD /ch6/vol 0 \; SSSAD /ch5/vol 0 \; SSSAD
-/ch1/vol 1 \; SSSAD /ch4/vol 0 \; SSSAD /ch3/vol 0.474747 \; SSSAD
-/ch2/vol 0 \; SSSAD /aux.six/wet 67 \; SSSAD /aux.four/wet 100 \; SSSAD
-/aux.two/wet 100 \; SSSAD /aux.three/wet 81 \; SSSAD /aux.one/wet 100
-\; SSSAD /sw6/switch~ 0 \; SSSAD /wp6/2/pdel.mix 127 \; SSSAD /wp6/2/pdel.oct
-3 \; SSSAD /wp6/2/pdel.fdb 11.9944 \; SSSAD /wp6/2/pdel.depth 127 \;
-SSSAD /wp6/2/pdel.fact 127 \; SSSAD /wp6/2/pdel.time 10.3524 \; SSSAD
-/wp6/2/bub.tvar 106.475 \; SSSAD /wp6/2/bub.fdb 15.3939 \; SSSAD /wp6/2/bub.dens
-0 \; SSSAD /wp6/2/bub.grev 76.9697 \; SSSAD /wp6/2/bub.mix 127 \; SSSAD
-/wp6/2/bub.gsize 11.5455 \; SSSAD /wp6/2/bub.reso 0 \; SSSAD /wp6/2/bub.filt
-0 \; SSSAD /wp6/2/bub.time 6.41414 \; SSSAD /sw5/switch~ 0 \; SSSAD
-/sw1/switch~ 0 \; SSSAD /wp1/5/cos.pan 13.8545 \; SSSAD /wp1/4/bub.tvar
-109.04 \; SSSAD /wp1/4/bub.fdb 0 \; SSSAD /wp1/4/bub.dens 0 \; SSSAD
-/wp1/4/bub.grev 112.889 \; SSSAD /wp1/4/bub.mix 127 \; SSSAD /wp1/4/bub.gsize
-0 \; SSSAD /wp1/4/bub.reso 0 \; SSSAD /wp1/4/bub.filt 127 \; SSSAD
-/wp1/4/bub.time 19.2424 \; SSSAD /wp1/3/pdel.mix 0 \; SSSAD /wp1/3/pdel.oct
-3 \; SSSAD /wp1/3/pdel.fdb 52.2753 \; SSSAD /wp1/3/pdel.depth 0 \;
-SSSAD /wp1/3/pdel.fact 97.4949 \; SSSAD /wp1/3/pdel.time 77.3032 \;
-SSSAD /wp1/2/gru.mix 16.3176 \; SSSAD /wp1/2/gru.pitch 73.8139 \; SSSAD
-/wp1/2/gru.q.filt 65.4242 \; SSSAD /wp1/2/gru.filt 88.5152 \; SSSAD
-/wp1/1/del.mix 26.9394 \; SSSAD /wp1/1/del.fb 52.596 \; SSSAD /wp1/1/del.del
-37.202 \; SSSAD /sn1.8/paramoff 0 \; SSSAD /sn1.8/paramout /ch8/vol
-\; SSSAD /sn1.7/paramoff 0 \; SSSAD /sn1.7/paramout /wp1/4/bub.mix
-\; SSSAD /sn1.6/paramoff 0 \; SSSAD /sn1.6/paramout /wp1/3/pdel.mix
-\; SSSAD /sn1.5/paramoff 0 \; SSSAD /sn1.5/paramout /wp6/1/pdel.fdb
-\; SSSAD /sn1.4/paramoff 0 \; SSSAD /sn1.4/paramout /wp6/1/pdel.time
-\; SSSAD /sn1.1/paramoff 0 \; SSSAD /sn1.1/paramout /wp1/5/cos.pan
-\; SSSAD /sn1.3/paramoff 0 \; SSSAD /sn1.3/paramout /wp1/5/cos.pan
-\; SSSAD /pr1.8/paramin max.1 \; SSSAD /pr1.8/paramon 0 \; SSSAD /pr1.7/paramin
-max.2 \; SSSAD /pr1.7/paramon 0 \; SSSAD /pr1.6/paramin max.1 \; SSSAD
-/pr1.6/paramon 0 \; SSSAD /pr1.5/paramin max.2 \; SSSAD /pr1.5/paramon
-0 \; SSSAD /pr1.4/paramin max.2 \; SSSAD /pr1.4/paramon 0 \; SSSAD
-/pr1.2/paramin max.1 \; SSSAD /pr1.2/paramon 0 \; SSSAD /pr1.3/paramin
-max.1 \; SSSAD /pr1.3/paramon 0 \; SSSAD /sn1.2/paramoff 0 \; SSSAD
-/sn1.2/paramout /wp1/5/cos.pan \; SSSAD /pr1.1/paramin tanh.2 \; SSSAD
-/pr1.1/paramon 0 \; SSSAD /cv1.8/curve 2 \; SSSAD /cv1.7/curve 1.89
-\; SSSAD /cv1.6/curve 7 \; SSSAD /cv1.5/curve 4 \; SSSAD /cv1.4/curve
-4 \; SSSAD /cv1.3/curve 3 \; SSSAD /cv1.2/curve 3 \; SSSAD /cv1.1/curve
-8 \; SSSAD /sw3/switch~ 0 \; SSSAD /sw2/switch~ 1 \; SSSAD /wp2/2/del.mix
-0 \; SSSAD /wp2/2/del.fb 0 \; SSSAD /wp2/2/del.del 0 \; SSSAD /wp2/3/gru.mix
-127 \; SSSAD /wp2/3/gru.pitch 99.9965 \; SSSAD /wp2/3/gru.q.filt 1.00061
-\; SSSAD /wp2/3/gru.filt 79.9972 \; SSSAD /wp2/1/sh.mix 125.717 \;
-SSSAD /wp2/1/sh.pitch 8.9798 \; SSSAD /sw4/switch~ 0 \; SSSAD /wp4/3/pdel.mix
-127 \; SSSAD /wp4/3/pdel.oct 0 \; SSSAD /wp4/3/pdel.fdb 118.02 \; SSSAD
-/wp4/3/pdel.depth 74.404 \; SSSAD /wp4/3/pdel.fact 96.2121 \; SSSAD
-/wp4/3/pdel.time 48.7475 \; SSSAD /wp4/2/tstre.trsp 45.2454 \; SSSAD
-/wp4/2/tstre.comp 13.7904 \; SSSAD /wp4/1/tstre.trsp 43.9497 \; SSSAD
-/wp4/1/tstre.comp 77.3032 \; SSSAD_ADMIN set \;;
+#X msg 10 30;
 #X connect 0 0 1 0;
 #X restore 342 520 pd presetstore6;
-#N canvas 1017 203 450 300 presetstore7 0;
+#N canvas 1023 226 450 300 presetstore7 0;
 #X obj 10 10 r presetstore7;
-#X msg 10 30 \; SSSAD /wp1/5/cos.pan 13.9828 \; SSSAD /ch2/vol 0.868687
-\; SSSAD /ch1/vol 1 \; SSSAD /ch4/vol 0.858586 \; SSSAD /aux.one/wet
-60 \; SSSAD /wp1/4/bub.time 114.172 \; SSSAD /wp1/4/bub.tvar 123.152
-\; SSSAD /wp1/4/bub.filt 34.6364 \; SSSAD /wp1/4/bub.grev 35.9192 \;
-SSSAD /wp1/4/bub.gsize 1.8601 \; SSSAD /wp1/4/bub.dens 87.2323 \; SSSAD
-/wp1/4/bub.reso 123.152 \; SSSAD /wp1/4/bub.mix 43.6162 \; SSSAD /wp1/4/bub.fdb
-60.2929 \; SSSAD /wp1/3/pdel.mix 89.798 \; SSSAD /wp1/3/pdel.fdb 81.7803
-\; SSSAD /wp1/3/pdel.depth 1.8601 \; SSSAD /wp1/3/pdel.fact 97.4949
-\; SSSAD /wp1/3/pdel.time 0 \; SSSAD /sw1/switch~ 1 \; SSSAD /wp1/2/gru.mix
-110.323 \; SSSAD /wp1/2/gru.pitch 98.7778 \; SSSAD /wp1/2/gru.q.filt
-7.69697 \; SSSAD /wp1/2/gru.filt 32.4171 \; SSSAD /wp1/1/del.mix 26.9394
-\; SSSAD /wp1/1/del.del 37.202 \; SSSAD /wp1/1/del.fb 52.596 \; SSSAD
-/sn1.5/paramoff 1 \; SSSAD /sn1.5/paramout /wp1/3/pdel.time \; SSSAD
-/sn1.4/paramoff 1 \; SSSAD /sn1.4/paramout /wp1/3/pdel.depth \; SSSAD
-/sn1.1/paramoff 1 \; SSSAD /sn1.1/paramout /wp1/2/gru.filt \; SSSAD
-/sn1.3/paramoff 1 \; SSSAD /sn1.3/paramout /wp1/5/cos.pan \; SSSAD
-/pr1.5/paramon 1 \; SSSAD /pr1.5/paramin max.2 \; SSSAD /pr1.4/paramon
-1 \; SSSAD /pr1.4/paramin max.2 \; SSSAD /pr1.2/paramon 1 \; SSSAD
-/pr1.2/paramin max.1 \; SSSAD /pr1.3/paramon 1 \; SSSAD /pr1.3/paramin
-max.2 \; SSSAD /sn1.2/paramoff 1 \; SSSAD /sn1.2/paramout /wp1/4/bub.gsize
-\; SSSAD /pr1.1/paramon 1 \; SSSAD /pr1.1/paramin max.2 \; SSSAD /cv1.5/curve
-1 \; SSSAD /cv1.4/curve 2 \; SSSAD /cv1.3/curve 4 \; SSSAD /cv1.2/curve
-3 \; SSSAD /cv1.1/curve 2 \; SSSAD_ADMIN set \;;
+#X msg 10 30;
 #X connect 0 0 1 0;
 #X restore 342 540 pd presetstore7;
 #N canvas 377 464 399 146 sssad-prefix 0;
@@ -7740,110 +6543,14 @@ max.2 \; SSSAD /sn1.2/paramoff 1 \; SSSAD /sn1.2/paramout /wp1/4/bub.gsize
 #X connect 43 0 44 0;
 #X connect 43 1 45 0;
 #X restore 10 57 pd CLOCK.TRIGGER;
-#N canvas 1048 206 450 300 presetstore8 0;
+#N canvas 1054 229 450 300 presetstore8 0;
 #X obj 10 10 r presetstore8;
-#X msg 10 30 \; SSSAD /an//switch~ 1 \; SSSAD /ch9/vol 0 \; SSSAD /ch8/vol
-0 \; SSSAD /ch7/vol 0 \; SSSAD /ch6/vol 0 \; SSSAD /ch5/vol 0 \; SSSAD
-/ch1/vol 0.646465 \; SSSAD /ch4/vol 0.909091 \; SSSAD /ch3/vol 0 \;
-SSSAD /ch2/vol 0.808081 \; SSSAD /aux.six/wet 67 \; SSSAD /aux.four/wet
-100 \; SSSAD /aux.two/wet 100 \; SSSAD /aux.three/wet 81 \; SSSAD /aux.one/wet
-60 \; SSSAD /sw6/switch~ 1 \; SSSAD /wp6/2/pdel.mix 127 \; SSSAD /wp6/2/pdel.oct
-1 \; SSSAD /wp6/2/pdel.fdb 11.9944 \; SSSAD /wp6/2/pdel.depth 127 \;
-SSSAD /wp6/2/pdel.fact 127 \; SSSAD /wp6/2/pdel.time 1.8601 \; SSSAD
-/wp6/2/bub.tvar 106.475 \; SSSAD /wp6/2/bub.fdb 15.3939 \; SSSAD /wp6/2/bub.dens
-0 \; SSSAD /wp6/2/bub.grev 76.9697 \; SSSAD /wp6/2/bub.mix 127 \; SSSAD
-/wp6/2/bub.gsize 11.5455 \; SSSAD /wp6/2/bub.reso 0 \; SSSAD /wp6/2/bub.filt
-0 \; SSSAD /wp6/2/bub.time 6.41414 \; SSSAD /sw5/switch~ 0 \; SSSAD
-/sw1/switch~ 1 \; SSSAD /wp1/5/cos.pan 13.7904 \; SSSAD /wp1/4/bub.tvar
-0 \; SSSAD /wp1/4/bub.fdb 10.2626 \; SSSAD /wp1/4/bub.dens 32.4171
-\; SSSAD /wp1/4/bub.grev 35.9192 \; SSSAD /wp1/4/bub.mix 69.2727 \;
-SSSAD /wp1/4/bub.gsize 1.8601 \; SSSAD /wp1/4/bub.reso 55.1616 \; SSSAD
-/wp1/4/bub.filt 127 \; SSSAD /wp1/4/bub.time 62.8586 \; SSSAD /wp1/3/pdel.mix
-101.164 \; SSSAD /wp1/3/pdel.oct 3 \; SSSAD /wp1/3/pdel.fdb 55.1616
-\; SSSAD /wp1/3/pdel.depth 102.626 \; SSSAD /wp1/3/pdel.fact 75.6869
-\; SSSAD /wp1/3/pdel.time 10.5962 \; SSSAD /wp1/2/gru.mix 6.41414 \;
-SSSAD /wp1/2/gru.pitch 98.7778 \; SSSAD /wp1/2/gru.q.filt 65.4242 \;
-SSSAD /wp1/2/gru.filt 88.5152 \; SSSAD /wp1/1/del.mix 26.9394 \; SSSAD
-/wp1/1/del.fb 52.596 \; SSSAD /wp1/1/del.del 37.202 \; SSSAD /sn1.8/paramoff
-0 \; SSSAD /sn1.8/paramout /ch8/vol \; SSSAD /sn1.7/paramoff 0 \; SSSAD
-/sn1.7/paramout /wp1/4/bub.mix \; SSSAD /sn1.6/paramoff 0 \; SSSAD
-/sn1.6/paramout /wp1/3/pdel.mix \; SSSAD /sn1.5/paramoff 0 \; SSSAD
-/sn1.5/paramout /wp6/1/pdel.fdb \; SSSAD /sn1.4/paramoff 0 \; SSSAD
-/sn1.4/paramout /wp6/1/pdel.time \; SSSAD /sn1.1/paramoff 1 \; SSSAD
-/sn1.1/paramout /wp1/4/bub.dens \; SSSAD /sn1.3/paramoff 1 \; SSSAD
-/sn1.3/paramout /wp1/5/cos.pan \; SSSAD /pr1.8/paramin max.1 \; SSSAD
-/pr1.8/paramon 0 \; SSSAD /pr1.7/paramin max.2 \; SSSAD /pr1.7/paramon
-0 \; SSSAD /pr1.6/paramin max.1 \; SSSAD /pr1.6/paramon 0 \; SSSAD
-/pr1.5/paramin max.2 \; SSSAD /pr1.5/paramon 0 \; SSSAD /pr1.4/paramin
-max.2 \; SSSAD /pr1.4/paramon 0 \; SSSAD /pr1.2/paramin max.1 \; SSSAD
-/pr1.2/paramon 1 \; SSSAD /pr1.3/paramin max.2 \; SSSAD /pr1.3/paramon
-1 \; SSSAD /sn1.2/paramoff 1 \; SSSAD /sn1.2/paramout /wp1/4/bub.gsize
-\; SSSAD /pr1.1/paramin max.2 \; SSSAD /pr1.1/paramon 1 \; SSSAD /cv1.8/curve
-2 \; SSSAD /cv1.7/curve 1.89 \; SSSAD /cv1.6/curve 7 \; SSSAD /cv1.5/curve
-4 \; SSSAD /cv1.4/curve 4 \; SSSAD /cv1.3/curve 4 \; SSSAD /cv1.2/curve
-3 \; SSSAD /cv1.1/curve 2 \; SSSAD /sw3/switch~ 0 \; SSSAD /sw2/switch~
-1 \; SSSAD /wp2/2/del.mix 0 \; SSSAD /wp2/2/del.fb 0 \; SSSAD /wp2/2/del.del
-0 \; SSSAD /wp2/3/gru.mix 0 \; SSSAD /wp2/3/gru.pitch 5.13131 \; SSSAD
-/wp2/3/gru.q.filt 53.8788 \; SSSAD /wp2/3/gru.filt 120.586 \; SSSAD
-/wp2/1/sh.mix 127 \; SSSAD /wp2/1/sh.pitch 6.41414 \; SSSAD /sw4/switch~
-1 \; SSSAD /wp4/3/pdel.mix 127 \; SSSAD /wp4/3/pdel.oct 0 \; SSSAD
-/wp4/3/pdel.fdb 118.02 \; SSSAD /wp4/3/pdel.depth 74.404 \; SSSAD /wp4/3/pdel.fact
-96.2121 \; SSSAD /wp4/3/pdel.time 48.7475 \; SSSAD /wp4/2/tstre.trsp
-45.2454 \; SSSAD /wp4/2/tstre.comp 13.7904 \; SSSAD /wp4/1/tstre.trsp
-43.9497 \; SSSAD /wp4/1/tstre.comp 77.3032 \; SSSAD_ADMIN set \;;
+#X msg 10 30;
 #X connect 0 0 1 0;
 #X restore 342 561 pd presetstore8;
-#N canvas 974 235 450 300 presetstore9 0;
+#N canvas 980 258 450 300 presetstore9 0;
 #X obj 10 10 r presetstore9;
-#X msg 10 30 \; SSSAD /an//switch~ 1 \; SSSAD /ch9/vol 0 \; SSSAD /ch8/vol
-0 \; SSSAD /ch7/vol 0 \; SSSAD /ch6/vol 0 \; SSSAD /ch5/vol 0 \; SSSAD
-/ch1/vol 0 \; SSSAD /ch4/vol 0 \; SSSAD /ch3/vol 0 \; SSSAD /ch2/vol
-0 \; SSSAD /aux.six/wet 13 \; SSSAD /aux.four/wet 100 \; SSSAD /aux.two/wet
-100 \; SSSAD /aux.three/wet 81 \; SSSAD /aux.one/wet 100 \; SSSAD /sw6/switch~
-0 \; SSSAD /wp6/2/pdel.mix 127 \; SSSAD /wp6/2/pdel.oct 3 \; SSSAD
-/wp6/2/pdel.fdb 48.9014 \; SSSAD /wp6/2/pdel.depth 127 \; SSSAD /wp6/2/pdel.fact
-127 \; SSSAD /wp6/2/pdel.time 77.3032 \; SSSAD /wp6/2/bub.tvar 0 \;
-SSSAD /wp6/2/bub.fdb 100.971 \; SSSAD /wp6/2/bub.dens 12.0329 \; SSSAD
-/wp6/2/bub.grev 50.0303 \; SSSAD /wp6/2/bub.mix 127 \; SSSAD /wp6/2/bub.gsize
-0 \; SSSAD /wp6/2/bub.reso 0 \; SSSAD /wp6/2/bub.filt 0 \; SSSAD /wp6/2/bub.time
-116.25 \; SSSAD /sw5/switch~ 0 \; SSSAD /sw1/switch~ 1 \; SSSAD /wp1/5/cos.pan
-16.51 \; SSSAD /wp1/4/bub.tvar 82.101 \; SSSAD /wp1/4/bub.fdb 74.404
-\; SSSAD /wp1/4/bub.dens 87.2323 \; SSSAD /wp1/4/bub.grev 35.9192 \;
-SSSAD /wp1/4/bub.mix 2.56566 \; SSSAD /wp1/4/bub.gsize 16.51 \; SSSAD
-/wp1/4/bub.reso 8.9798 \; SSSAD /wp1/4/bub.filt 34.6364 \; SSSAD /wp1/4/bub.time
-0.333535 \; SSSAD /wp1/3/pdel.mix 117.751 \; SSSAD /wp1/3/pdel.oct
-6 \; SSSAD /wp1/3/pdel.fdb 8.9798 \; SSSAD /wp1/3/pdel.depth 17.0231
-\; SSSAD /wp1/3/pdel.fact 94.9293 \; SSSAD /wp1/3/pdel.time 32.4171
-\; SSSAD /wp1/2/gru.mix 127 \; SSSAD /wp1/2/gru.pitch 84.6667 \; SSSAD
-/wp1/2/gru.q.filt 17.9596 \; SSSAD /wp1/2/gru.filt 1.8601 \; SSSAD
-/wp1/1/del.mix 0 \; SSSAD /wp1/1/del.fb 0 \; SSSAD /wp1/1/del.del 0
-\; SSSAD /sn1.8/paramoff 1 \; SSSAD /sn1.8/paramout /wp6/2/pdel.time
-\; SSSAD /sn1.7/paramoff 1 \; SSSAD /sn1.7/paramout /wp6/2/pdel.fdb
-\; SSSAD /sn1.6/paramoff 1 \; SSSAD /sn1.6/paramout /wp1/3/pdel.mix
-\; SSSAD /sn1.5/paramoff 1 \; SSSAD /sn1.5/paramout /wp6/1/pdel.fdb
-\; SSSAD /sn1.4/paramoff 1 \; SSSAD /sn1.4/paramout /wp6/1/pdel.time
-\; SSSAD /sn1.1/paramoff 0 \; SSSAD /sn1.1/paramout /wp4/1/tstre.comp
-\; SSSAD /sn1.3/paramoff 1 \; SSSAD /sn1.3/paramout /wp1/3/pdel.time
-\; SSSAD /pr1.8/paramin max.2 \; SSSAD /pr1.8/paramon 1 \; SSSAD /pr1.7/paramin
-max.2 \; SSSAD /pr1.7/paramon 1 \; SSSAD /pr1.6/paramin max.1 \; SSSAD
-/pr1.6/paramon 1 \; SSSAD /pr1.5/paramin max.2 \; SSSAD /pr1.5/paramon
-1 \; SSSAD /pr1.4/paramin max.2 \; SSSAD /pr1.4/paramon 1 \; SSSAD
-/pr1.2/paramin max.2 \; SSSAD /pr1.2/paramon 1 \; SSSAD /pr1.3/paramin
-max.1 \; SSSAD /pr1.3/paramon 0 \; SSSAD /sn1.2/paramoff 1 \; SSSAD
-/sn1.2/paramout /wp1/2/gru.filt \; SSSAD /pr1.1/paramin max.1 \; SSSAD
-/pr1.1/paramon 1 \; SSSAD /cv1.8/curve 6 \; SSSAD /cv1.7/curve 4.89
-\; SSSAD /cv1.6/curve 8 \; SSSAD /cv1.5/curve 4 \; SSSAD /cv1.4/curve
-4 \; SSSAD /cv1.3/curve 6 \; SSSAD /cv1.2/curve 4 \; SSSAD /cv1.1/curve
-2 \; SSSAD /sw3/switch~ 0 \; SSSAD /sw2/switch~ 1 \; SSSAD /wp2/2/del.mix
-127 \; SSSAD /wp2/2/del.fb 0 \; SSSAD /wp2/2/del.del 0 \; SSSAD /wp2/3/gru.mix
-123.152 \; SSSAD /wp2/3/gru.pitch 50.0303 \; SSSAD /wp2/3/gru.q.filt
-0 \; SSSAD /wp2/3/gru.filt 110.323 \; SSSAD /wp2/1/sh.mix 127 \; SSSAD
-/wp2/1/sh.pitch 23.0909 \; SSSAD /sw4/switch~ 0 \; SSSAD /wp4/3/pdel.mix
-127 \; SSSAD /wp4/3/pdel.oct 1 \; SSSAD /wp4/3/pdel.fdb 118.02 \; SSSAD
-/wp4/3/pdel.depth 74.404 \; SSSAD /wp4/3/pdel.fact 96.2121 \; SSSAD
-/wp4/3/pdel.time 48.7475 \; SSSAD /wp4/2/tstre.trsp 6.51677 \; SSSAD
-/wp4/2/tstre.comp 14.2522 \; SSSAD /wp4/1/tstre.trsp 5.13131 \; SSSAD
-/wp4/1/tstre.comp 78.2012 \; SSSAD_ADMIN set \;;
+#X msg 10 30;
 #X connect 0 0 1 0;
 #X restore 342 581 pd presetstore9;
 #N canvas 181 209 579 362 adc.in 0;
@@ -8207,14 +6914,14 @@ max.1 \; SSSAD /pr1.3/paramon 0 \; SSSAD /sn1.2/paramoff 1 \; SSSAD
 #X obj -33 207 r preset-to-trigger;
 #X obj 221 310 bng 15 250 50 0 \$0-vis-structure empty Structure 19
 7 0 8 -228856 -1 -1;
-#N canvas 309 89 1013 102 structure 1;
+#N canvas 315 112 1013 102 structure 1;
 #X obj -1 -3 cnv 15 16020 100 empty empty empty 20 12 0 14 -128992
 -66577 0;
 #N canvas 329 257 1265 585 timeline 0;
 #X obj -2 -29 cnv 15 16020 26 empty empty empty 20 12 0 14 -228856
 -66577 0;
-#X obj 192 -29 cnv 20 104 26 empty vt_to_selection_canvas empty 20
-12 0 14 -166441 -262144 0;
+#X obj 192 -29 cnv 20 16 26 empty vt_to_selection_canvas empty 20 12
+0 14 -233017 -262144 0;
 #N canvas 246 667 404 175 timeline_selection 0;
 #N canvas 861 407 684 435 selection_switch 0;
 #X msg 42 149 2000;
@@ -8891,7 +7598,7 @@ OFF;
 #X obj -120 -15 tgl 15 0 vt_from_play_switch vt_to_play_switch PLAY
 22 7 1 10 -262144 -1 -1 0 1;
 #X obj 45 -16 tgl 15 0 vt_from_selection_switch vt_to_selection_switch
-SELECTION 17 7 1 10 -262144 -1 -1 1 1;
+SELECTION 17 7 1 10 -262144 -1 -1 0 1;
 #X obj -243 86 tgl 15 0 vt_from_loop_switch vt_to_loop_switch LOOPED
 17 7 1 10 -262144 -1 -1 0 1;
 #X obj -67 89 tgl 11 0 vt_shortcuts_enable oijsdpoihjwrpiuzruzpr shortcuts
@@ -8994,7 +7701,7 @@ SELECTION 17 7 1 10 -262144 -1 -1 1 1;
 #X connect 14 0 13 1;
 #X restore 147 78 pd beat_counter;
 #X obj 0 -63 hsl 16000 12 0 16000 0 0 vt_from_cursor_slider vt_to_cursor_slider
-empty -2 -8 0 10 -66577 -262144 -1 8300 0;
+empty -2 -8 0 10 -66577 -262144 -1 0 0;
 #N canvas 344 431 544 411 make-event 0;
 #X obj 120 160 f;
 #X obj 47 88 r \$0-create-event;
@@ -9099,9 +7806,9 @@ reasons;
 #X connect 30 0 0 0;
 #X restore 147 123 pd time_scale;
 #X obj 0 -47 hsl 16000 8 0 16000 0 0 vt_from_selection_slider1 vt_to_selection_slider1
-empty -2 -8 0 10 -33289 -258113 -1 19199 1;
+empty -2 -8 0 10 -33289 -258113 -1 0 1;
 #X obj 0 -39 hsl 16000 8 0 16000 0 0 vt_from_selection_slider2 vt_to_selection_slider2
-empty -2 -8 0 10 -33289 -258113 -1 29598 1;
+empty -2 -8 0 10 -33289 -258113 -1 1600 1;
 #N canvas 786 654 276 186 create-event 0;
 #X obj 59 89 del 200;
 #X obj 59 67 r \$0-create-event;
@@ -9159,7 +7866,7 @@ empty -2 -8 0 10 -33289 -258113 -1 29598 1;
 1 10 -262144 -1 -1;
 #X obj 100 104 event-store;
 #X msg 313 128 label \$1;
-#X obj 239 207 hradio 15 1 0 4 empty empty 00:18:46 3 8 0 8 -1 -1 -228856
+#X obj 239 207 hradio 15 1 0 4 empty empty 00:00:00 3 8 0 8 -1 -1 -228856
 0;
 #X obj 313 106 r vt_current_clock;
 #X obj 377 146 r vt_bartime;
@@ -9178,7 +7885,7 @@ Play 17 8 0 8 -1 -262144 -1 0 1;
 #X obj 239 172 tgl 15 0 vt_from_loop_switch_gui vt_to_loop_switch_gui
 Loop 17 7 0 8 -1 -258113 -1 0 1;
 #X obj 188 172 tgl 15 0 vt_from_selection_switch_gui vt_to_selection_switch_gui
-Sel 17 8 0 8 -1 -228856 -1 1 1;
+Sel 17 8 0 8 -1 -228856 -1 0 1;
 #X obj 100 136 cnv 15 200 15 empty empty Event 6 7 0 8 -228856 -33289
 0;
 #X obj 139 136 hradio 15 1 0 2 empty empty New 4 8 0 8 -1 -1 -191407
@@ -9193,11 +7900,11 @@ Sel 17 8 0 8 -1 -228856 -1 1 1;
 empty -3 -8 0 8 -1 -228856 -1 0 256;
 #X obj 373 287 bng 15 250 50 0 \$0-trigger-delete sdkjsalgkag empty
 17 7 0 10 -228856 -1 -1;
-#X obj 185 136 hradio 15 1 0 4 empty empty 10/05 8 8 0 8 -1 -1 -228856
+#X obj 185 136 hradio 15 1 0 4 empty empty 00/00 8 8 0 8 -1 -1 -228856
 0;
 #X obj 100 23 r vt_current_beatcount;
 #X msg 100 45 label \$1;
-#X obj 240 136 hradio 15 1 0 4 empty empty 41 8 8 0 8 -1 -1 -228856
+#X obj 240 136 hradio 15 1 0 4 empty empty 0 8 8 0 8 -1 -1 -228856
 0;
 #N canvas 18 93 450 300 make-label 0;
 #X msg 134 34 label \$1;
