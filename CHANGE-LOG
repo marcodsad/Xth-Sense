@@ -1,3 +1,13 @@
+Thu 27 Oct 2011
+- Removed sssad-lib dependency
+- Imported sssad objects into xthsense lib for better portability
+- Updated all embedded [sssad] within xthsense objects
+- Imported [storage] from VisualTracker for better portability
+- Updated [pd bpm] after importing [inc.storage]
+- Removed puremapping dependency
+- Updated curve drawers
+
+
 Wed 26 Oct 2011
 - Finished structure programming, event creation for preset and timeline
 - Changed GUI main side window
