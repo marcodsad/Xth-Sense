@@ -1,4 +1,4 @@
-#N canvas 105 325 234 455 10;
+#N canvas 152 299 234 455 10;
 #X declare -lib iemlib;
 #X declare -lib mrpeach;
 #X declare -lib moocow;
@@ -13,9 +13,9 @@
 #X declare -lib rj;
 #X declare -lib pdmtl;
 #X declare -stdpath extra/tof;
-#N canvas 166 210 546 632 software 0;
+#N canvas 190 210 546 632 software 0;
 #X obj 214 325 image images/sidewindow.gif 0;
-#N canvas 471 145 1000 697 workspaces 1;
+#N canvas 517 145 1000 697 workspaces 1;
 #X obj 501 348 image images/interface_cntrl0.1.gif 0;
 #X obj 948 22 tabswitch-motion2;
 #N canvas 32 446 465 370 creator1 0;
@@ -570,7 +570,6 @@
 #X coords 0 -1 1 1 922 339 2 0 0;
 #X restore 17 755 pd workspace_6;
 #X obj 559 655 utils.cpusage;
-#X obj 774 655 utils.clockk;
 #N canvas 410 541 318 297 side-buttons 0;
 #X obj 100 100 gui.bng.box Analysis;
 #X obj 100 126 gui.bng.box Mapping;
@@ -3509,7 +3508,7 @@
 0.737322 0.737329 0.737337 0.737344 0.737352 0.737359 0.737367 0.737374
 0.737382 0.737389 0.737397 0.737404 0.737412 0.737419 0.737427 0.737434
 0.737442 0.737449 0.737457 0.737464 0.737472 0.737479 0.737487 0.737494
-0.737502;
+0.737502 ;
 #A 6000 0.737509 0.737516 0.737524 0.737531 0.737539 0.737546 0.737554
 0.737561 0.737569 0.737576 0.737584 0.737591 0.737599 0.737606 0.737614
 0.737621 0.737629 0.737636 0.737644 0.737651 0.737658 0.737666 0.737673
@@ -6352,8 +6351,10 @@ x 5 9 0 11 -232576 -1 -1 0 0;
 #X connect 26 1 9 1;
 #X coords 0 -1 1 1 492 155 2 0 0;
 #X restore 31 510 pd mixer;
+#X obj 718 655 hradio 15 1 0 13 empty empty Xth.Sense.Biophysical.Music.v1
+5 8 0 8 -1 -1 -228856 0;
 #X restore 342 170 pd workspaces;
-#N canvas 95 297 589 247 dependencies 1;
+#N canvas 114 62 589 247 dependencies 0;
 #X obj 375 52 import iemlib;
 #X obj 375 71 import mrpeach;
 #X obj 468 71 import moocow;
@@ -6372,7 +6373,7 @@ x 5 9 0 11 -232576 -1 -1 0 0;
 #X text 35 30 -------------------------------------;
 #X obj 159 72 import soundhack;
 #X obj 159 94 import rj;
-#X obj 39 73 import pdmtl;
+#X obj 35 82 import pdmtl;
 #X restore 342 277 pd dependencies;
 #X obj 119 339 tgl 15 0 empty empty Triggers.extraction 21 9 0 8 -162280
 -1 -1 0 1;
@@ -6549,21 +6550,19 @@ x 5 9 0 11 -232576 -1 -1 0 0;
 #X msg 10 30;
 #X connect 0 0 1 0;
 #X restore 342 581 pd presetstore9;
-#N canvas 181 209 579 362 adc.in 0;
+#N canvas 433 146 579 362 adc.in 0;
 #X obj 53 138 *~;
 #X obj 233 138 *~;
 #X obj 52 22 adc~ 1;
 #X obj 232 21 adc~ 2;
-#X obj 104 213 send~ 1.l;
+#X obj 123 211 send~ 1.l;
 #X obj 53 236 send~ 1.r;
 #X obj 233 236 send~ 2.r;
-#X obj 284 214 send~ 2.l;
-#X obj 54 183 fx.punch~;
+#X obj 302 214 send~ 2.l;
 #X floatatom 105 162 5 0 0 0 - - -;
-#X obj 234 183 fx.punch~;
 #X floatatom 285 163 5 0 0 0 - - -;
-#X obj 177 158 init 2;
-#X obj 356 155 init 2;
+#X obj 147 163 init 2;
+#X obj 326 163 init 2;
 #X text 338 187 <<< fx.punch~ sucks 3/4 cpu %;
 #X text 342 66 <<< filters suck 3/4 cpu %;
 #X obj 74 90 s~ SIG.FILT.1;
@@ -6804,33 +6803,35 @@ x 5 9 0 11 -232576 -1 -1 0 0;
 #X connect 3 0 4 0;
 #X restore 280 278 pd route-ardour-msg;
 #X obj 163 322 utils.rec.mono~ recs;
-#X connect 0 0 8 0;
-#X connect 0 0 8 1;
-#X connect 1 0 10 0;
-#X connect 1 0 10 1;
-#X connect 2 0 18 0;
-#X connect 2 0 22 0;
-#X connect 3 0 19 0;
-#X connect 3 0 23 0;
-#X connect 8 0 5 0;
-#X connect 8 0 30 0;
-#X connect 8 1 4 0;
-#X connect 9 0 8 2;
-#X connect 10 0 6 0;
-#X connect 10 1 7 0;
-#X connect 11 0 10 2;
-#X connect 12 0 8 2;
-#X connect 13 0 10 2;
-#X connect 22 0 16 0;
-#X connect 22 0 0 0;
-#X connect 22 0 27 0;
-#X connect 23 0 20 0;
-#X connect 23 0 1 0;
-#X connect 23 0 26 0;
-#X connect 26 0 1 1;
-#X connect 27 0 0 1;
-#X connect 28 0 30 1;
+#X obj 54 183 efx.puncher~;
+#X obj 234 183 efx.puncher~;
+#X connect 0 0 29 0;
+#X connect 0 0 29 1;
+#X connect 1 0 30 0;
+#X connect 1 0 30 1;
+#X connect 2 0 16 0;
+#X connect 2 0 20 0;
+#X connect 3 0 17 0;
+#X connect 3 0 21 0;
+#X connect 8 0 29 2;
+#X connect 9 0 30 2;
+#X connect 10 0 29 2;
+#X connect 11 0 30 2;
+#X connect 20 0 14 0;
+#X connect 20 0 0 0;
+#X connect 20 0 25 0;
+#X connect 21 0 18 0;
+#X connect 21 0 1 0;
+#X connect 21 0 24 0;
+#X connect 24 0 1 1;
+#X connect 25 0 0 1;
+#X connect 26 0 28 1;
+#X connect 27 0 26 0;
+#X connect 29 0 5 0;
 #X connect 29 0 28 0;
+#X connect 29 1 4 0;
+#X connect 30 0 6 0;
+#X connect 30 1 7 0;
 #X coords 0 0 1 1 45 20 0;
 #X restore 342 149 pd adc.in;
 #X obj 120 311 bng 15 250 50 0 \$0-vis-workspaces empty Workspaces
@@ -6909,10 +6910,10 @@ x 5 9 0 11 -232576 -1 -1 0 0;
 #X obj -33 207 r preset-to-trigger;
 #X obj 221 310 bng 15 250 50 0 \$0-vis-structure empty Structure 19
 7 0 8 -228856 -1 -1;
-#N canvas 147 154 1013 102 structure 1;
+#N canvas 254 73 1013 102 structure 1;
 #X obj -1 -3 cnv 15 16020 100 empty empty empty 20 12 0 14 -128992
 -66577 0;
-#N canvas 288 294 1265 585 timeline 0;
+#N canvas 329 257 1265 585 timeline 0;
 #X obj -2 -29 cnv 15 16020 26 empty empty empty 20 12 0 14 -228856
 -66577 0;
 #X obj 192 -29 cnv 20 16 26 empty vt_to_selection_canvas empty 20 12
@@ -7587,7 +7588,7 @@ OFF;
 #X connect 16 0 17 1;
 #X connect 19 0 3 0;
 #X restore 146 35 pd cursor;
-#X obj 115 -47 cnv 15 1 44 empty vt_to_sequence_cursor empty 20 12
+#X obj 190 -47 cnv 15 1 44 empty vt_to_sequence_cursor empty 20 12
 0 14 -1 -262144 0;
 #N canvas 388 444 910 300 multiple_ctrl 0;
 #X obj -120 -15 tgl 15 0 vt_from_play_switch vt_to_play_switch PLAY
@@ -7697,29 +7698,34 @@ SELECTION 17 7 1 10 -262144 -1 -1 0 1;
 #X restore 147 78 pd beat_counter;
 #X obj 0 -63 hsl 16000 12 0 16000 0 0 vt_from_cursor_slider vt_to_cursor_slider
 empty -2 -8 0 10 -66577 -262144 -1 0 0;
-#N canvas 356 431 544 411 make-event 0;
-#X obj 120 160 f;
-#X obj 47 88 r \$0-create-event;
-#X obj 135 36 i;
-#X obj 47 154 f;
-#X obj 74 154 + 1;
-#X obj 47 111 t b b;
-#X msg 197 88 0;
-#X obj 135 14 r vt_from_cursor_slider;
-#X obj 156 158 r vt_beat;
-#X obj 47 192 pack f f f;
-#X obj 47 316 s pd-timeline;
-#X obj 135 59 + 2;
-#X text 229 86 << resest counter of events;
-#X text 292 12 << position from slider;
-#X text 221 158 << beat that will trigger event;
-#X text 229 217 << variable are \; position \, id \, beat;
-#X msg 47 218 obj \$2 -28 set-event \$2 \$1 \$3;
+#N canvas 380 353 559 469 make-event 0;
+#X obj 157 201 f;
+#X obj 57 98 r \$0-create-event;
+#X obj 145 46 i;
+#X obj 57 200 f;
+#X obj 84 200 + 1;
+#X obj 57 121 t b b;
+#X msg 115 133 0;
+#X obj 145 24 r vt_from_cursor_slider;
+#X obj 186 201 r vt_beat;
+#X obj 57 262 pack f f f;
+#X obj 57 411 s pd-timeline;
+#X obj 145 69 + 2;
+#X text 153 131 << resest counter of events;
+#X text 302 22 << position from slider;
+#X text 253 201 << beat that will trigger event;
+#X text 239 287 << variable are \; position \, id \, beat;
+#X msg 57 288 obj \$2 -28 set-event \$2 \$1 \$3;
+#X msg 130 366 \; \$1 bang;
+#X obj 145 162 t f f;
+#X obj 130 317 f;
+#X obj 57 230 t f f;
+#X obj 130 341 makefilename %d_loadbang;
 #X connect 0 0 9 1;
 #X connect 1 0 5 0;
 #X connect 2 0 11 0;
 #X connect 3 0 4 0;
-#X connect 3 0 9 0;
+#X connect 3 0 20 0;
 #X connect 4 0 3 1;
 #X connect 5 0 3 0;
 #X connect 5 1 0 0;
@@ -7727,45 +7733,23 @@ empty -2 -8 0 10 -66577 -262144 -1 0 0;
 #X connect 7 0 2 0;
 #X connect 8 0 9 2;
 #X connect 9 0 16 0;
-#X connect 11 0 0 1;
+#X connect 11 0 18 0;
 #X connect 16 0 10 0;
+#X connect 17 0 10 0;
+#X connect 18 0 19 1;
+#X connect 18 1 0 1;
+#X connect 19 0 21 0;
+#X connect 20 0 19 0;
+#X connect 20 1 9 0;
+#X connect 21 0 17 0;
 #X restore 147 100 pd make-event;
 #X obj 0 -47 hsl 16000 8 0 16000 0 0 vt_from_selection_slider1 vt_to_selection_slider1
 empty -2 -8 0 10 -33289 -258113 -1 0 1;
 #X obj 0 -39 hsl 16000 8 0 16000 0 0 vt_from_selection_slider2 vt_to_selection_slider2
 empty -2 -8 0 10 -33289 -258113 -1 1600 1;
-#N canvas 792 656 276 186 create-event 0;
-#X obj 59 89 del 200;
-#X obj 59 67 r \$0-create-event;
-#X obj 59 118 s set-event-loadbang;
-#X obj 114 90 loadbang;
-#X obj 176 91 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
-#X connect 0 0 2 0;
-#X connect 1 0 0 0;
-#X connect 3 0 2 0;
-#X connect 4 0 2 0;
-#X restore 288 15 pd create-event;
-#N canvas 6 47 303 240 delete-selected-event 0;
-#X floatatom 63 55 5 0 0 0 - - -;
-#X obj 102 83 makefilename %d-event;
-#X obj 75 155 iem_s;
-#X msg 102 107 set \$1;
-#X obj 102 56 r \$0-event-to-delete;
-#X obj 75 129 r \$0-trigger-delete;
-#X connect 0 0 1 0;
-#X connect 1 0 3 0;
-#X connect 3 0 2 1;
-#X connect 4 0 1 0;
-#X connect 5 0 2 0;
-#X restore 289 38 pd delete-selected-event;
-#N canvas 909 100 450 300 structurestore0 0;
-#X obj 10 10 r structurestore0;
-#X msg 10 30 \; SSSAD-EVE 489/pre.n 5 \; SSSAD-EVE 294/pre.n 5 \; SSSAD-EVE
-143/pre.n 1 \; SSSAD-EVE_ADMIN set \;;
-#X connect 0 0 1 0;
+#N canvas 933 192 450 300 structurestore0 0;
 #X restore 463 18 pd structurestore0;
-#N canvas 6 47 450 300 structurestore1 0;
+#N canvas 12 70 450 300 structurestore1 0;
 #X restore 463 38 pd structurestore1;
 #N canvas 6 47 450 300 structurestore2 0;
 #X restore 463 58 pd structurestore2;
@@ -7783,52 +7767,52 @@ empty -2 -8 0 10 -33289 -258113 -1 1600 1;
 #X restore 463 178 pd structurestore8;
 #N canvas 6 47 450 300 structurestore9 0;
 #X restore 463 198 pd structurestore9;
+#N canvas 833 656 276 186 events-loadbang 0;
+#X obj 59 118 s set-event-loadbang;
+#X obj 59 91 loadbang;
+#X obj 121 94 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X connect 1 0 0 0;
+#X connect 2 0 0 0;
+#X restore 285 15 pd events-loadbang;
 #X coords 0 0 1 1 16020 65 2 -10 -65;
 #X restore 1 14 pd timeline;
 #X restore 343 192 pd structure;
-#N canvas 312 330 495 400 timeline-controls 0;
+#N canvas 324 376 495 400 timeline-controls 0;
 #X obj 332 42 bng 15 250 50 0 \$0-timeline-rewind empty REWIND 17 7
 1 10 -262144 -1 -1;
 #X msg 313 128 label \$1;
-#X obj 239 207 hradio 15 1 0 4 empty empty 00:00:00 3 8 0 8 -1 -1 -228856
+#X obj 230 177 hradio 15 1 0 4 empty empty 00:00:00 3 8 0 8 -1 -1 -228856
 0;
 #X obj 313 106 r vt_current_clock;
 #X obj 377 146 r vt_bartime;
-#X obj 100 207 hradio 15 1 0 4 empty empty Bpm 40 8 0 8 -1 -1 -228856
+#X obj 110 177 hradio 15 1 0 4 empty empty Bpm 40 8 0 8 -1 -1 -228856
 0;
-#X obj 100 207 nbx 4 15 0 1e+37 0 0 vt_from_bpm_gui vt_to_bpm_gui empty
+#X obj 110 177 nbx 4 15 0 1e+37 0 0 vt_from_bpm_gui vt_to_bpm_gui empty
 -3 -8 0 8 -1 -228856 -1 130 256;
-#X obj 170 207 hradio 15 1 0 4 empty empty Ms 45 8 0 8 -1 -1 -228856
+#X obj 170 177 hradio 15 1 0 4 empty empty Time 32 8 0 8 -1 -1 -228856
 0;
-#X obj 170 207 nbx 4 15 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 8
+#X obj 378 178 nbx 4 15 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 8
 -1 -228856 -1 1846.15 256;
-#X obj 100 172 cnv 15 200 15 empty empty Mod 6 7 0 8 -228856 -33289
+#X obj 110 155 cnv 15 180 15 empty empty Mode 2 8 0 8 -191407 -33289
 0;
-#X obj 139 172 tgl 15 0 vt_from_play_switch_gui vt_to_play_switch_gui
+#X obj 139 155 tgl 15 0 vt_from_play_switch_gui vt_to_play_switch_gui
 Play 17 8 0 8 -1 -262144 -1 0 1;
-#X obj 239 172 tgl 15 0 vt_from_loop_switch_gui vt_to_loop_switch_gui
-Loop 17 7 0 8 -1 -258113 -1 0 1;
-#X obj 188 172 tgl 15 0 vt_from_selection_switch_gui vt_to_selection_switch_gui
+#X obj 226 155 tgl 15 0 vt_from_loop_switch_gui vt_to_loop_switch_gui
+Loop 17 8 0 8 -1 -258113 -1 0 1;
+#X obj 185 155 tgl 15 0 vt_from_selection_switch_gui vt_to_selection_switch_gui
 Sel 17 8 0 8 -1 -228856 -1 0 1;
-#X obj 100 136 cnv 15 200 15 empty empty Event 6 7 0 8 -228856 -33289
+#X obj 110 134 cnv 15 180 15 empty empty Node 2 9 0 8 -191407 -33289
 0;
-#X obj 139 136 hradio 15 1 0 2 empty empty New 4 8 0 8 -1 -1 -191407
+#X obj 139 134 hradio 15 1 0 2 empty empty New 4 8 0 8 -1 -1 -191407
 0;
-#X obj 169 136 bng 15 250 50 0 \$0-create-event empty empty 17 7 0
+#X obj 169 134 bng 15 250 50 0 \$0-create-event empty empty 17 7 0
 10 -228856 -1 -1;
-#X obj 383 210 cnv 15 90 15 empty empty empty 20 12 0 14 -1 -66577
-0;
-#X obj 368 235 hradio 15 1 0 4 empty empty Delete 8 8 0 8 -1 -1 -191407
-0;
-#X obj 383 192 nbx 3 15 0 1e+37 0 0 \$0-event-to-delete asfijsfjfolajaklsj
-empty -3 -8 0 8 -1 -228856 -1 0 256;
-#X obj 373 287 bng 15 250 50 0 \$0-trigger-delete sdkjsalgkag empty
-17 7 0 10 -228856 -1 -1;
-#X obj 185 136 hradio 15 1 0 4 empty empty 00/00 8 8 0 8 -1 -1 -228856
+#X obj 199 134 hradio 15 1 0 3 empty empty 00/00 8 8 0 8 -1 -1 -228856
 0;
 #X obj 100 23 r vt_current_beatcount;
 #X msg 100 45 label \$1;
-#X obj 240 136 hradio 15 1 0 4 empty empty 0 8 8 0 8 -1 -1 -228856
+#X obj 244 134 hradio 15 1 0 3 empty empty 0 8 8 0 8 -1 -1 -228856
 0;
 #N canvas 24 116 450 300 make-label 0;
 #X msg 134 34 label \$1;
@@ -7839,29 +7823,29 @@ empty -3 -8 0 8 -1 -228856 -1 0 256;
 #X connect 1 0 3 0;
 #X connect 3 0 0 0;
 #X restore 170 56 pd make-label;
-#X obj 100 104 xsssad.eventstore;
+#X obj 109 113 xsssad.eventstore;
 #X connect 1 0 2 0;
 #X connect 3 0 1 0;
 #X connect 4 0 8 0;
-#X connect 21 0 22 0;
-#X connect 22 0 20 0;
-#X connect 24 0 23 0;
+#X connect 17 0 18 0;
+#X connect 18 0 16 0;
+#X connect 20 0 19 0;
 #X coords 0 -1 1 1 200 145 2 100 100;
 #X restore 115 116 pd timeline-controls;
-#N canvas 896 70 204 144 help 0;
-#N canvas 18 93 450 300 gui-browser 0;
+#N canvas 1390 148 204 144 help 1;
+#N canvas 201 116 543 458 gui-browser 0;
 #X floatatom 100 59 5 0 0 0 - - -;
 #X msg 144 41 clear;
-#X obj 100 100 file.browser_ medias;
 #X obj 195 7 path.getdir;
 #X obj 195 29 t s b;
+#X obj 100 100 file.browser_ medias;
 #X msg 222 52 patterns pd;
-#X connect 0 0 2 0;
-#X connect 1 0 2 1;
-#X connect 3 0 4 0;
-#X connect 4 0 2 1;
-#X connect 4 1 5 0;
-#X connect 5 0 2 1;
+#X connect 0 0 4 0;
+#X connect 1 0 4 1;
+#X connect 2 0 3 0;
+#X connect 3 0 4 1;
+#X connect 3 1 5 0;
+#X connect 5 0 4 1;
 #X coords 0 -1 1 1 198 138 2 100 100;
 #X restore -4 -12 pd gui-browser;
 #X restore 344 217 pd help;
@@ -7871,4 +7855,3 @@ empty -3 -8 0 8 -1 -228856 -1 0 256;
 #X connect 31 0 36 0;
 #X coords 0 -1 1 1 229 448 2 100 100;
 #X restore -96 -1 pd software;
-#X obj -81 265 utils.cpusage;
