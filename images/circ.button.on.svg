@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
+
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
@@ -12,7 +13,7 @@
    height="18"
    id="svg3289"
    sodipodi:version="0.32"
-   inkscape:version="0.46"
+   inkscape:version="0.47 r22583"
    version="1.0"
    sodipodi:docname="circ.button.on.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape">
@@ -37,18 +38,19 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="32"
-     inkscape:cx="5.6038927"
+     inkscape:cx="0.5413927"
      inkscape:cy="8.7400423"
      inkscape:document-units="px"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="layer2"
      showgrid="true"
      units="px"
      inkscape:window-width="1335"
-     inkscape:window-height="833"
-     inkscape:window-x="132"
-     inkscape:window-y="65"
+     inkscape:window-height="825"
+     inkscape:window-x="97"
+     inkscape:window-y="24"
      showguides="true"
-     inkscape:guide-bbox="true">
+     inkscape:guide-bbox="true"
+     inkscape:window-maximized="0">
     <inkscape:grid
        type="xygrid"
        id="grid3847"
@@ -107,7 +109,7 @@
        sodipodi:cy="44.486984"
        sodipodi:cx="965.31396"
        id="path3243"
-       style="fill:#d40000;stroke:none;display:inline"
+       style="fill:#c30030;stroke:none;display:inline;fill-opacity:1"
        sodipodi:type="arc" />
   </g>
   <g

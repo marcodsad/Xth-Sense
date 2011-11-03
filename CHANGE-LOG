@@ -1,3 +1,14 @@
+Sun 30 Oct 2011
+- Removed rj dependency
+- Decreased cpu usage when idle (and audio on) from 16% to 9-11%, by adding switch~ to [mix.aux.stereo~] and [mix.ch.stereo~]
+
+
+Sat 29 Oct 2011
+- Fixed bad bug in [set-event] and structure creation; now functional
+- Added storage for bpm
+- Removed pdmtl dependency
+
+
 Thu 27 Oct 2011
 - Removed sssad-lib dependency
 - Imported sssad objects into xthsense lib for better portability
