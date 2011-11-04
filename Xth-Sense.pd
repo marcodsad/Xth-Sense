@@ -1,4 +1,4 @@
-#N canvas 143 154 234 452 10;
+#N canvas 149 177 234 452 10;
 #X declare -lib iemlib;
 #X declare -lib mrpeach;
 #X declare -lib moocow;
@@ -169,7 +169,7 @@
 #X obj 332 42 bng 15 250 50 0 \$0-timeline-rewind empty REWIND 17 7
 1 10 -262144 -1 -1;
 #X msg 313 128 label \$1;
-#X obj 231 196 hradio 15 1 0 4 empty empty 00:06:05 3 8 0 8 -1 -1 -228856
+#X obj 231 196 hradio 15 1 0 4 empty empty 00:00:00 3 8 0 8 -1 -1 -228856
 0;
 #X obj 313 106 r vt_current_clock;
 #X obj 378 148 r vt_bartime;
@@ -195,11 +195,11 @@ Sel 17 8 0 8 -1 -228856 -1 0 1;
 0;
 #X obj 182 154 bng 15 250 50 0 \$0-create-event empty empty 17 7 0
 10 -228856 -1 -1;
-#X obj 199 154 hradio 15 1 0 3 empty empty 00/01 8 8 0 8 -1 -1 -228856
+#X obj 199 154 hradio 15 1 0 3 empty empty 00/00 8 8 0 8 -1 -1 -228856
 0;
 #X obj 100 23 r vt_current_beatcount;
 #X msg 100 45 label \$1;
-#X obj 246 154 hradio 15 1 0 3 empty empty 1 8 8 0 8 -1 -1 -228856
+#X obj 246 154 hradio 15 1 0 3 empty empty 0 8 8 0 8 -1 -1 -228856
 0;
 #N canvas 42 185 450 300 make-label 0;
 #X msg 134 34 label \$1;
@@ -1385,7 +1385,7 @@ empty -2 -8 0 10 -33289 -258113 -1 1600 1;
 #X coords 0 0 1 1 16020 65 2 -10 -65;
 #X restore 1 14 pd timeline;
 #X restore 343 192 pd Sequence;
-#N canvas 444 107 1000 697 Deck 1;
+#N canvas 450 130 1000 697 Deck 1;
 #X obj 501 348 image images/interface_cntrl0.1.gif 0;
 #X obj 948 22 tabswitch-motion2;
 #N canvas 32 446 465 370 creator1 0;
@@ -2255,7 +2255,7 @@ empty -2 -8 0 10 -33289 -258113 -1 1600 1;
 #X connect 24 0 1 0;
 #X coords 0 -1 1 1 310 60 2 0 0;
 #X restore 25 398 pd sensor-1-to-control.values;
-#N canvas 475 180 877 412 analysis 0;
+#N canvas 487 226 877 412 analysis 0;
 #X obj 100 100 cnv 15 372 240 empty empty empty 20 12 0 14 -133153
 -66577 0;
 #N canvas 192 78 1364 764 calibrate 0;
@@ -2264,7 +2264,7 @@ empty -2 -8 0 10 -33289 -258113 -1 1600 1;
 -1 0;
 #X floatatom 189 107 5 0 0 0 - - -;
 #X obj 18 334 vsl 15 40 0 0.04 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 1194 1;
 #N canvas 967 366 296 390 filter.max.value 0;
 #X obj 52 45 inlet;
 #X obj 90 185 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
@@ -6855,7 +6855,7 @@ empty -2 -8 0 10 -33289 -258113 -1 1600 1;
 #X obj 100 100 cnv 15 44 97 empty empty empty 20 12 0 14 -128992 -262144
 0;
 #X obj 126 108 vsl 15 70 0 1 0 0 sadgfsd sfdsfs Soft -5 80 0 8 -191407
--1 -262144 0 1;
+-1 -262144 86 1;
 #N canvas 1062 550 312 275 smooth.control.params 0;
 #X obj 74 19 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262130
 -1 -1 0 1;
@@ -6880,7 +6880,7 @@ empty -2 -8 0 10 -33289 -258113 -1 1600 1;
 #X connect 9 0 2 1;
 #X restore 146 49 pd smooth.control.params;
 #X obj 104 119 vsl 15 70 0 1 0 0 dfgsdg dfgdfg Nat -2 -10 0 8 -191407
--1 -262144 0 1;
+-1 -262144 69 1;
 #X obj 104 -14 t f f;
 #X obj 104 -181 spigot 1;
 #X obj 149 -201 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
@@ -6924,7 +6924,7 @@ empty -2 -8 0 10 -33289 -258113 -1 1600 1;
 #X obj 100 100 cnv 15 44 97 empty empty empty 20 12 0 14 -128992 -262144
 0;
 #X obj 126 108 vsl 15 70 0 1 0 0 sadgfsd sfdsfs Soft -5 80 0 8 -191407
--1 -262144 0 1;
+-1 -262144 86 1;
 #N canvas 1050 504 312 275 smooth.control.params 0;
 #X obj 74 19 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262130
 -1 -1 0 1;
@@ -6949,7 +6949,7 @@ empty -2 -8 0 10 -33289 -258113 -1 1600 1;
 #X connect 9 0 2 1;
 #X restore 147 49 pd smooth.control.params;
 #X obj 104 119 vsl 15 70 0 1 0 0 dfgsdg dfgdfg Nat -2 -10 0 8 -191407
--1 -262144 0 1;
+-1 -262144 69 1;
 #X obj 105 -14 t f f;
 #X obj 105 -181 spigot 1;
 #X obj 200 -201 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
