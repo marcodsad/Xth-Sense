@@ -1,4 +1,4 @@
-#N canvas 155 200 234 452 10;
+#N canvas 167 246 234 452 10;
 #X declare -lib iemlib;
 #X declare -lib mrpeach;
 #X declare -lib moocow;
@@ -454,7 +454,7 @@ Sel 17 8 0 8 -1 -228856 -1 0 1;
 #X floatatom 74 52 5 0 0 0 - - -;
 #X floatatom 102 99 5 0 0 0 - - -;
 #X obj 42 241 outlet~;
-#X obj 144 157 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 144 157 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 41 118 t b;
 #X msg 41 140 0;
@@ -1385,7 +1385,7 @@ empty -2 -8 0 10 -33289 -258113 -1 1600 1;
 #X coords 0 0 1 1 16020 65 2 -10 -65;
 #X restore 1 14 pd timeline;
 #X restore 343 192 pd Sequence;
-#N canvas 1623 47 1000 708 Deck 1;
+#N canvas 476 109 999 708 Deck 1;
 #X obj 501 348 image images/interface_cntrl0.1.gif 0;
 #X obj 948 22 tabswitch-motion2;
 #N canvas 32 446 465 370 creator1 0;
@@ -1459,7 +1459,7 @@ empty -2 -8 0 10 -33289 -258113 -1 1600 1;
 #X connect 10 3 11 0;
 #X connect 12 0 10 2;
 #X restore 22 712 pd creator2;
-#N canvas 301 498 950 344 workspace_4 0;
+#N canvas 307 498 950 344 workspace_4 0;
 #N canvas 517 262 571 415 totalcount 0;
 #X obj 106 103 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
@@ -1550,7 +1550,7 @@ empty -2 -8 0 10 -33289 -258113 -1 1600 1;
 #X connect 11 2 6 0;
 #X connect 11 3 7 0;
 #X restore 590 707 pd dispatch.keyTab;
-#N canvas 364 147 932 344 workspace_2 0;
+#N canvas 370 170 932 344 workspace_2 0;
 #N canvas 517 262 571 415 totalcount 0;
 #X obj 106 103 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
@@ -1612,7 +1612,7 @@ empty -2 -8 0 10 -33289 -258113 -1 1600 1;
 #X connect 4 0 3 0;
 #X coords 0 -1 1 1 922 339 2 0 0;
 #X restore 17 755 pd workspace_2;
-#N canvas 490 423 927 347 workspace_3 0;
+#N canvas 502 469 927 347 workspace_3 0;
 #N canvas 517 262 571 415 totalcount 0;
 #X obj 106 103 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
@@ -1672,17 +1672,10 @@ empty -2 -8 0 10 -33289 -258113 -1 1600 1;
 #X obj 872 32 switch~;
 #X obj 872 7 utils.gui.switch~ /sw3;
 #X obj 852 314 utils.gui.showpatch workspace_3 edit;
-#X obj 100 293 mix.set.ch~ one;
-#X obj 101 111 efx.gui.pshift.ssb~;
-#X obj 101 42 r~ 1.l;
 #X connect 5 0 4 0;
-#X connect 8 0 7 0;
-#X connect 8 1 7 1;
-#X connect 9 0 8 0;
-#X connect 9 0 8 1;
 #X coords 0 -1 1 1 922 339 2 0 0;
-#X restore 17 18 pd workspace_3;
-#N canvas 538 261 647 386 routing-params 0;
+#X restore 17 755 pd workspace_3;
+#N canvas 544 284 647 386 routing-params 0;
 #X obj 100 100 cnv 15 372 240 empty empty empty 20 12 0 14 -133153
 -66577 0;
 #N canvas 339 134 590 405 arduino 0;
@@ -1792,7 +1785,7 @@ empty -2 -8 0 10 -33289 -258113 -1 1600 1;
 #X obj 725 703 catch~ cntrl.mix-l;
 #X obj 845 725 catch~ cntrl.mix-r;
 #X obj 843 705 catch~ test-l;
-#N canvas 295 437 940 347 workspace_5 0;
+#N canvas 301 460 940 347 workspace_5 0;
 #N canvas 517 262 571 415 totalcount 0;
 #X obj 106 103 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
@@ -1854,7 +1847,7 @@ empty -2 -8 0 10 -33289 -258113 -1 1600 1;
 #X connect 4 0 3 0;
 #X coords 0 -1 1 1 922 339 2 0 0;
 #X restore 17 755 pd workspace_5;
-#N canvas 443 314 927 347 workspace_6 0;
+#N canvas 449 337 927 347 workspace_6 0;
 #N canvas 517 262 571 415 totalcount 0;
 #X obj 106 103 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
@@ -1915,14 +1908,14 @@ empty -2 -8 0 10 -33289 -258113 -1 1600 1;
 #X obj 852 314 utils.gui.showpatch workspace_6 edit;
 #X connect 4 0 3 0;
 #X coords 0 -1 1 1 922 339 2 0 0;
-#X restore 17 755 pd workspace_6;
+#X restore 17 18 pd workspace_6;
 #X obj 559 655 utils.cpusage;
 #N canvas 410 541 318 297 side-buttons 0;
 #X obj 100 100 gui.bng.box Analysis;
 #X obj 100 126 gui.bng.box Mapping;
 #N canvas 496 210 457 265 move-modules 0;
 #X obj 64 -58 inlet;
-#X obj 64 92 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+#X obj 64 92 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
 ;
 #X obj 63 110 sel 0 1;
 #X msg 63 135 537 755;
@@ -2262,7 +2255,7 @@ empty -2 -8 0 10 -33289 -258113 -1 1600 1;
 #X connect 24 0 1 0;
 #X coords 0 -1 1 1 310 60 2 0 0;
 #X restore 25 398 pd sensor-1-to-control.values;
-#N canvas 487 226 877 412 analysis 0;
+#N canvas 493 249 877 412 analysis 0;
 #X obj 100 100 cnv 15 372 240 empty empty empty 20 12 0 14 -133153
 -66577 0;
 #N canvas 192 78 1364 764 calibrate 0;
@@ -2271,7 +2264,7 @@ empty -2 -8 0 10 -33289 -258113 -1 1600 1;
 -1 0;
 #X floatatom 189 107 5 0 0 0 - - -;
 #X obj 18 334 vsl 15 40 0 0.04 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 3900 1;
+-1 -1 0 1;
 #N canvas 967 366 296 390 filter.max.value 0;
 #X obj 52 45 inlet;
 #X obj 90 185 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
@@ -2307,11 +2300,11 @@ empty -2 -8 0 10 -33289 -258113 -1 1600 1;
 #X restore 18 -18 pd filter.max.value;
 #X floatatom 26 7 5 0 0 0 - - -;
 #X obj 45 334 vsl 15 40 0 0.4 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 3900 1;
+-1 -1 0 1;
 #X floatatom 225 107 5 0 0 0 - - -;
 #X msg -65 291 range 0 0.04;
 #X obj 72 334 vsl 15 40 0 0.4 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 3900 1;
+-1 -1 0 1;
 #X floatatom 262 107 5 0 0 0 - - -;
 #X obj 18 383 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
@@ -2321,7 +2314,7 @@ empty -2 -8 0 10 -33289 -258113 -1 1600 1;
 -1;
 #X obj 18 32 t f f;
 #X obj 99 334 vsl 15 40 0 0.04 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 3900 1;
+-1 -1 0 1;
 #X obj 126 334 vsl 15 40 0 0.4 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 1;
 #X obj 99 383 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
@@ -2339,7 +2332,7 @@ empty -2 -8 0 10 -33289 -258113 -1 1600 1;
 #X obj 227 -56 s \$0-analyse;
 #X obj 63 -72 r \$0-analyse;
 #X obj 153 334 vsl 15 40 0 0.4 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 3900 1;
+-1 -1 0 1;
 #X obj 153 383 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 45 512 s t.b;
@@ -6671,7 +6664,7 @@ empty -2 -8 0 10 -33289 -258113 -1 1600 1;
 #X obj 100 100 cnv 15 68 97 empty empty empty 20 12 0 14 -128992 -262144
 0;
 #X obj 126 108 vsl 15 70 0 1 0 0 sadgfsd sfdsfs Tanh -5 80 0 8 -191407
--1 -262144 340 1;
+-1 -262144 0 1;
 #N canvas 1038 458 312 275 smooth.control.params 0;
 #X obj 74 19 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262130
 -1 -1 0 1;
@@ -6696,7 +6689,7 @@ empty -2 -8 0 10 -33289 -258113 -1 1600 1;
 #X connect 9 0 2 1;
 #X restore 132 -31 pd smooth.control.params;
 #X obj 105 119 vsl 15 70 0 1 0 0 dfgsdg dfgdfg Lin -2 -10 0 8 -191407
--1 -262144 3004 1;
+-1 -262144 0 1;
 #X obj 105 -63 t f f;
 #X obj 105 4 scale.lin 1 0 0.3;
 #X obj 105 -91 spigot 1;
@@ -6832,7 +6825,7 @@ empty -2 -8 0 10 -33289 -258113 -1 1600 1;
 #X obj 105 233 s \$0-linear-for-last-max;
 #X obj 148 36 r \$0-linear-for-last-max;
 #X obj 148 119 vsl 15 70 0 1 0 0 dfosij sdfkjkl Max -2 -9 0 8 -191407
--1 -262144 6900 1;
+-1 -262144 2760 1;
 #X obj 148 208 s MASTER.LASTMAX.1;
 #X text 207 -176 < converts the signal in control value every 20ms
 ;
@@ -6862,7 +6855,7 @@ empty -2 -8 0 10 -33289 -258113 -1 1600 1;
 #X obj 100 100 cnv 15 44 97 empty empty empty 20 12 0 14 -128992 -262144
 0;
 #X obj 126 108 vsl 15 70 0 1 0 0 sadgfsd sfdsfs Soft -5 80 0 8 -191407
--1 -262144 6830 1;
+-1 -262144 0 1;
 #N canvas 1062 550 312 275 smooth.control.params 0;
 #X obj 74 19 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262130
 -1 -1 0 1;
@@ -6887,7 +6880,7 @@ empty -2 -8 0 10 -33289 -258113 -1 1600 1;
 #X connect 9 0 2 1;
 #X restore 146 49 pd smooth.control.params;
 #X obj 104 119 vsl 15 70 0 1 0 0 dfgsdg dfgdfg Nat -2 -10 0 8 -191407
--1 -262144 5037 1;
+-1 -262144 0 1;
 #X obj 104 -14 t f f;
 #X obj 104 -181 spigot 1;
 #X obj 149 -201 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
@@ -6931,7 +6924,7 @@ empty -2 -8 0 10 -33289 -258113 -1 1600 1;
 #X obj 100 100 cnv 15 44 97 empty empty empty 20 12 0 14 -128992 -262144
 0;
 #X obj 126 108 vsl 15 70 0 1 0 0 sadgfsd sfdsfs Soft -5 80 0 8 -191407
--1 -262144 86 1;
+-1 -262144 0 1;
 #N canvas 1050 504 312 275 smooth.control.params 0;
 #X obj 74 19 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262130
 -1 -1 0 1;
@@ -6956,7 +6949,7 @@ empty -2 -8 0 10 -33289 -258113 -1 1600 1;
 #X connect 9 0 2 1;
 #X restore 147 49 pd smooth.control.params;
 #X obj 104 119 vsl 15 70 0 1 0 0 dfgsdg dfgdfg Nat -2 -10 0 8 -191407
--1 -262144 69 1;
+-1 -262144 0 1;
 #X obj 105 -14 t f f;
 #X obj 105 -181 spigot 1;
 #X obj 200 -201 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
@@ -7428,7 +7421,7 @@ x 5 9 0 11 -232576 -1 -1 0 0;
 #X connect 23 0 4 0;
 #X coords 0 -1 1 1 372 240 2 100 100;
 #X restore 553 394 pd analysis;
-#N canvas 368 242 931 348 workspace_1 0;
+#N canvas 374 265 931 348 workspace_1 0;
 #N canvas 523 285 571 415 totalcount 0;
 #X obj 106 103 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
@@ -7490,14 +7483,13 @@ x 5 9 0 11 -232576 -1 -1 0 0;
 #X connect 4 0 3 0;
 #X coords 0 -1 1 1 922 339 2 0 0;
 #X restore 17 755 pd workspace_1;
-#N canvas 287 134 960 414 mixer 0;
+#N canvas 305 203 960 414 mixer 0;
 #X text 469 -119 throw/catch = bus: serve per gruppare canali;
 #X text 468 -91 send/receive = aux: serve per singoli effetti;
 #X obj -133 -136 catch~ dummy;
 #X text 514 197 aux.one_l;
 #X obj -177 -17 mix.catch.stereo~ group.mix;
 #X obj 536 128 mix.throw.stereo~ group.mix;
-#X obj 449 138 mix.aux.stereo~ /aux.ten;
 #N canvas 262 372 1332 244 catches--------------------------------------------------
 0;
 #X obj 47 121 outlet~;
@@ -7602,6 +7594,10 @@ x 5 9 0 11 -232576 -1 -1 0 0;
 #X obj -146 155 hip~ 5;
 #X obj -77 152 hip~ 5;
 #X obj -146 127 efx.puncher~;
+#X obj 5 138 mix.aux.stereo~ /mix;
+#X obj 0 117 hradio 15 1 0 3 empty empty Mix 11 8 0 8 -1 -1 -191407
+0;
+#X obj 449 138 mix.aux.stereo~ /aux.ten;
 #X obj 58 138 mix.aux.stereo~ /aux.one;
 #X obj 145 138 mix.aux.stereo~ /aux.three;
 #X obj 407 138 mix.aux.stereo~ /aux.nine;
@@ -7611,61 +7607,60 @@ x 5 9 0 11 -232576 -1 -1 0 0;
 #X obj 276 138 mix.aux.stereo~ /aux.six;
 #X obj 319 138 mix.aux.stereo~ /aux.seven;
 #X obj 363 138 mix.aux.stereo~ /aux.eight;
-#X obj 5 138 mix.aux.stereo~ /mix;
-#X obj 0 117 hradio 15 1 0 3 empty empty Mix 11 8 0 8 -1 -1 -191407
-0;
-#X connect 4 0 10 0;
-#X connect 4 1 10 1;
-#X connect 7 0 11 0;
-#X connect 7 0 37 0;
-#X connect 7 1 11 1;
-#X connect 7 1 37 1;
-#X connect 7 2 12 0;
-#X connect 7 2 40 0;
-#X connect 7 3 12 1;
-#X connect 7 3 40 1;
-#X connect 7 4 13 0;
-#X connect 7 4 38 0;
-#X connect 7 5 13 1;
-#X connect 7 5 38 1;
-#X connect 7 6 14 0;
-#X connect 7 6 41 0;
-#X connect 7 7 14 1;
-#X connect 7 7 41 1;
-#X connect 7 8 15 0;
-#X connect 7 8 42 0;
-#X connect 7 9 15 1;
-#X connect 7 9 42 1;
-#X connect 7 10 16 0;
-#X connect 7 10 43 0;
-#X connect 7 11 16 1;
-#X connect 7 11 43 1;
-#X connect 7 12 17 0;
-#X connect 7 12 44 0;
-#X connect 7 13 17 1;
-#X connect 7 13 44 1;
-#X connect 7 14 18 0;
-#X connect 7 14 45 0;
-#X connect 7 15 18 1;
-#X connect 7 15 45 1;
-#X connect 7 16 8 0;
-#X connect 7 16 39 0;
-#X connect 7 17 8 1;
-#X connect 7 17 39 1;
-#X connect 7 18 6 0;
-#X connect 7 18 9 0;
-#X connect 7 19 6 1;
-#X connect 7 19 9 1;
+#X connect 4 0 9 0;
+#X connect 4 1 9 1;
+#X connect 6 0 10 0;
+#X connect 6 0 39 0;
+#X connect 6 1 10 1;
+#X connect 6 1 39 1;
+#X connect 6 2 11 0;
+#X connect 6 2 42 0;
+#X connect 6 3 11 1;
+#X connect 6 3 42 1;
+#X connect 6 4 12 0;
+#X connect 6 4 40 0;
+#X connect 6 5 12 1;
+#X connect 6 5 40 1;
+#X connect 6 6 13 0;
+#X connect 6 6 43 0;
+#X connect 6 7 13 1;
+#X connect 6 7 43 1;
+#X connect 6 8 14 0;
+#X connect 6 8 44 0;
+#X connect 6 9 14 1;
+#X connect 6 9 44 1;
+#X connect 6 10 15 0;
+#X connect 6 10 45 0;
+#X connect 6 11 15 1;
+#X connect 6 11 45 1;
+#X connect 6 12 16 0;
+#X connect 6 12 46 0;
+#X connect 6 13 16 1;
+#X connect 6 13 46 1;
+#X connect 6 14 17 0;
+#X connect 6 14 47 0;
+#X connect 6 15 17 1;
+#X connect 6 15 47 1;
+#X connect 6 16 7 0;
+#X connect 6 16 41 0;
+#X connect 6 17 7 1;
+#X connect 6 17 41 1;
+#X connect 6 18 8 0;
+#X connect 6 18 38 0;
+#X connect 6 19 8 1;
+#X connect 6 19 38 1;
+#X connect 7 0 5 0;
+#X connect 7 1 5 1;
 #X connect 8 0 5 0;
 #X connect 8 1 5 1;
-#X connect 9 0 5 0;
-#X connect 9 1 5 1;
-#X connect 10 0 32 0;
-#X connect 10 0 36 0;
-#X connect 10 0 46 0;
-#X connect 10 1 33 0;
-#X connect 10 1 36 1;
-#X connect 10 1 46 1;
+#X connect 9 0 31 0;
+#X connect 9 0 35 0;
+#X connect 9 0 36 0;
+#X connect 9 1 32 0;
+#X connect 9 1 35 1;
+#X connect 9 1 36 1;
+#X connect 10 0 5 0;
+#X connect 10 1 5 1;
 #X connect 11 0 5 0;
 #X connect 11 1 5 1;
 #X connect 12 0 5 0;
@@ -7680,16 +7675,14 @@ x 5 9 0 11 -232576 -1 -1 0 0;
 #X connect 16 1 5 1;
 #X connect 17 0 5 0;
 #X connect 17 1 5 1;
-#X connect 18 0 5 0;
-#X connect 18 1 5 1;
-#X connect 30 0 31 0;
-#X connect 31 0 36 2;
-#X connect 32 0 29 0;
-#X connect 33 0 29 1;
-#X connect 34 0 29 0;
-#X connect 35 0 29 1;
-#X connect 36 0 34 0;
-#X connect 36 1 35 0;
+#X connect 29 0 30 0;
+#X connect 30 0 35 2;
+#X connect 31 0 28 0;
+#X connect 32 0 28 1;
+#X connect 33 0 28 0;
+#X connect 34 0 28 1;
+#X connect 35 0 33 0;
+#X connect 35 1 34 0;
 #X coords 0 -1 1 1 492 155 2 0 0;
 #X restore 31 510 pd mixer;
 #X obj 718 655 hradio 15 1 0 13 empty empty Xth.Sense.Biophysical.Music.v1
