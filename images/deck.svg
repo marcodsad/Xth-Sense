@@ -14,7 +14,7 @@
    height="700"
    id="svg2"
    inkscape:version="0.47 r22583"
-   sodipodi:docname="interface_cntrl0.2_sidewindow_black.svg">
+   sodipodi:docname="interface_cntrl0.2_main_black.svg">
   <metadata
      id="metadata4344">
     <rdf:RDF>
@@ -39,13 +39,13 @@
      inkscape:window-height="829"
      id="namedview4342"
      showgrid="false"
-     inkscape:zoom="0.83055543"
-     inkscape:cx="500.61256"
-     inkscape:cy="350.00002"
+     inkscape:zoom="1.2679897"
+     inkscape:cx="473.76826"
+     inkscape:cy="164.76033"
      inkscape:window-x="0"
      inkscape:window-y="24"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg2" />
+     inkscape:current-layer="layer4" />
   <defs
      id="defs4">
     <inkscape:perspective
@@ -156,7 +156,7 @@
        x="17.955645"
        y="479.5784"
        id="rect3192"
-       style="fill:none;stroke:#cccccc;stroke-width:1.50000012;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+       style="fill:#999999;stroke:#cccccc;stroke-width:1.50000011999999994;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;fill-opacity:1" />
     <rect
        width="379.76315"
        height="244.37285"
@@ -165,7 +165,7 @@
        x="549.13184"
        y="393.45706"
        id="rect4302"
-       style="fill:none;stroke:#cccccc;stroke-width:1.49999976;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+       style="fill:#999999;stroke:#cccccc;stroke-width:1.49999975999999990;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;fill-opacity:1" />
     <rect
        width="380.49426"
        height="28.43017"
@@ -174,7 +174,7 @@
        x="549.13184"
        y="650.18964"
        id="rect4306"
-       style="fill:none;stroke:#cccccc;stroke-width:1.50000012;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+       style="fill:#999999;stroke:#cccccc;stroke-width:1.50000011999999994;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;fill-opacity:1" />
     <rect
        width="517.97528"
        height="72.959846"
@@ -183,7 +183,7 @@
        x="17.861349"
        y="393.4343"
        id="rect2968"
-       style="fill:none;stroke:#cccccc;stroke-width:1.5;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+       style="fill:#999999;stroke:#cccccc;stroke-width:1.50000000000000000;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;fill-opacity:1" />
     <rect
        width="919.33466"
        height="337.2179"
