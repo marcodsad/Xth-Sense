@@ -1,3 +1,8 @@
+Thu 10 Nov 2011
+- Added plugins folder
+- Added instrument-analysis.pd 
+
+
 Sun 30 Oct 2011
 - Removed rj dependency
 - Decreased cpu usage when idle (and audio on) from 16% to 9-11%, by adding switch~ to [mix.aux.stereo~] and [mix.ch.stereo~]
