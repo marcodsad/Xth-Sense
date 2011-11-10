@@ -1,0 +1,6 @@
+#N canvas 0 22 230 100 10;
+#X obj 29 32 adc~ \$1;
+#X obj 29 62 outlet~;
+#X text 35 5 only exists to make adc input;
+#X text 91 23 be settable by \$1;
+#X connect 0 0 1 0;
