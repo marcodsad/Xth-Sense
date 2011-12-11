@@ -1,10 +1,10 @@
-#N canvas 99 208 1014 634 10;
+#N canvas 105 208 1014 634 10;
 #X obj 310 66 r vt_beat;
 #X floatatom 272 68 5 0 0 0 - - -;
 #X obj 310 143 ==;
 #X obj 310 271 f;
 #X obj 310 165 sel 1;
-#X obj 100 100 hradio 15 1 0 1 empty empty 6 4 8 0 8 -1 -1 -191407
+#X obj 100 100 hradio 15 1 0 1 empty empty - 4 8 0 8 -1 -1 -191407
 0;
 #X obj 100 77 r \$0-label;
 #X obj 100 149 t b;
@@ -12,7 +12,7 @@
 #X obj 101 100 hradio 15 1 0 5 empty empty Preset 8 8 0 8 -1 -1 -191407
 0;
 #X obj 177 101 nbx 3 14 0 10 0 0 empty empty empty 0 -8 0 8 -1 -228856
--228856 6 256;
+-228856 0 256;
 #X obj 177 125 s \$0-define-preset;
 #X obj 177 72 r \$0-stored-preset-to-gui-nbx;
 #X connect 1 0 2 0;
@@ -64,7 +64,7 @@ empty -2 -8 0 10 -258699 -258699 -262144 0 1;
 #X connect 5 0 0 0;
 #X connect 8 0 6 0;
 #X connect 9 0 7 0;
-#X restore -4 103 pd color;
+#X restore -2 110 pd color;
 #N canvas 1120 333 394 392 make-label 0;
 #X msg 101 229 label \$1;
 #X obj 101 251 s \$0-label;

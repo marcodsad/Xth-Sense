@@ -1,5 +1,13 @@
+Thu 24 Nov 2011
+- [DONE] Mapping: enable custom output range
+
+Wed 23 Nov 2011
+- Add OSC compatibility (something like the [mapping] router?)
+- [DONE] Mapping: add inverse curve
+- Aux: enable sensor mapping
+
 Sun 20 Nov 2011
-- Add credits Visual Tracker
+- [DONE] Add credits Visual Tracker
 
 Thu 27 Oct 2011
 - [DONE] Commit last changes (see change log of today)
