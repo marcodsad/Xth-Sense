@@ -1,3 +1,16 @@
+Tue 10 Jan 2012
+- Improved [Inputs] usability: 
+	.added modular GUI with dynamic [adc~]
+	.added filter bypass button (for use with any instrument)
+	.added [xsssad] capability to threshold and punch
+
+
+Mon 19 Dec 2011
+- Added [mix.set.in~] for dynamic sensor input dispatching
+- Minor GUI improvements
+- Added [flow.rhythm] for threshold/trigger
+
+
 Sat 26 Nov 2011
 - Added custom normalization and reverse of biosignals data to control values
 - Included credits to VisualTracker for the fork of Sequence

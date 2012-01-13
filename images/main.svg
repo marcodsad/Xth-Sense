@@ -14,7 +14,7 @@
    height="451.67236"
    id="svg3160"
    inkscape:version="0.47 r22583"
-   sodipodi:docname="interface_cntrl0.2_sidewindow1_black.svg">
+   sodipodi:docname="main.svg">
   <metadata
      id="metadata14">
     <rdf:RDF>
@@ -39,9 +39,9 @@
      inkscape:window-height="829"
      id="namedview12"
      showgrid="false"
-     inkscape:zoom="1.3062268"
-     inkscape:cx="-7.6291253"
-     inkscape:cy="225.83618"
+     inkscape:zoom="1.98"
+     inkscape:cx="25.412106"
+     inkscape:cy="153.36134"
      inkscape:window-x="0"
      inkscape:window-y="24"
      inkscape:window-maximized="1"
@@ -115,10 +115,19 @@
   <rect
      style="opacity:0.59090905;fill:#999999;fill-opacity:1;stroke:#dadada;stroke-width:1.89999998;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
      id="rect3648"
-     width="209.09674"
+     width="207.04327"
      height="61.383999"
-     x="12.370181"
+     x="13.441557"
      y="172.16176"
      rx="3.9000001"
      ry="2.8" />
+  <rect
+     ry="2.8"
+     rx="3.9000001"
+     y="242.16176"
+     x="13.441557"
+     height="130.07086"
+     width="207.04327"
+     id="rect2821"
+     style="opacity:0.59090905;fill:#999999;fill-opacity:1;stroke:#dadada;stroke-width:1.89999998;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
 </svg>

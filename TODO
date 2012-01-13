@@ -1,8 +1,13 @@
+Mon 9 Jan 2012
+- Group MMG features, calculate average, deviation, difference so to identify gestures?
+- [DONE] Improve Inputs subpatch usability by adding an enhanced GUI
+- Re-organize the whole framework, create modular patches to enable regular updates (how exactly?)
+
 Thu 24 Nov 2011
 - [DONE] Mapping: enable custom output range
 
 Wed 23 Nov 2011
-- Add OSC compatibility (something like the [mapping] router?)
+- Add global OSC compatibility (something like the [mapping] router?)
 - [DONE] Mapping: add inverse curve
 - Aux: enable sensor mapping
 
