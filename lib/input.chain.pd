@@ -1,5 +1,5 @@
-#N canvas 145 50 599 300 10;
-#X obj -60 163 *~;
+#N canvas 479 107 599 300 10;
+#X obj -19 162 *~;
 #N canvas 456 68 418 305 filters-bank 0;
 #X obj 106 34 inlet~;
 #X obj 48 247 outlet~;
@@ -35,8 +35,8 @@
 #X connect 13 0 1 0;
 #X connect 14 0 1 0;
 #X connect 15 0 1 0;
-#X restore -5 91 pd filters-bank;
-#N canvas 845 47 419 306 threshold 0;
+#X restore -3 91 pd filters-bank;
+#N canvas 851 70 419 306 threshold 0;
 #X obj 42 15 inlet~;
 #X obj 41 51 env~;
 #X obj 42 241 outlet~;
@@ -68,8 +68,8 @@
 #X connect 10 0 2 0;
 #X connect 12 0 8 0;
 #X connect 14 0 8 1;
-#X restore -6 125 pd threshold;
-#X obj -59 188 efx.puncher~;
+#X restore -3 139 pd threshold;
+#X obj -60 218 efx.puncher~;
 #X obj 221 20 r \$0-env1;
 #X obj 226 112 s \$0-threshold;
 #X obj 155 166 gui.nbx;
@@ -77,7 +77,7 @@
 0;
 #X obj 106 146 hradio 15 1 0 3 empty empty RMS 2 8 0 8 -1 -1 -191407
 0;
-#X obj 158 146 hsl 30 15 0 127 0 0 gdsfaf \$0-label 0.00 0 8 0 8 -128992
+#X obj 158 146 hsl 30 15 0 127 0 0 gdsfaf \$0-label 0 0 8 0 8 -128992
 -128992 -262144 0 1;
 #X obj 222 84 init 62;
 #X obj 155 186 gui.nbx;
@@ -85,12 +85,12 @@
 0;
 #X obj 114 251 s \$0-punch;
 #X obj 113 223 init 2;
-#X obj 10 167 r \$0-punch;
+#X obj 9 195 r \$0-punch;
 #X obj -61 -3 adc~ \$1;
 #X obj 105 72 r \$0-label.input;
 #X obj 108 106 hsl 80 15 0 127 0 0 dtvsgsdfgd dgvsdgsdvg Input.1 1
-8 0 8 -191407 -191407 -1 200 1;
-#X obj -59 211 outlet~;
+8 0 8 -191407 -191407 -1 0 1;
+#X obj -60 241 outlet~;
 #N canvas 12 70 308 179 make.input.label 0;
 #X obj 39 34 loadbang;
 #X obj 39 54 f \$1;
@@ -120,8 +120,8 @@
 #X obj -61 63 demux~ 1 2;
 #X obj -49 27 r \$0-filter.bypass;
 #X obj 108 126 hsl 80 15 0 127 0 0 dtvsgsdfgd dgvsdgsdvg Filter.Bypass
-1 8 0 8 -66577 -66577 -233017 1000 1;
-#N canvas 810 72 338 262 bypass.button 0;
+1 8 0 8 -66577 -66577 -233017 0 1;
+#N canvas 816 95 338 262 bypass.button 1;
 #X obj 45 15 inlet;
 #X obj 45 37 t b;
 #X obj 45 59 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
@@ -162,8 +162,8 @@
 #X connect 17 0 18 0;
 #X connect 21 0 6 0;
 #X connect 22 0 11 0;
-#X connect 24 0 2 0;
-#X connect 24 0 0 0;
+#X connect 24 0 3 0;
+#X connect 24 0 3 1;
 #X connect 24 1 1 0;
 #X connect 25 0 24 0;
 #X connect 26 0 27 0;
