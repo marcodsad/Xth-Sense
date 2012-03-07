@@ -1,6 +1,6 @@
-#N canvas 479 107 599 300 10;
-#X obj -19 162 *~;
-#N canvas 456 68 418 305 filters-bank 0;
+#N canvas 485 130 639 388 10;
+#X obj -4 153 *~;
+#N canvas 474 137 418 305 filters-bank 0;
 #X obj 106 34 inlet~;
 #X obj 48 247 outlet~;
 #X obj 107 78 lop~ 70;
@@ -35,10 +35,9 @@
 #X connect 13 0 1 0;
 #X connect 14 0 1 0;
 #X connect 15 0 1 0;
-#X restore -3 91 pd filters-bank;
-#N canvas 851 70 419 306 threshold 0;
+#X restore -5 86 pd filters-bank;
+#N canvas 917 323 419 306 threshold 0;
 #X obj 42 15 inlet~;
-#X obj 41 51 env~;
 #X obj 42 241 outlet~;
 #X obj 144 157 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
@@ -51,46 +50,45 @@
 #X obj 42 209 lop~ 0.5;
 #X text 203 97 << Customize threshold;
 #X obj 41 75 resample 10;
-#X obj 75 51 s \$0-env1;
 #X obj 98 97 r \$0-threshold;
-#X connect 0 0 1 0;
-#X connect 1 0 12 0;
-#X connect 1 0 13 0;
-#X connect 4 0 5 0;
-#X connect 5 0 3 0;
-#X connect 5 0 9 0;
-#X connect 6 0 7 0;
+#X obj 41 51 env~;
+#X obj 75 51 s \$0-env1;
+#X connect 0 0 13 0;
+#X connect 3 0 4 0;
+#X connect 4 0 2 0;
+#X connect 4 0 8 0;
+#X connect 5 0 6 0;
+#X connect 6 0 2 0;
+#X connect 6 0 8 0;
 #X connect 7 0 3 0;
-#X connect 7 0 9 0;
-#X connect 8 0 4 0;
-#X connect 8 1 6 0;
-#X connect 9 0 10 0;
-#X connect 10 0 2 0;
-#X connect 12 0 8 0;
-#X connect 14 0 8 1;
-#X restore -3 139 pd threshold;
-#X obj -60 218 efx.puncher~;
-#X obj 221 20 r \$0-env1;
-#X obj 226 112 s \$0-threshold;
-#X obj 155 166 gui.nbx;
-#X obj 106 166 hradio 15 1 0 3 empty empty Thresh 2 8 0 8 -1 -1 -191407
+#X connect 7 1 5 0;
+#X connect 8 0 9 0;
+#X connect 9 0 1 0;
+#X connect 11 0 7 0;
+#X connect 12 0 7 1;
+#X connect 13 0 11 0;
+#X connect 13 0 14 0;
+#X restore 12 130 pd threshold;
+#X obj -60 217 efx.puncher~;
+#X obj 226 111 s \$0-threshold;
+#X obj 155 165 gui.nbx;
+#X obj 106 165 hradio 15 1 0 3 empty empty Thresh 2 8 0 8 -1 -1 -191407
 0;
-#X obj 106 146 hradio 15 1 0 3 empty empty RMS 2 8 0 8 -1 -1 -191407
+#X obj 106 145 hradio 15 1 0 3 empty empty RMS 2 8 0 8 -1 -1 -191407
 0;
-#X obj 158 146 hsl 30 15 0 127 0 0 gdsfaf \$0-label 0 0 8 0 8 -128992
+#X obj 158 145 hsl 30 15 0 127 0 0 gdsfaf \$0-label 4.56 0 8 0 8 -128992
 -128992 -262144 0 1;
 #X obj 222 84 init 62;
-#X obj 155 186 gui.nbx;
-#X obj 106 186 hradio 15 1 0 3 empty empty Punch 2 8 0 8 -1 -1 -191407
+#X obj 155 185 gui.nbx;
+#X obj 106 185 hradio 15 1 0 3 empty empty Punch 2 8 0 8 -1 -1 -191407
 0;
-#X obj 114 251 s \$0-punch;
-#X obj 113 223 init 2;
-#X obj 9 195 r \$0-punch;
-#X obj -61 -3 adc~ \$1;
-#X obj 105 72 r \$0-label.input;
-#X obj 108 106 hsl 80 15 0 127 0 0 dtvsgsdfgd dgvsdgsdvg Input.1 1
+#X obj 114 250 s \$0-punch;
+#X obj 113 222 init 2;
+#X obj 9 194 r \$0-punch;
+#X obj 105 71 r \$0-label.input;
+#X obj 108 105 hsl 80 15 0 127 0 0 dtvsgsdfgd dgvsdgsdvg Input.2 1
 8 0 8 -191407 -191407 -1 0 1;
-#X obj -60 241 outlet~;
+#X obj -60 240 outlet~;
 #N canvas 12 70 308 179 make.input.label 0;
 #X obj 39 34 loadbang;
 #X obj 39 54 f \$1;
@@ -104,8 +102,8 @@
 #X connect 4 0 2 0;
 #X connect 5 0 3 0;
 #X restore 221 62 pd make.input.label;
-#X obj 242 240 xsssad /in.\$1/thresh;
-#X obj 242 265 xsssad /in.\$1/punch;
+#X obj 242 239 xsssad /in.\$1/thresh;
+#X obj 242 264 xsssad /in.\$1/punch;
 #N canvas 921 397 315 162 make.env.label 0;
 #X obj 50 21 inlet;
 #X obj 50 126 s \$0-label;
@@ -117,11 +115,11 @@
 #X connect 3 0 1 0;
 #X connect 4 0 3 0;
 #X restore 221 42 pd make.env.label;
-#X obj -61 63 demux~ 1 2;
-#X obj -49 27 r \$0-filter.bypass;
-#X obj 108 126 hsl 80 15 0 127 0 0 dtvsgsdfgd dgvsdgsdvg Filter.Bypass
+#X obj -61 62 demux~ 1 2;
+#X obj -49 26 r \$0-filter.bypass;
+#X obj 108 125 hsl 80 15 0 127 0 0 dtvsgsdfgd dgvsdgsdvg Filter.Bypass
 1 8 0 8 -66577 -66577 -233017 0 1;
-#N canvas 816 95 338 262 bypass.button 1;
+#N canvas 896 182 338 262 bypass.button 0;
 #X obj 45 15 inlet;
 #X obj 45 37 t b;
 #X obj 45 59 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
@@ -133,6 +131,7 @@
 #X msg 174 179 color 2 2 10;
 #X msg 193 153 color 14 14 22;
 #X obj 45 82 t f f;
+#X obj 85 39 init 0;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 2 0 9 0;
@@ -143,29 +142,53 @@
 #X connect 8 0 5 0;
 #X connect 9 0 4 0;
 #X connect 9 1 6 0;
-#X restore 224 142 pd bypass.button;
+#X connect 10 0 2 0;
+#X restore 224 141 pd bypass.button;
+#X obj 380 -80 r \$0-filter.bypass;
+#X obj 380 -56 t f f;
+#X obj 407 -34 == 0;
+#X obj 221 0 gui.spigot /input.\$1a;
+#X obj 295 4 gui.spigot /input.\$1b;
+#N canvas 48 208 307 181 env2 0;
+#X obj 62 35 inlet~;
+#X obj 61 71 env~;
+#X obj 95 71 s \$0-env2;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X restore -48 108 pd env2;
+#X obj -61 -4 adc~ \$1;
+#X obj 295 -52 r \$0-env2;
+#X obj 221 -53 r \$0-env1;
 #X connect 0 0 3 0;
 #X connect 0 0 3 1;
-#X connect 1 0 2 0;
 #X connect 1 0 0 0;
+#X connect 1 0 2 0;
 #X connect 2 0 0 1;
-#X connect 3 0 19 0;
-#X connect 4 0 23 0;
-#X connect 6 0 5 0;
-#X connect 6 0 21 1;
-#X connect 10 0 6 0;
-#X connect 11 0 13 0;
-#X connect 11 0 22 1;
-#X connect 14 0 11 0;
-#X connect 15 0 3 2;
-#X connect 16 0 24 0;
-#X connect 17 0 18 0;
-#X connect 21 0 6 0;
-#X connect 22 0 11 0;
-#X connect 24 0 3 0;
-#X connect 24 0 3 1;
-#X connect 24 1 1 0;
+#X connect 3 0 17 0;
+#X connect 5 0 4 0;
+#X connect 5 0 19 1;
+#X connect 9 0 5 0;
+#X connect 10 0 12 0;
+#X connect 10 0 20 1;
+#X connect 13 0 10 0;
+#X connect 14 0 3 2;
+#X connect 15 0 16 0;
+#X connect 19 0 5 0;
+#X connect 20 0 10 0;
+#X connect 22 0 3 0;
+#X connect 22 0 3 1;
+#X connect 22 0 31 0;
+#X connect 22 1 1 0;
+#X connect 23 0 22 0;
+#X connect 24 0 25 0;
 #X connect 25 0 24 0;
 #X connect 26 0 27 0;
-#X connect 27 0 26 0;
+#X connect 27 0 29 1;
+#X connect 27 1 28 0;
+#X connect 28 0 30 1;
+#X connect 29 0 21 0;
+#X connect 30 0 21 0;
+#X connect 32 0 22 0;
+#X connect 33 0 30 0;
+#X connect 34 0 29 0;
 #X coords 0 -1 1 1 96 107 2 100 100;
