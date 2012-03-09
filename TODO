@@ -1,3 +1,6 @@
+Wed 7 March 2012
+- Create graph to draw the different sensitivity of a sensor in time
+
 Mon 20 Feb
 - Add dynamic sensing timeline. Get sensor input to move through the score
 - [DONE] Mapping: Color change to rev button
