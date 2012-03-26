@@ -1,4 +1,4 @@
-#N canvas 485 130 639 388 10;
+#N canvas 515 245 639 388 10;
 #X obj -4 153 *~;
 #N canvas 474 137 418 305 filters-bank 0;
 #X obj 106 34 inlet~;
@@ -86,8 +86,8 @@
 #X obj 113 222 init 2;
 #X obj 9 194 r \$0-punch;
 #X obj 105 71 r \$0-label.input;
-#X obj 108 105 hsl 80 15 0 127 0 0 dtvsgsdfgd dgvsdgsdvg Input.2 1
-8 0 8 -191407 -191407 -1 0 1;
+#X obj 108 105 hsl 80 15 0 127 0 0 dtvsgsdfgd dgvsdgsdvg Input.1 1
+8 0 8 -1 -1 -228856 0 1;
 #X obj -60 240 outlet~;
 #N canvas 12 70 308 179 make.input.label 0;
 #X obj 39 34 loadbang;
