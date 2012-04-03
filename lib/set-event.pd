@@ -1,21 +1,20 @@
-#N canvas 105 208 1014 634 10;
+#N canvas 90 243 861 525 10;
 #X obj 310 66 r vt_beat;
-#X floatatom 272 68 5 0 0 0 - - -;
+#X floatatom 274 92 5 0 0 0 - - -;
 #X obj 310 143 ==;
 #X obj 310 271 f;
 #X obj 310 165 sel 1;
-#X obj 100 100 hradio 15 1 0 1 empty empty - 4 8 0 8 -1 -1 -191407
+#X obj 100 100 hradio 15 1 0 1 empty empty 3 4 8 0 8 -1 -1 -191407
 0;
 #X obj 100 77 r \$0-label;
 #X obj 100 149 t b;
-#N canvas 330 542 450 300 \$0-set-event 0;
-#X obj 101 100 hradio 15 1 0 5 empty empty Preset 8 8 0 8 -1 -1 -191407
+#N canvas 360 542 450 300 \$0-set-event 0;
+#X obj 101 100 hradio 15 1 0 5 empty empty Scene 8 8 0 8 -1 -1 -191407
 0;
-#X obj 177 101 nbx 3 14 0 10 0 0 empty empty empty 0 -8 0 8 -1 -228856
--228856 0 256;
 #X obj 177 125 s \$0-define-preset;
 #X obj 177 72 r \$0-stored-preset-to-gui-nbx;
-#X connect 1 0 2 0;
+#X obj 177 100 gui.nbx;
+#X connect 2 0 3 0;
 #X connect 3 0 1 0;
 #X coords 0 0 1 1 110 15 0;
 #X restore 99 278 pd \$0-set-event;
@@ -23,20 +22,20 @@
 #X msg 100 230 \; \$1 vis 1;
 #X obj 100 199 makefilename pd-%d-set-event;
 #X obj 325 116 f \$3;
-#X obj 328 192 r \$0-define-preset;
-#X floatatom 265 255 5 0 0 0 - - -;
-#X obj 328 244 t f f f;
-#X obj 267 406 s \$0-stored-preset-to-gui-nbx;
+#X obj 344 192 r \$0-define-preset;
+#X floatatom 267 273 5 0 0 0 - - -;
+#X obj 344 244 t f f f;
+#X obj 283 466 s \$0-stored-preset-to-gui-nbx;
 #X text 349 143 << matches current beat to the one that will trigger
 event;
 #X text 440 293 << send global preset change;
-#X text 447 192 << listen to user's selection from gui in pd-set-event
+#X text 468 190 << listen to user's selection from gui in pd-set-event
 ;
-#X obj 346 217 r \$0-stored-preset;
-#X obj 347 270 s \$0-preset-to-make-label;
-#X obj 267 358 t f f;
-#X obj 294 381 s \$0-stored-preset;
-#X floatatom 382 246 5 0 0 0 - - -;
+#X obj 362 217 r \$0-stored-preset;
+#X obj 363 270 s \$0-preset-to-make-label;
+#X obj 283 418 t f f;
+#X obj 310 441 s \$0-stored-preset;
+#X floatatom 399 246 5 0 0 0 - - -;
 #X obj 310 294 s preset-to-trigger;
 #X obj 103 116 hsl 10 8 0 127 0 0 \$0-toggle-event-s \$0-toggle-event-r
 empty -2 -8 0 10 -258699 -258699 -262144 0 1;
@@ -82,19 +81,20 @@ empty -2 -8 0 10 -258699 -258699 -262144 0 1;
 #X connect 6 0 8 0;
 #X connect 7 0 0 0;
 #X connect 8 0 0 0;
-#X restore 419 106 pd make-label;
-#X obj 267 333 xsssad.event \$1/pre.n;
-#X obj 392 56 r \$2_loadbang;
-#X obj 441 79 r set-event-loadbang;
-#X floatatom 238 303 5 0 0 0 - - -;
-#X floatatom 287 198 5 0 0 0 - - -;
-#X floatatom 394 167 5 0 0 0 - - -;
-#X obj 325 92 loadbang;
-#X obj 392 78 t b b;
+#X restore 419 86 pd make-label;
+#X obj 283 385 xsssad.event \$1/pre.n;
+#X obj 441 59 r set-event-loadbang;
+#X floatatom 300 349 5 0 0 0 - - -;
+#X floatatom 260 152 5 0 0 0 - - -;
+#X text 2 19 There's a bug related to the lack of loadbang \; because
+the object is created dynamically;
+#X obj 406 339 r \$2_event-loadbang;
+#X obj 392 58 t b b;
+#X obj 392 36 r \$2_event-loadbang;
+#X obj 325 93 loadbang;
 #X connect 0 0 1 0;
 #X connect 0 0 2 0;
 #X connect 2 0 4 0;
-#X connect 2 0 35 0;
 #X connect 3 0 25 0;
 #X connect 4 0 3 0;
 #X connect 5 0 7 0;
@@ -103,7 +103,7 @@ empty -2 -8 0 10 -258699 -258699 -262144 0 1;
 #X connect 9 0 11 0;
 #X connect 11 0 10 0;
 #X connect 12 0 2 1;
-#X connect 12 0 36 0;
+#X connect 12 0 34 0;
 #X connect 13 0 15 0;
 #X connect 14 0 25 0;
 #X connect 15 0 31 1;
@@ -119,10 +119,11 @@ empty -2 -8 0 10 -258699 -258699 -262144 0 1;
 #X connect 29 0 26 0;
 #X connect 29 1 26 0;
 #X connect 31 0 22 0;
-#X connect 32 0 38 0;
-#X connect 33 0 30 0;
-#X connect 34 0 31 1;
+#X connect 32 0 30 0;
+#X connect 33 0 31 1;
+#X connect 36 0 31 2;
 #X connect 37 0 12 0;
-#X connect 38 0 12 0;
-#X connect 38 1 30 0;
+#X connect 37 1 30 0;
+#X connect 38 0 37 0;
+#X connect 39 0 12 0;
 #X coords 0 -1 1 1 15 24 2 100 100;

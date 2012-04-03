@@ -1,6 +1,9 @@
+Tue 27 Mar 
+- add sample player in [inputs], to choose between live input or recorded input
+- fix bug GUI efx.sliders
+
 Mon 26 March
 - Make [pd workspace] an abstraction?
-
 
 Sat 24 March 2012
 - Bypass audio for multiple mappings

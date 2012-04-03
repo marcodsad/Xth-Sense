@@ -1,4 +1,4 @@
-#N canvas 515 245 639 388 10;
+#N canvas 521 268 639 388 10;
 #X obj -4 153 *~;
 #N canvas 474 137 418 305 filters-bank 0;
 #X obj 106 34 inlet~;
@@ -36,7 +36,7 @@
 #X connect 14 0 1 0;
 #X connect 15 0 1 0;
 #X restore -5 86 pd filters-bank;
-#N canvas 917 323 419 306 threshold 0;
+#N canvas 923 346 419 306 threshold 0;
 #X obj 42 15 inlet~;
 #X obj 42 241 outlet~;
 #X obj 144 157 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
@@ -76,7 +76,7 @@
 0;
 #X obj 106 145 hradio 15 1 0 3 empty empty RMS 2 8 0 8 -1 -1 -191407
 0;
-#X obj 158 145 hsl 30 15 0 127 0 0 gdsfaf \$0-label 4.56 0 8 0 8 -128992
+#X obj 158 145 hsl 30 15 0 127 0 0 gdsfaf \$0-label 39.17 0 8 0 8 -128992
 -128992 -262144 0 1;
 #X obj 222 84 init 62;
 #X obj 155 185 gui.nbx;
@@ -89,7 +89,7 @@
 #X obj 108 105 hsl 80 15 0 127 0 0 dtvsgsdfgd dgvsdgsdvg Input.1 1
 8 0 8 -1 -1 -228856 0 1;
 #X obj -60 240 outlet~;
-#N canvas 12 70 308 179 make.input.label 0;
+#N canvas 24 116 308 179 make.input.label 0;
 #X obj 39 34 loadbang;
 #X obj 39 54 f \$1;
 #X obj 39 76 makefilename Input.%d;
@@ -104,16 +104,18 @@
 #X restore 221 62 pd make.input.label;
 #X obj 242 239 xsssad /in.\$1/thresh;
 #X obj 242 264 xsssad /in.\$1/punch;
-#N canvas 921 397 315 162 make.env.label 0;
-#X obj 50 21 inlet;
+#N canvas 927 420 315 162 make.env.label 1;
+#X obj 50 4 inlet;
 #X obj 50 126 s \$0-label;
 #X obj 50 48 makefilename %f;
 #X msg 50 102 label \$1;
 #X obj 50 76 stripfilename -4;
-#X connect 0 0 2 0;
+#X obj 50 25 resample 200;
+#X connect 0 0 5 0;
 #X connect 2 0 4 0;
 #X connect 3 0 1 0;
 #X connect 4 0 3 0;
+#X connect 5 0 2 0;
 #X restore 221 42 pd make.env.label;
 #X obj -61 62 demux~ 1 2;
 #X obj -49 26 r \$0-filter.bypass;
