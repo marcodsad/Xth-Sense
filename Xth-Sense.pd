@@ -1,4 +1,4 @@
-#N canvas 166 141 239 457 10;
+#N canvas 147 172 239 457 10;
 #X declare -lib iemlib;
 #X declare -lib mrpeach;
 #X declare -lib moocow;
@@ -10,9 +10,9 @@
 #X declare -lib iemguts;
 #X declare -lib soundhack;
 #X declare -lib xth-sense-lib;
-#N canvas 270 204 574 638 software 0;
+#N canvas 282 204 574 638 software 0;
 #X obj 217 326 image images/main.gif 0;
-#N canvas 216 453 589 247 dependencies 0;
+#N canvas 222 476 589 247 dependencies 0;
 #X obj 375 52 import iemlib;
 #X obj 375 71 import mrpeach;
 #X obj 468 71 import moocow;
@@ -167,7 +167,7 @@ in the \; Visual Tracker software by \; Ales Cerny.;
 #X restore 345 340 pd changelog_and_todo;
 #X obj 183 509 bng 15 250 50 0 \$0-vis-dependencies empty Libs 17 7
 0 8 -99865 -1 -1;
-#N canvas 635 442 495 400 timeline-controls 0;
+#N canvas 635 235 495 400 timeline-controls 0;
 #X obj 332 42 bng 15 250 50 0 \$0-timeline-rewind empty REWIND 17 7
 1 10 -262144 -1 -1;
 #X msg 313 128 label \$1;
@@ -177,12 +177,10 @@ in the \; Visual Tracker software by \; Ales Cerny.;
 #X obj 378 148 r vt_bartime;
 #X obj 150 199 hradio 15 1 0 2 empty empty Bpm 4 8 0 8 -1 -1 -228856
 0;
-#X obj 115 199 nbx 4 15 0 1e+37 0 0 vt_from_bpm_gui vt_to_bpm_gui empty
--3 -8 0 8 -1 -228856 -1 119 256;
 #X obj 175 199 hradio 15 1 0 4 empty empty Time 32 8 0 8 -1 -1 -228856
 0;
 #X obj 378 178 nbx 4 15 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 8
--1 -228856 -1 2016.81 256;
+-1 -228856 -1 2000 256;
 #X obj 115 178 cnv 15 180 15 empty empty Mode 2 8 0 8 -191407 -33289
 0;
 #X obj 156 178 tgl 15 0 vt_from_play_switch_gui vt_to_play_switch_gui
@@ -215,7 +213,7 @@ Sel 17 8 0 8 -1 -228856 -1 0 1;
 #N canvas 78 323 450 300 store-load-update_bpm_value 0;
 #X obj 126 59 r vt_from_bpm_gui;
 #X obj 126 86 prepend set;
-#X msg 126 126 119;
+#X msg 126 126 120;
 #X obj 65 86 loadbang;
 #X obj 126 228 s bpm_to_loadbang;
 #X obj 126 158 t f f;
@@ -232,13 +230,18 @@ Sel 17 8 0 8 -1 -228856 -1 0 1;
 #X obj -19 75 r preset-to-trigger;
 #X obj 115 115 xsssad.presetstore;
 #X obj 115 136 xsssad.eventstore;
+#X obj -16 173 s vt_from_bpm_gui;
+#X obj -15 151 r vt_to_bpm_gui;
+#X obj 114 199 gui.nbx;
 #X connect 1 0 2 0;
 #X connect 3 0 1 0;
-#X connect 4 0 8 0;
-#X connect 17 0 18 0;
-#X connect 18 0 16 0;
-#X connect 20 0 19 0;
-#X connect 22 0 23 0;
+#X connect 4 0 7 0;
+#X connect 16 0 17 0;
+#X connect 17 0 15 0;
+#X connect 19 0 18 0;
+#X connect 21 0 22 0;
+#X connect 25 0 26 0;
+#X connect 26 0 24 0;
 #X coords 0 -1 1 1 209 154 2 100 100;
 #X restore 112 112 pd timeline-controls;
 #X obj 188 282 utils.gui.showpatch Deck Deck;
@@ -342,10 +345,10 @@ Sel 17 8 0 8 -1 -228856 -1 0 1;
 #X connect 3 0 2 0;
 #X coords 0 0 1 1 45 20 0;
 #X restore 345 150 pd Inputs;
-#N canvas 338 98 1013 102 Sequence 0;
+#N canvas 344 121 1013 102 Sequence 0;
 #X obj -1 -3 cnv 15 16020 100 empty empty empty 20 12 0 14 -128992
 -66577 0;
-#N canvas 326 92 1268 316 timeline 0;
+#N canvas 326 115 1268 316 timeline 0;
 #X obj -2 -29 cnv 15 16020 26 empty empty empty 20 12 0 14 -228856
 -66577 0;
 #X obj 0 -29 cnv 20 16 26 empty vt_to_selection_canvas empty 20 12
@@ -1013,7 +1016,7 @@ SELECTION 17 7 1 10 -262144 -1 -1 0 1;
 #X obj -67 89 tgl 11 0 vt_shortcuts_enable oijsdpoihjwrpiuzruzpr shortcuts
 15 7 0 10 -262144 -1 -1 0 1;
 #X obj -243 -16 nbx 5 15 -1e+37 1e+37 0 0 vt_from_bpm vt_to_bpm SET_BPM
-60 8 0 10 -262144 -1 -1 0 256;
+60 8 0 10 -262144 -1 -1 120 256;
 #X obj -243 5 change;
 #X obj -120 5 change;
 #X obj 45 5 change;
@@ -1151,9 +1154,9 @@ empty -2 -8 0 10 -66577 -262144 -1 0 0;
 #X connect 21 0 17 0;
 #X restore 147 100 pd make-event;
 #X obj 0 -47 hsl 16000 8 0 16000 0 0 vt_from_selection_slider1 vt_to_selection_slider1
-empty -2 -8 0 10 -33289 -258113 -1 0 1;
+empty -2 -8 0 10 -33289 -258113 -1 0 0;
 #X obj 0 -39 hsl 16000 8 0 16000 0 0 vt_from_selection_slider2 vt_to_selection_slider2
-empty -2 -8 0 10 -33289 -258113 -1 1600 1;
+empty -2 -8 0 10 -33289 -258113 -1 1600 0;
 #N canvas 745 247 450 300 structurestore0 0;
 #X restore 463 18 pd structurestore0;
 #N canvas 12 70 450 300 structurestore1 0;
@@ -1191,7 +1194,7 @@ set \;;
 #X coords 0 0 1 1 16020 65 2 -10 -65;
 #X restore 1 14 pd timeline;
 #X restore 346 193 pd Sequence;
-#N canvas 425 94 1003 698 Deck 1;
+#N canvas 437 125 1003 698 Deck 1;
 #X obj 501 348 image images/deck.gif 0;
 #X obj 948 22 tabswitch-motion2;
 #N canvas 438 150 931 343 workspace_4 0;
@@ -1609,7 +1612,7 @@ set \;;
 #X obj 100 126 gui.bng.box Mapping;
 #N canvas 502 233 457 265 move-modules 0;
 #X obj 64 -58 inlet;
-#X obj 64 92 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+#X obj 64 92 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
 ;
 #X obj 63 110 sel 0 1;
 #X floatatom 131 100 5 0 0 0 - - -;
@@ -1964,7 +1967,7 @@ set \;;
 #X coords 0 -1 1 1 310 60 2 0 0;
 #X restore 25 398 pd sensor-1-to-control.values;
 #N canvas 616 430 877 412 analysis 0;
-#N canvas 222 78 1364 764 calibrate 0;
+#N canvas 228 78 1364 764 calibrate 0;
 #X obj 45 90 demux 1 2 3 4 5;
 #X obj 132 67 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144 -1
 -1 0;
@@ -2280,9 +2283,9 @@ set \;;
 #X restore 731 -39 pd output-only-ascendent-order;
 #X floatatom 692 85 5 0 0 0 - - -;
 #X obj 629 239 hsl 128 15 0 1 0 0 empty empty empty -2 -6 0 8 -262144
--1 -1 2005 1;
+-1 -1 0 1;
 #X obj 664 329 hsl 128 15 0 1 0 0 empty empty empty -2 -6 0 8 -262144
--1 -1 1702 1;
+-1 -1 0 1;
 #X obj 732 430 hsl 128 15 0 1 0 0 empty empty empty -2 -6 0 8 -262144
 -1 -1 0 1;
 #X obj 850 530 hsl 128 15 0 1 0 0 empty empty empty -2 -6 0 8 -262144
@@ -6355,7 +6358,7 @@ set \;;
 #X obj 100 100 cnv 15 68 97 empty empty empty 20 12 0 14 -128992 -262144
 0;
 #X obj 126 108 vsl 15 70 0 1 0 0 sadgfsd sfdsfs Tanh -5 80 0 8 -191407
--1 -262144 5 1;
+-1 -262144 0 1;
 #N canvas 1809 209 312 275 smooth.control.params 0;
 #X obj 74 19 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262130
 -1 -1 0 1;
@@ -6510,7 +6513,7 @@ set \;;
 #X obj 105 233 s \$0-linear-for-last-max;
 #X obj 148 36 r \$0-linear-for-last-max;
 #X obj 148 119 vsl 15 70 0 1 0 0 dfosij sdfkjkl Max -2 -9 0 8 -191407
--1 -262144 3206 1;
+-1 -262144 2760 1;
 #X obj 148 208 s MASTER.LASTMAX.1;
 #X text 207 -176 < converts the signal in control value every 20ms
 ;
@@ -6540,7 +6543,7 @@ set \;;
 #X obj 100 100 cnv 15 44 97 empty empty empty 20 12 0 14 -128992 -262144
 0;
 #X obj 126 108 vsl 15 70 0 1 0 0 sadgfsd sfdsfs Soft -5 80 0 8 -191407
--1 -262144 3191 1;
+-1 -262144 0 1;
 #N canvas 2084 285 312 275 smooth.control.params 0;
 #X obj 74 19 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262130
 -1 -1 0 1;
@@ -6565,7 +6568,7 @@ set \;;
 #X connect 9 0 2 1;
 #X restore 146 49 pd smooth.control.params;
 #X obj 104 119 vsl 15 70 0 1 0 0 dfgsdg dfgdfg Nat -2 -10 0 8 -191407
--1 -262144 4416 1;
+-1 -262144 0 1;
 #X obj 104 -14 t f f;
 #X obj 104 -181 spigot 1;
 #X obj 149 -201 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
@@ -6609,7 +6612,7 @@ set \;;
 #X obj 100 100 cnv 15 44 97 empty empty empty 20 12 0 14 -128992 -262144
 0;
 #X obj 126 108 vsl 15 70 0 1 0 0 sadgfsd sfdsfs Soft -5 80 0 8 -191407
--1 -262144 2534 1;
+-1 -262144 0 1;
 #N canvas 1050 504 312 275 smooth.control.params 0;
 #X obj 74 19 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262130
 -1 -1 0 1;
@@ -6634,7 +6637,7 @@ set \;;
 #X connect 9 0 2 1;
 #X restore 147 49 pd smooth.control.params;
 #X obj 104 119 vsl 15 70 0 1 0 0 dfgsdg dfgdfg Nat -2 -10 0 8 -191407
--1 -262144 207 1;
+-1 -262144 0 1;
 #X obj 105 -14 t f f;
 #X obj 105 -181 spigot 1;
 #X obj 200 -201 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
@@ -6893,7 +6896,7 @@ x 5 9 0 11 -232576 -1 -1 0 0;
 #X obj 100 100 cnv 15 68 97 empty empty empty 20 12 0 14 -128992 -262144
 0;
 #X obj 126 108 vsl 15 70 0 1 0 0 sadgfsd sfdsfs Tanh -5 80 0 8 -191407
--1 -262144 22 1;
+-1 -262144 0 1;
 #N canvas 1038 458 312 275 smooth.control.params 0;
 #X obj 74 19 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262130
 -1 -1 0 1;
@@ -7048,7 +7051,7 @@ x 5 9 0 11 -232576 -1 -1 0 0;
 #X restore 148 64 pd last.max.&.three.triggers;
 #X obj 105 210 t f f;
 #X obj 148 119 vsl 15 70 0 1 0 0 dfosij sdfkjkl Max -2 -9 0 8 -191407
--1 -262144 3177 1;
+-1 -262144 2760 1;
 #X obj 132 261 s MASTER.IN.2;
 #X obj 126 286 s MASTER.TANH.2;
 #X obj 148 208 s MASTER.LASTMAX.2;
@@ -7096,7 +7099,7 @@ x 5 9 0 11 -232576 -1 -1 0 0;
 #X connect 20 0 8 0;
 #X coords 0 -1 1 1 383 248 2 100 100;
 #X restore 548 389 pd analysis;
-#N canvas 453 293 927 346 workspace_1 0;
+#N canvas 478 141 927 346 workspace_1 0;
 #X obj 5 4 cnv 15 910 331 empty empty empty 20 12 0 14 -162280 -66577
 0;
 #N canvas 523 285 571 415 totalcount 0;
