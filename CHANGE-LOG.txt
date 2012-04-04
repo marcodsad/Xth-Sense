@@ -1,3 +1,9 @@
+Wed 4 Apr 2012
+- Fixed boring bug with Audio.ON/OFF switches
+- Sequence sliders now behave "Jump on click"
+- Swapped regular number boxes with [gui.nbx] for better responsiveness
+
+
 Mon 20 Feb 2012
 - Fixed bug with filter bypass button
 
