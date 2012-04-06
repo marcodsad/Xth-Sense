@@ -1,6 +1,6 @@
 Tue 27 Mar 
 - add sample player in [inputs], to choose between live input or recorded input
-- fix bug GUI efx.sliders
+- fix bug GUI efx.sliders (maybe there's no bug, check better)
 
 Mon 26 March
 - Make [pd workspace] an abstraction?
