@@ -1,0 +1,24 @@
+#N canvas 601 183 599 649 10;
+#X obj 217 326 image images/main.gif 0;
+#X obj 189 307 tgl 14 0 sfds sdfsf Triggers 16 7 0 8 -162280 -1 -1
+0 1;
+#X obj 6 366 s GLOB.START;
+#X obj 237 509 bng 15 250 50 0 \$0-vis-change-log empty Change_log
+17 7 0 8 -99865 -1 -1;
+#X obj 122 509 bng 15 250 50 0 \$0-vis-todo empty Todo 17 7 0 8 -99865
+-1 -1;
+#X obj 183 509 bng 15 250 50 0 \$0-vis-dependencies empty Libs 17 7
+0 8 -99865 -1 -1;
+#X obj 188 282 utils.gui.showpatch Deck Deck;
+#X obj 251 282 utils.gui.showpatch Sequence Seq;
+#X obj 120 468 send~ 1.l;
+#X obj 222 468 send~ 2.l;
+#X obj 118 354 input.chain 1;
+#X obj 120 282 utils.gui.showpatch calibrate Track;
+#X obj 120 307 utils.gui.showpatch history Histo;
+#X obj 219 354 input.chain 2;
+#X obj 112 112 global.controls;
+#X connect 1 0 2 0;
+#X connect 10 0 8 0;
+#X connect 13 0 9 0;
+#X coords 0 -1 1 1 233 452 2 100 100;

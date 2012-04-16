@@ -1,4 +1,4 @@
-#N canvas 273 244 639 388 10;
+#N canvas 279 267 639 388 10;
 #X obj -4 153 *~;
 #N canvas 474 137 418 305 filters-bank 0;
 #X obj 106 34 inlet~;

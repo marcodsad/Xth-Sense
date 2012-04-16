@@ -1,4 +1,4 @@
-#N canvas 118 225 450 300 10;
+#N canvas 124 248 450 300 10;
 #X obj 100 100 cnv 15 57 20 empty empty empty 20 12 0 14 -128992 -66577
 0;
 #X obj 123 -18 inlet;
@@ -7,12 +7,8 @@
 #X obj 123 20 t f f;
 #X obj 240 163 outlet bang;
 #X obj 150 163 outlet value;
-#X obj 338 84 nbx 3 15 0 100 0 0 empty empty empty 0 -8 0 8 -1 -262144
--1 0 256;
-#X obj 322 19 hsl 30 15 0 127 0 0 gdsfaf \$0-amount 0 0 8 0 8 -128992
--128992 -262144 0 1;
 #X floatatom 231 66 5 0 0 0 - - -;
-#X obj 123 102 hsl 30 15 0 127 0 0 gdsfaf \$0-label 0.00 0 8 0 8 -128992
+#X obj 123 102 hsl 30 15 0 127 0 0 gdsfaf \$0-label 0 0 8 0 8 -128992
 -128992 -262144 0 1;
 #N canvas 921 397 346 241 make-value-label 0;
 #X obj 50 21 inlet;
@@ -27,7 +23,7 @@
 #X restore -24 92 pd make-value-label;
 #X connect 1 0 3 0;
 #X connect 2 0 4 0;
-#X connect 3 0 10 0;
+#X connect 3 0 8 0;
 #X connect 3 1 5 0;
-#X connect 8 0 5 0;
+#X connect 6 0 5 0;
 #X coords 0 -1 1 1 57 20 2 100 100;

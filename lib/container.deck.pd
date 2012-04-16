@@ -1,0 +1,22 @@
+#N canvas 281 75 1113 767 10;
+#X obj 501 348 image /home/sad/00.Pd/projects/_Xth-Sense/dev/images/deck.gif
+0;
+#X obj 724 705 catch~ cntrl.mix-l;
+#X obj 844 727 catch~ cntrl.mix-r;
+#X obj 842 707 catch~ test-l;
+#X obj 558 657 utils.cpusage;
+#X obj 717 657 hradio 15 1 0 13 empty empty Xth.Sense.Biophysical.Music.v1
+5 8 0 8 -1 -1 -228856 0;
+#X obj 30 503 mixer.deck;
+#X obj 25 398 features.pusher 1;
+#X obj 25 900 features.pusher 2;
+#X obj 933 379 buttons.modules;
+#X obj 338 404 buttons.pusher;
+#X obj 548 389 analysis.module;
+#X obj 537 755 routing.module;
+#X obj 537 755 midi.module;
+#X obj 1010 325 utils.openit;
+#X text 1008 353 LOAD BACKGROUND \; IMAGE.;
+#X obj 948 22 tabswitch-motion2;
+#X connect 14 0 0 0;
+#X coords 0 -1 1 1 1000 700 2 0 -3;
