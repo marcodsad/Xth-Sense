@@ -1,4 +1,4 @@
-#N canvas 183 200 238 457 10;
+#N canvas 143 228 238 457 10;
 #X declare -lib iemlib;
 #X declare -lib mrpeach;
 #X declare -lib moocow;
@@ -10,7 +10,7 @@
 #X declare -lib iemguts;
 #X declare -lib soundhack;
 #X declare -lib xth-sense-lib;
-#N canvas 36 183 941 659 main.ui.container 0;
+#N canvas 42 183 941 659 main.ui.container 0;
 #N canvas 222 476 589 247 dependencies 0;
 #X obj 375 52 import iemlib;
 #X obj 375 71 import mrpeach;
@@ -287,7 +287,7 @@ in the \; Visual Tracker software by \; Ales Cerny.;
 #X restore 6 -24 pd timeline;
 #X obj 2 -59 time.sequence;
 #X restore 346 194 pd Sequence;
-#N canvas 440 99 1004 698 Deck 0;
+#N canvas 434 85 1004 698 Deck 0;
 #X obj 0 -3 container.deck;
 #N canvas 438 150 931 343 workspace_4 0;
 #X obj 5 3 cnv 15 910 331 empty empty empty 20 12 0 14 -162280 -66577

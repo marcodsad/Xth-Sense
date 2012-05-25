@@ -1,4 +1,4 @@
-#N canvas 281 75 1113 767 10;
+#N canvas 338 75 1113 767 10;
 #X obj 501 348 image /home/sad/00.Pd/projects/_Xth-Sense/dev/images/deck.gif
 0;
 #X obj 724 705 catch~ cntrl.mix-l;
@@ -18,5 +18,29 @@
 #X obj 1010 325 utils.openit;
 #X text 1008 353 LOAD BACKGROUND \; IMAGE.;
 #X obj 948 22 tabswitch-motion2;
+#N canvas 299 187 595 365 find-img-deck 0;
+#X obj 103 187 mergefilename /;
+#X msg 103 156 \$1 \$2;
+#X obj 103 131 pack s s;
+#X obj 115 25 loadbang;
+#X obj 103 53 t b b;
+#X obj 81 27 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 103 289 outlet;
+#X msg 103 253 open \$1;
+#X obj 103 76 getdir 3;
+#X obj 148 104 symbol images/deck.gif;
+#X connect 0 0 7 0;
+#X connect 1 0 0 0;
+#X connect 2 0 1 0;
+#X connect 3 0 4 0;
+#X connect 4 0 8 0;
+#X connect 4 1 9 0;
+#X connect 5 0 4 0;
+#X connect 7 0 6 0;
+#X connect 8 0 2 0;
+#X connect 9 0 2 1;
+#X restore 1007 300 pd find-img-deck;
 #X connect 14 0 0 0;
+#X connect 17 0 0 0;
 #X coords 0 -1 1 1 1000 700 2 0 -3;

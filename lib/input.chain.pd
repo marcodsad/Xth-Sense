@@ -1,6 +1,6 @@
-#N canvas 279 267 639 388 10;
+#N canvas 285 290 639 388 10;
 #X obj -4 153 *~;
-#N canvas 474 137 418 305 filters-bank 0;
+#N canvas 480 160 418 305 filters-bank 0;
 #X obj 106 34 inlet~;
 #X obj 48 247 outlet~;
 #X obj 107 78 lop~ 70;
@@ -13,10 +13,10 @@
 #X obj 50 121 lop~ 50;
 #X obj 50 143 lop~ 50;
 #X obj 306 100 bp~ 100 23;
-#X obj 49 171 *~ 1;
-#X obj 106 172 *~ 1;
-#X obj 209 128 *~ 1;
-#X obj 308 123 *~ 1;
+#X obj 49 171 *~ 4;
+#X obj 106 172 *~ 4;
+#X obj 209 128 *~ 4;
+#X obj 308 123 *~ 4;
 #X connect 0 0 2 0;
 #X connect 0 0 7 0;
 #X connect 0 0 6 0;
