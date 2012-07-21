@@ -1,4 +1,4 @@
-#N canvas 42 185 521 406 10;
+#N canvas 54 231 521 406 10;
 #X obj 332 52 bng 15 250 50 0 \$0-timeline-rewind empty REWIND 17 7
 1 10 -262144 -1 -1;
 #X msg 313 138 label \$1;
@@ -11,7 +11,7 @@
 #X obj 175 209 hradio 15 1 0 4 empty empty Time 32 8 0 8 -1 -1 -228856
 0;
 #X obj 378 188 nbx 4 15 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 8
--1 -228856 -1 2000 256;
+-1 -228856 -1 2500 256;
 #X obj 115 188 cnv 15 180 15 empty empty Mode 2 8 0 8 -191407 -33289
 0;
 #X obj 156 188 tgl 15 0 vt_from_play_switch_gui vt_to_play_switch_gui
@@ -41,23 +41,6 @@ Sel 17 8 0 8 -1 -228856 -1 0 1;
 #X connect 1 0 3 0;
 #X connect 3 0 0 0;
 #X restore 170 66 pd make-label;
-#N canvas 110 458 450 300 store-load-update_bpm_value 0;
-#X obj 126 59 r vt_from_bpm_gui;
-#X obj 126 86 prepend set;
-#X msg 126 126 120;
-#X obj 65 86 loadbang;
-#X obj 126 228 s bpm_to_loadbang;
-#X obj 126 158 t f f;
-#X obj 153 204 s vt_to_bpm_gui;
-#X msg 153 179 \$1;
-#X connect 0 0 1 0;
-#X connect 1 0 2 0;
-#X connect 2 0 5 0;
-#X connect 3 0 2 0;
-#X connect 5 0 4 0;
-#X connect 5 1 7 0;
-#X connect 7 0 6 0;
-#X restore 100 269 pd store-load-update_bpm_value;
 #X obj -19 85 r preset-to-trigger;
 #X obj 115 125 xsssad.presetstore;
 #X obj 115 146 xsssad.eventstore;
@@ -71,8 +54,8 @@ Sel 17 8 0 8 -1 -228856 -1 0 1;
 #X connect 16 0 17 0;
 #X connect 17 0 15 0;
 #X connect 19 0 18 0;
-#X connect 21 0 22 0;
-#X connect 25 0 26 0;
-#X connect 26 0 24 0;
-#X connect 27 0 11 0;
+#X connect 20 0 21 0;
+#X connect 24 0 25 0;
+#X connect 25 0 23 0;
+#X connect 26 0 11 0;
 #X coords 0 -1 1 1 209 154 2 100 100;

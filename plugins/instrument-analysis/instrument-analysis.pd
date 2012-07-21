@@ -1,6 +1,6 @@
-#N canvas 311 184 589 369 10;
+#N canvas 542 205 589 369 10;
 #X declare -lib mrpeach;
-#X declare -lib xthsense;
+#X declare -lib xth-sense-lib;
 #X obj 906 5 tgl 15 1 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
 ;
 #X text 867 159 audio in;
@@ -1256,8 +1256,6 @@ connect 11 0 4 0 \; pd-\$1\$2 connect 12 0 15 0 \; pd-\$1\$2 connect
 #X connect 54 0 46 0;
 #X coords 0 0 1 1 542 311 2 0 0;
 #X restore 22 11 pd tune;
-#X obj 600 323 import xthsense;
-#X obj 623 69 efx.puncher.mono~;
 #X obj 726 47 init 2;
 #X obj 622 1 lib/adc_wrapper 1;
 #X text 954 41 Instrument analysis \, a simple but functional \; pitch
@@ -1265,6 +1263,8 @@ recognition model \; First version created by Marco Donnarumma in 2007
 \; major improvements and OSC capabilities were added by Phil Stone
 in 2009 \; This is a new revision developed for inclusion in the Xth
 Sense system.;
+#X obj 600 323 import xth-sense-lib;
+#X obj 623 69 efx.puncher.mono~;
 #X connect 0 0 3 1;
 #X connect 4 0 7 0;
 #X connect 6 0 12 1;
@@ -1272,8 +1272,8 @@ Sense system.;
 #X connect 7 0 9 0;
 #X connect 9 0 8 0;
 #X connect 10 0 9 1;
-#X connect 16 0 12 0;
-#X connect 17 0 16 1;
-#X connect 18 0 16 0;
-#X connect 18 0 3 0;
+#X connect 15 0 19 1;
+#X connect 16 0 3 0;
+#X connect 16 0 19 0;
+#X connect 19 0 12 0;
 #X coords 0 0 1 1 85 60 0;
