@@ -1,4 +1,4 @@
-#N canvas 285 290 639 388 10;
+#N canvas 294 313 639 388 10;
 #X obj -4 153 *~;
 #N canvas 480 160 418 305 filters-bank 0;
 #X obj 106 34 inlet~;
@@ -84,7 +84,7 @@
 #X obj 113 222 init 2;
 #X obj 9 194 r \$0-punch;
 #X obj 105 71 r \$0-label.input;
-#X obj 108 105 hsl 80 15 0 127 0 0 dtvsgsdfgd dgvsdgsdvg Input.1 1
+#X obj 108 105 hsl 80 15 0 127 0 0 dtvsgsdfgd dgvsdgsdvg Input.0 1
 8 0 8 -1 -1 -228856 0 1;
 #X obj -60 240 outlet~;
 #N canvas 24 116 308 179 make.input.label 0;
@@ -116,7 +116,7 @@
 #X connect 5 0 2 0;
 #X restore 221 42 pd make.env.label;
 #X obj -61 62 demux~ 1 2;
-#X obj -49 26 r \$0-filter.bypass;
+#X obj -3 22 r \$0-filter.bypass;
 #X obj 108 125 hsl 80 15 0 127 0 0 dtvsgsdfgd dgvsdgsdvg Filter.Bypass
 1 8 0 8 -66577 -66577 -233017 0 1;
 #N canvas 896 182 338 262 bypass.button 0;
@@ -162,6 +162,7 @@
 #X obj 155 165 gui.nbx;
 #X obj 155 185 gui.nbx;
 #X obj 380 97 r in.\$1_dyna.thresh;
+#X obj 14 -27 inlet~;
 #X connect 0 0 3 0;
 #X connect 0 0 3 1;
 #X connect 1 0 0 0;
@@ -195,4 +196,5 @@
 #X connect 34 0 10 0;
 #X connect 34 0 18 1;
 #X connect 35 0 33 0;
+#X connect 36 0 20 0;
 #X coords 0 -1 1 1 96 107 2 100 100;

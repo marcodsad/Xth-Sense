@@ -1,3 +1,7 @@
+Tue 8 Jan 2013
+- Fixed MIDI saving/loading bug
+- Fixed MIDI labelling on preset load bug
+
 Wed 4 Apr 2012
 - Fixed boring bug with Audio.ON/OFF switches
 - Sequence sliders now behave "Jump on click"

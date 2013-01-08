@@ -9,7 +9,7 @@ Sat 24 March 2012
 - Bypass audio for multiple mappings
 
 Wed 7 March 2012
-- Create graph to draw the different sensitivity of a sensor in time
+- [DONE] Create graph to draw the different sensitivity of a sensor in time
 
 Mon 20 Feb
 - Add dynamic sensing timeline. Get sensor input to move through the score
@@ -22,7 +22,7 @@ Tue 7 Feb 2012
 Mon 9 Jan 2012
 - Group MMG features, calculate average, deviation, difference so to identify gestures?
 - [DONE] Improve Inputs subpatch usability by adding an enhanced GUI
-- Re-organize the whole framework, create modular patches to enable regular updates (how exactly?)
+- [DONE] Re-organize the whole framework, create modular patches to enable regular updates (how exactly?)
 
 Thu 24 Nov 2011
 - [DONE] Mapping: enable custom output range
@@ -46,7 +46,7 @@ Wed 24 Aug 2011
 - [ONGOING] Try out tID lib for more feature extraction
 
 Mon 15 Aug 2011
-- Test new [analysis] in a live performance
+- [DONE] Test new [analysis] in a live performance
 
 Thu 11 Aug 2011
 - [DONE] Check ruler in VisualTracker to manage timeline and related events in XS.
