@@ -1,4 +1,4 @@
-#N canvas 294 313 639 388 10;
+#N canvas 484 110 639 423 10;
 #X obj -4 153 *~;
 #N canvas 480 160 418 305 filters-bank 0;
 #X obj 106 34 inlet~;
@@ -75,7 +75,7 @@
 0;
 #X obj 106 145 hradio 15 1 0 3 empty empty RMS 2 8 0 8 -1 -1 -191407
 0;
-#X obj 158 145 hsl 30 15 0 127 0 0 gdsfaf \$0-label 0.00 0 8 0 8 -128992
+#X obj 158 145 hsl 30 15 0 127 0 0 gdsfaf \$0-label 22.28 0 8 0 8 -128992
 -128992 -262144 0 1;
 #X obj 222 84 init 62;
 #X obj 106 185 hradio 15 1 0 3 empty empty Punch 2 8 0 8 -1 -1 -191407
@@ -84,7 +84,7 @@
 #X obj 113 222 init 2;
 #X obj 9 194 r \$0-punch;
 #X obj 105 71 r \$0-label.input;
-#X obj 108 105 hsl 80 15 0 127 0 0 dtvsgsdfgd dgvsdgsdvg Input.0 1
+#X obj 108 105 hsl 58 15 0 127 0 0 dtvsgsdfgd dgvsdgsdvg Input.1 1
 8 0 8 -1 -1 -228856 0 1;
 #X obj -60 240 outlet~;
 #N canvas 24 116 308 179 make.input.label 0;
@@ -119,7 +119,7 @@
 #X obj -3 22 r \$0-filter.bypass;
 #X obj 108 125 hsl 80 15 0 127 0 0 dtvsgsdfgd dgvsdgsdvg Filter.Bypass
 1 8 0 8 -66577 -66577 -233017 0 1;
-#N canvas 896 182 338 262 bypass.button 0;
+#N canvas 899 182 338 262 bypass.button 0;
 #X obj 45 15 inlet;
 #X obj 45 37 t b;
 #X obj 45 59 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
@@ -163,6 +163,36 @@
 #X obj 155 185 gui.nbx;
 #X obj 380 97 r in.\$1_dyna.thresh;
 #X obj 14 -27 inlet~;
+#X obj 175 105 hsl 12 15 0 127 0 0 dtvsgsdfgd dgvsdgsdvg () 1 8 0 8
+-260818 -260818 -1 0 1;
+#N canvas 1159 190 338 262 switch.button 0;
+#X obj 45 15 inlet;
+#X obj 45 37 t b;
+#X obj 45 59 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
+;
+#X obj 174 208 outlet;
+#X obj 174 123 sel 0 1;
+#X msg 174 179 color 2 2 10;
+#X msg 193 153 color 14 14 22;
+#X obj 45 82 t f f;
+#X obj 45 139 s \$0-switch.bypass;
+#X obj 85 37 init 1;
+#X obj 159 63 xsssad /in.\$1/switch;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 7 0;
+#X connect 2 0 10 1;
+#X connect 4 0 5 0;
+#X connect 4 1 6 0;
+#X connect 5 0 3 0;
+#X connect 6 0 3 0;
+#X connect 7 0 8 0;
+#X connect 7 1 4 0;
+#X connect 9 0 2 0;
+#X connect 10 0 2 0;
+#X restore 367 144 pd switch.button;
+#X obj 430 10 r \$0-switch.bypass;
+#X obj 430 33 switch~;
 #X connect 0 0 3 0;
 #X connect 0 0 3 1;
 #X connect 1 0 0 0;
@@ -197,4 +227,7 @@
 #X connect 34 0 18 1;
 #X connect 35 0 33 0;
 #X connect 36 0 20 0;
+#X connect 37 0 38 0;
+#X connect 38 0 37 0;
+#X connect 39 0 40 0;
 #X coords 0 -1 1 1 96 107 2 100 100;

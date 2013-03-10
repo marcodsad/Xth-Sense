@@ -1,4 +1,4 @@
-#N canvas 356 98 1113 767 10;
+#N canvas 369 91 1113 767 10;
 #X obj 501 348 image /home/sad/00.Pd/projects/_Xth-Sense/dev/images/deck.gif
 0;
 #X obj 724 705 catch~ cntrl.mix-l;
@@ -12,7 +12,6 @@
 #X obj 25 900 features.pusher 2;
 #X obj 933 379 buttons.modules;
 #X obj 338 404 buttons.pusher;
-#X obj 548 389 analysis.module;
 #X obj 537 755 routing.module;
 #X obj 537 755 midi.module;
 #X obj 1010 325 utils.openit;
@@ -42,6 +41,8 @@
 #X connect 9 0 2 1;
 #X restore 1007 300 pd find-img-deck;
 #X obj 30 488 mixer.recorder;
-#X connect 14 0 0 0;
-#X connect 17 0 0 0;
+#X obj 537 755 mixer.automation.module;
+#X obj 548 389 analysis.module;
+#X connect 13 0 0 0;
+#X connect 16 0 0 0;
 #X coords 0 -1 1 1 1000 700 2 0 -3;

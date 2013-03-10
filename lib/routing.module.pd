@@ -1,4 +1,4 @@
-#N canvas 6 47 450 300 10;
+#N canvas 467 281 607 401 10;
 #N canvas 339 134 590 405 arduino 0;
 #X restore 489 292 pd arduino;
 #N canvas 6 47 357 190 init 0;

@@ -1,36 +1,36 @@
-#N canvas 54 231 521 406 10;
-#X obj 332 52 bng 15 250 50 0 \$0-timeline-rewind empty REWIND 17 7
+#N canvas 57 231 521 406 10;
+#X obj 332 45 bng 15 250 50 0 \$0-timeline-rewind empty REWIND 17 7
 1 10 -262144 -1 -1;
-#X msg 313 138 label \$1;
-#X obj 235 209 hradio 15 1 0 4 empty empty 00:00:00 3 8 0 8 -1 -1 -228856
+#X msg 313 131 label \$1;
+#X obj 235 222 hradio 15 1 0 4 empty empty 00:26:00 3 8 0 8 -1 -1 -228856
 0;
-#X obj 313 116 r vt_current_clock;
-#X obj 378 158 r vt_bartime;
-#X obj 150 209 hradio 15 1 0 2 empty empty Bpm 4 8 0 8 -1 -1 -228856
+#X obj 313 109 r vt_current_clock;
+#X obj 378 151 r vt_bartime;
+#X obj 150 222 hradio 15 1 0 2 empty empty Bpm 4 8 0 8 -1 -1 -228856
 0;
-#X obj 175 209 hradio 15 1 0 4 empty empty Time 32 8 0 8 -1 -1 -228856
+#X obj 175 222 hradio 15 1 0 4 empty empty Time 32 8 0 8 -1 -1 -228856
 0;
-#X obj 378 188 nbx 4 15 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 8
--1 -228856 -1 2500 256;
-#X obj 115 188 cnv 15 180 15 empty empty Mode 2 8 0 8 -191407 -33289
+#X obj 378 181 nbx 4 15 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 8
+-1 -228856 -1 2000 256;
+#X obj 115 181 cnv 15 180 15 empty empty Mode 2 8 0 8 -191407 -33289
 0;
-#X obj 156 188 tgl 15 0 vt_from_play_switch_gui vt_to_play_switch_gui
+#X obj 156 181 tgl 15 0 vt_from_play_switch_gui vt_to_play_switch_gui
 Play 17 8 0 8 -1 -262144 -1 0 1;
-#X obj 249 188 tgl 15 0 vt_from_loop_switch_gui vt_to_loop_switch_gui
+#X obj 249 181 tgl 15 0 vt_from_loop_switch_gui vt_to_loop_switch_gui
 Loop 17 8 0 8 -1 -258113 -1 0 1;
-#X obj 203 188 tgl 15 0 vt_from_selection_switch vt_to_selection_switch
+#X obj 203 181 tgl 15 0 vt_from_selection_switch vt_to_selection_switch
 Sel 17 8 0 8 -1 -228856 -1 0 1;
-#X obj 115 167 cnv 15 180 15 empty empty Event 2 8 0 8 -191407 -33289
+#X obj 115 160 cnv 15 180 15 empty empty Event 2 8 0 8 -191407 -33289
 0;
-#X obj 156 167 hradio 15 1 0 2 empty empty New 4 8 0 8 -1 -1 -191407
+#X obj 156 160 hradio 15 1 0 2 empty empty New 4 8 0 8 -1 -1 -191407
 0;
-#X obj 186 167 bng 15 250 50 0 xs-create-event empty empty 17 7 0 10
+#X obj 186 160 bng 15 250 50 0 xs-create-event empty empty 17 7 0 10
 -228856 -1 -1;
-#X obj 203 167 hradio 15 1 0 3 empty empty 00/00 8 8 0 8 -1 -1 -228856
+#X obj 203 160 hradio 15 1 0 3 empty empty 13/05 8 8 0 8 -1 -1 -228856
 0;
-#X obj 100 33 r vt_current_beatcount;
-#X msg 100 55 label \$1;
-#X obj 250 167 hradio 15 1 0 3 empty empty 0 8 8 0 8 -1 -1 -228856
+#X obj 100 26 r vt_current_beatcount;
+#X msg 100 48 label \$1;
+#X obj 250 160 hradio 15 1 0 3 empty empty 53 8 8 0 8 -1 -1 -228856
 0;
 #N canvas 42 185 450 300 make-label 0;
 #X msg 134 34 label \$1;
@@ -40,14 +40,15 @@ Sel 17 8 0 8 -1 -228856 -1 0 1;
 #X connect 0 0 2 0;
 #X connect 1 0 3 0;
 #X connect 3 0 0 0;
-#X restore 170 66 pd make-label;
-#X obj -19 85 r preset-to-trigger;
-#X obj 115 125 xsssad.presetstore;
-#X obj 115 146 xsssad.eventstore;
-#X obj -16 183 s vt_from_bpm_gui;
-#X obj -15 161 r vt_to_bpm_gui;
-#X obj 114 209 gui.nbx;
-#X obj -11 113 init 0;
+#X restore 170 59 pd make-label;
+#X obj -19 78 r preset-to-trigger;
+#X obj 115 118 xsssad.presetstore;
+#X obj 115 139 xsssad.eventstore;
+#X obj -16 176 s vt_from_bpm_gui;
+#X obj -15 154 r vt_to_bpm_gui;
+#X obj 114 222 gui.nbx;
+#X obj -11 106 init 0;
+#X obj 115 202 xsssad.autostore;
 #X connect 1 0 2 0;
 #X connect 3 0 1 0;
 #X connect 4 0 7 0;

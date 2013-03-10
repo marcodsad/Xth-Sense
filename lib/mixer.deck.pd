@@ -1,4 +1,4 @@
-#N canvas 309 176 953 440 10;
+#N canvas 321 176 984 479 10;
 #X obj 100 100 cnv 15 492 155 empty empty empty 20 12 0 14 -128992
 -66577 0;
 #X text 569 -19 throw/catch = bus: serve per gruppare canali;
@@ -98,7 +98,7 @@
 #X obj 459 217 hradio 15 1 0 3 empty empty Eight 6 8 0 8 -1 -1 -191407
 0;
 #X obj 503 217 hradio 15 1 0 3 empty empty Nine 8 8 0 8 -1 -1 -191407
-0;
+1;
 #X obj 547 217 hradio 15 1 0 3 empty empty Ten 8 8 0 8 -1 -1 -191407
 0;
 #X obj 23 174 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
@@ -121,12 +121,18 @@
 #X obj 419 238 mix.aux.stereo~ /aux.seven;
 #X obj 463 238 mix.aux.stereo~ /aux.eight;
 #X obj -33 -9 send~ dummy;
-#X obj 225 362 dac~;
 #X obj 23 341 send~ xthsense-right-ch;
 #X obj -45 362 send~ xthsense-left-ch;
 #X obj 226 307 receive~ xthsense-left-ch;
-#X obj 246 333 receive~ xthsense-right-ch;
-#X obj 100 217 hradio 15 1 0 3 empty empty Mix 11 8 0 8 -1 -1 -191407
+#X obj 269 333 receive~ xthsense-right-ch;
+#X obj 225 362 dac~ 1 2;
+#X obj 459 307 receive~ xthsense-left-ch;
+#X obj 502 333 receive~ xthsense-right-ch;
+#X obj 458 362 dac~ 4 3;
+#X obj 681 303 receive~ xthsense-left-ch;
+#X obj 724 329 receive~ xthsense-right-ch;
+#X obj 680 358 dac~ 5 6;
+#X obj 100 217 hradio 15 1 0 3 empty empty Main 11 8 0 8 -1 -1 -191407
 0;
 #X connect 4 0 9 0;
 #X connect 4 1 9 1;
@@ -198,12 +204,16 @@
 #X connect 17 1 5 1;
 #X connect 28 0 29 0;
 #X connect 29 0 34 2;
-#X connect 30 0 49 0;
-#X connect 31 0 48 0;
-#X connect 32 0 49 0;
-#X connect 33 0 48 0;
+#X connect 30 0 48 0;
+#X connect 31 0 47 0;
+#X connect 32 0 48 0;
+#X connect 33 0 47 0;
 #X connect 34 0 32 0;
 #X connect 34 1 33 0;
-#X connect 50 0 47 0;
-#X connect 51 0 47 1;
+#X connect 49 0 51 0;
+#X connect 50 0 51 1;
+#X connect 52 0 54 0;
+#X connect 53 0 54 1;
+#X connect 55 0 57 0;
+#X connect 56 0 57 1;
 #X coords 0 -1 1 1 492 155 2 100 100;

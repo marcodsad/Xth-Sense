@@ -1,5 +1,5 @@
-#N canvas 348 330 620 455 10;
-#N canvas 360 88 794 568 calibrate 1;
+#N canvas 354 330 620 455 10;
+#N canvas 360 88 794 568 calibrate 0;
 #X obj 547 -38 s \$0-calibrate;
 #X obj 547 -64 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
@@ -154,9 +154,9 @@
 #X restore 261 121 pd output-only-ascendent-order;
 #X floatatom 222 245 5 0 0 0 - - -;
 #X obj 159 399 hsl 128 15 0 1 0 0 empty empty empty -2 -6 0 8 -262144
--1 -1 0 1;
+-1 -1 1112 1;
 #X obj 194 489 hsl 128 15 0 1 0 0 empty empty empty -2 -6 0 8 -262144
--1 -1 0 1;
+-1 -1 992 1;
 #X obj 262 590 hsl 128 15 0 1 0 0 empty empty empty -2 -6 0 8 -262144
 -1 -1 0 1;
 #X obj 380 690 hsl 128 15 0 1 0 0 empty empty empty -2 -6 0 8 -262144
@@ -4687,7 +4687,7 @@ A WORKSPACE TO CONTROL DISCRETE EVENTS;
 #X obj 132 261 s MASTER.IN.1;
 #X obj 126 286 s MASTER.TANH.1;
 #X obj 105 -202 inlet~ adc1;
-#N canvas 965 150 629 562 last.max.&.three.triggers 0;
+#N canvas 965 150 629 562 last.max.&.three.triggers 1;
 #X floatatom 80 221 5 0 0 0 - - -;
 #X floatatom 43 175 12 0 0 0 - - -;
 #X obj 22 129 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
@@ -4706,7 +4706,6 @@ A WORKSPACE TO CONTROL DISCRETE EVENTS;
 #X obj -42 373 scale.lin 120 40 0.4;
 #X floatatom 139 327 5 0 0 0 - - -;
 #X obj 174 349 pack f 100;
-#X obj 174 376 line3;
 #X obj 43 98 spigot 1;
 #X obj 105 72 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
@@ -4771,6 +4770,7 @@ A WORKSPACE TO CONTROL DISCRETE EVENTS;
 #X text 301 296 3_ normalize the values;
 #X obj 43 10 inlet linear;
 #X obj 174 405 outlet last-max;
+#X obj 174 376 line3;
 #X connect 2 0 12 0;
 #X connect 3 0 12 0;
 #X connect 3 1 11 0;
@@ -4782,18 +4782,18 @@ A WORKSPACE TO CONTROL DISCRETE EVENTS;
 #X connect 8 0 10 0;
 #X connect 8 1 5 0;
 #X connect 9 0 8 0;
+#X connect 10 0 21 0;
 #X connect 10 0 22 0;
-#X connect 10 0 23 0;
 #X connect 11 0 0 0;
 #X connect 12 0 1 0;
-#X connect 15 0 16 0;
-#X connect 16 0 29 0;
-#X connect 17 0 3 0;
-#X connect 21 0 18 0;
-#X connect 21 0 17 1;
-#X connect 22 0 15 0;
-#X connect 22 0 14 0;
-#X connect 28 0 17 0;
+#X connect 15 0 29 0;
+#X connect 16 0 3 0;
+#X connect 20 0 17 0;
+#X connect 20 0 16 1;
+#X connect 21 0 15 0;
+#X connect 21 0 14 0;
+#X connect 27 0 16 0;
+#X connect 29 0 28 0;
 #X restore 148 63 pd last.max.&.three.triggers;
 #X obj 105 210 t f f;
 #X obj 105 233 s \$0-linear-for-last-max;
@@ -4806,6 +4806,7 @@ A WORKSPACE TO CONTROL DISCRETE EVENTS;
 #X obj 105 -138 resample 10;
 #X obj 105 -175 anlz.snap~;
 #X obj 105 4 scale.lin 1 0 0.3;
+#X msg 193 -202 5.8;
 #X connect 1 0 9 0;
 #X connect 2 0 1 0;
 #X connect 3 0 12 0;
@@ -4823,6 +4824,7 @@ A WORKSPACE TO CONTROL DISCRETE EVENTS;
 #X connect 18 0 5 0;
 #X connect 19 0 18 0;
 #X connect 20 0 3 0;
+#X connect 21 0 19 1;
 #X coords 0 -1 1 1 68 97 2 100 100;
 #X restore 152 126 pd all.scaling;
 #N canvas 1030 175 564 667 all.scaling 0;
